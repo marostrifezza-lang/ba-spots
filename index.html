@@ -1339,6 +1339,11 @@ function dibujar(c){
       const X = x*s + ox, Y = y*s + oy; ctx.lineWidth = 3; ctx.strokeStyle = hal; ctx.strokeText(DIR.num[i], X, Y); ctx.fillStyle = colN; ctx.fillText(DIR.num[i], X, Y);
     }
   }
+  if (S.marcaEv){
+    const X = PX(S.marcaEv.lng)*s + ox, Y = PY(S.marcaEv.lat)*s + oy;
+    ctx.beginPath(); ctx.arc(X, Y, 11, 0, 7); ctx.lineWidth = 3; ctx.strokeStyle = css("--accent"); ctx.stroke();
+    ctx.beginPath(); ctx.arc(X, Y, 4, 0, 7); ctx.fillStyle = css("--accent"); ctx.fill();
+  }
   if (S.marcaDir != null && DIR){
     const X = DIR.x[S.marcaDir]*s + ox, Y = DIR.y[S.marcaDir]*s + oy;
     ctx.beginPath(); ctx.arc(X, Y, 9, 0, 7); ctx.lineWidth = 3; ctx.strokeStyle = css("--accent"); ctx.stroke();
@@ -1444,7 +1449,7 @@ function tocarMapa(e){
 }
 function fijarUbic(lat, lng, texto){
   ponerHoja("medio");
-  S.ubic = {lat, lng}; S.esperandoUbic = false; avisoMapa(""); S.marcaDir = null;
+  S.ubic = {lat, lng}; S.esperandoUbic = false; avisoMapa(""); S.marcaDir = null; S.marcaEv = null;
   const di = texto ? null : dirCerca(lat, lng, 60);
   S.ubic.calle = texto || (di != null ? textoDir(di) : calleCerca(lat, lng));
   S.tab = "cerca"; S.detalle = null; calcularCerca(); render(); capa.pedir();
@@ -1642,6 +1647,63 @@ function vistaExplorar(){
   if (arr.length > S.verMas) h += `<button type="button" class="btn" data-a="mas">${tr("verNMas", Math.min(60, arr.length - S.verMas))}</button>`;
   return h;
 }
+/* Ubicación de un evento: sus coordenadas, o si no tiene, la dirección o el nombre del lugar buscados en los datos del mapa. */
+const _coordsEv = new Map();
+function coordsEv(e){
+  if (!e) return null;
+  if (e.lat != null && e.lng != null && Number.isFinite(+e.lat) && Number.isFinite(+e.lng)) return {lat: +e.lat, lng: +e.lng};
+  const texto = String(e.lugar || ""), listo = !!DIR && porId.size > 0;
+  if (listo && _coordsEv.has(texto)) return _coordsEv.get(texto);
+  const r = listo ? ubicarTexto(texto) : null;
+  if (listo) _coordsEv.set(texto, r);
+  return r;
+}
+function ubicarTexto(texto){
+  const partes = texto.split(",").map(s => s.trim()).filter(Boolean);
+  // 1) dirección con número
+  for (const pt of partes){
+    let n = norm(pt).replace(/\bnam\.?(?=\s|$)/g, "namestie").replace(/\bul\.\s*/g, "").replace(/\s+/g, " ").trim(), calle, nums, m;
+    if ((m = n.match(/^(.*?[a-z].*?)\s+(\d+)\s*([a-z])?(?:\s*\/\s*(\d+)?\s*([a-z])?)?$/))){
+      calle = m[1]; nums = [];
+      if (m[4]) nums.push(m[4] + (m[5] || ""));          // número de puerta (después de la barra)
+      if (m[5] && !m[4]) nums.push(m[2] + m[5]);          // "44/c" -> 44c
+      nums.push(m[2] + (m[3] || ""), m[2]);
+    } else if ((m = n.match(/^(\d+)([a-z])?\s+([a-z].*)$/))){ calle = m[3]; nums = [m[1] + (m[2] || ""), m[1]]; }
+    else continue;
+    const i = dirDeCalle(calle, nums);
+    if (i != null) return {lat: DIR.lat[i], lng: DIR.lng[i]};
+  }
+  // 2) nombre del lugar
+  for (const pt of partes){
+    const v = norm(pt).replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
+    if (v.length < 4) continue;
+    let parecido = null;
+    for (const p of porId.values()){
+      if (p.lat == null) continue;
+      const w = norm(p.n).replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
+      if (!w) continue;
+      if (w === v) return {lat: p.lat, lng: p.lng};
+      if (!parecido && Math.min(w.length, v.length) >= 6 && (w.includes(v) || v.includes(w))) parecido = p;
+    }
+    if (parecido) return {lat: parecido.lat, lng: parecido.lng};
+  }
+  return null;
+}
+function dirDeCalle(calle, nums){
+  const exactas = [], empiezan = [];
+  for (const [ci] of DIR.porCalle){ const c = norm(NOMBRES[ci]); if (c === calle) exactas.push(ci); else if (calle.length >= 5 && c.startsWith(calle)) empiezan.push(ci); }
+  for (const lista of [exactas, empiezan]){
+    let cercano = null, dif = Infinity;
+    for (const ci of lista){
+      const [a, b] = DIR.porCalle.get(ci);
+      for (const nq of nums) for (let i = a; i < b; i++) if (DIR.num[i].toLowerCase() === nq) return i;
+      const objetivo = parseInt(nums[nums.length - 1], 10);
+      for (let i = a; i < b; i++){ const d = Math.abs(parseInt(DIR.num[i], 10) - objetivo); if (d < dif){ dif = d; cercano = i; } }
+    }
+    if (cercano != null && dif <= 10) return cercano;   // mismo lado de la calle, cerca del número buscado
+  }
+  return null;
+}
 function vistaEventos(){
   const hoy = hoyISO(), ev = eventosActivos(hoy);
   let h = `<div class="cab-res"><h2>${tr("eventos")}</h2><div class="row"><button type="button" class="btn chico prim" data-a="nuevo-evento">${tr("agregarEvento")}</button></div></div>`;
@@ -1656,7 +1718,7 @@ function vistaEventos(){
       ${precio ? `<div class="small"><b>${tr("precio")}:</b> ${esc(precio)}</div>` : ""}
       ${desc ? `<p class="ev-desc">${esc(desc)}</p>` : ""}
       ${nota ? `<p class="small muted" style="margin-top:4px">${esc(nota)}</p>` : ""}
-      <div class="row small" style="margin-top:8px">${activo ? `<span class="tag mia">${e.hasta === hoy || (!e.hasta && e.desde === hoy) ? tr("hoy") : tr("enCurso")}</span>` : ""}${urlSegura(e.web || e.link) ? `<a class="btn chico" href="${esc(urlSegura(e.web || e.link))}" target="_blank" rel="noopener">${tr("paginaEvento")}</a>` : ""}${urlSegura(e.tickets) ? `<a class="btn chico prim" href="${esc(urlSegura(e.tickets))}" target="_blank" rel="noopener">${tr("comprarEntradas")}</a>` : ""}${e.fuente ? `<span class="tag">${esc(tr("fuenteEv", e.fuente))}</span>` : ""}${e.lat != null ? `<button type="button" class="btn chico" data-a="ir-evento" data-v="${esc(e.id)}">${tr("verEnMapa")}</button>` : ""}<button type="button" class="btn chico" data-a="borrar-evento" data-v="${esc(e.id)}">${tr("borrar")}</button></div></div>
+      <div class="row small" style="margin-top:8px">${activo ? `<span class="tag mia">${e.hasta === hoy || (!e.hasta && e.desde === hoy) ? tr("hoy") : tr("enCurso")}</span>` : ""}${urlSegura(e.web || e.link) ? `<a class="btn chico" href="${esc(urlSegura(e.web || e.link))}" target="_blank" rel="noopener">${tr("paginaEvento")}</a>` : ""}${urlSegura(e.tickets) ? `<a class="btn chico prim" href="${esc(urlSegura(e.tickets))}" target="_blank" rel="noopener">${tr("comprarEntradas")}</a>` : ""}${e.fuente ? `<span class="tag">${esc(tr("fuenteEv", e.fuente))}</span>` : ""}${coordsEv(e) ? `<button type="button" class="btn chico" data-a="ir-evento" data-v="${esc(e.id)}">${tr("verEnMapa")}</button>` : ""}<button type="button" class="btn chico" data-a="borrar-evento" data-v="${esc(e.id)}">${tr("borrar")}</button></div></div>
       <div class="der">${rango}</div></div>`; }).join("")}</div>`;
   h += `<p class="muted small">${tr("eventosDesaparecen")}${EVENTOS_FECHA ? " " + tr("eventosActualizados", fechaCorta(EVENTOS_FECHA)) : ""}</p>`;
   return h;
@@ -1846,7 +1908,7 @@ document.addEventListener("click", ev => {
     case "fe-cancelar": S.formEvento = null; render(); break;
     case "fe-guardar": guardarEvento(); break;
     case "borrar-evento": if (EVENTOS_PUB[v]) EVENTOS[v] = {oculto: true}; else delete EVENTOS[v]; guardarLocal(); render(); toast(tr("tEventoBorrado")); break;
-    case "ir-evento": { const e = todosEventos()[v]; if (e && e.lat != null){ ponerHoja("mapa"); map.setView([e.lat, e.lng], 17); } break; }
+    case "ir-evento": { const e = todosEventos()[v]; const c = coordsEv(e); if (c){ S.marcaEv = c; ponerHoja("mapa"); map.setView([c.lat, c.lng], 17.5); capa.pedir(); } break; }
     case "respaldo": respaldo(); break;
     case "gps": usarGPS(); break;
     case "car-prev": moverCarrusel(-1); break;

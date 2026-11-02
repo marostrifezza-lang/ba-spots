@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <meta charset="utf-8">
-<meta name="description" content="BA Spots: qué hacer en Bratislava ahora mismo. Lugares abiertos y cerca, a pie por calles reales, con filtros por actividad y una agenda de eventos.">
-<title>BA Spots</title>
+<meta name="description" content="Bratislava Spots: things to do in Bratislava right now. Places that are open and nearby, on foot along real streets, with activity filters and an events calendar.">
+<title>Bratislava Spots</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -641,6 +641,13 @@ p{margin:0}
 .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .buscar{position:relative}
 .buscar input{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+.buscar.con-gps input{padding-right:52px}
+.gps-in{position:absolute;top:0;right:0;height:100%;width:48px;display:grid;place-items:center;border:0;border-left:1px solid var(--line);background:none;color:var(--accent);cursor:pointer;border-radius:0 var(--r) var(--r) 0}
+.gps-in:hover{background:var(--surface-2)}
+.gps-in:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.gps-in.girando svg{animation:gps-gira 1s linear infinite}
+@keyframes gps-gira{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.gps-in.girando svg{animation:none;opacity:.5}}
 .sugs{position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:20;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);max-height:280px;overflow:auto}
 .sugs button{display:flex;width:100%;gap:10px;align-items:center;text-align:left;border:0;background:none;padding:10px 12px;cursor:pointer;border-bottom:1px solid var(--line)}
 .sugs button:hover{background:var(--surface-2)}
@@ -745,7 +752,7 @@ input[type=range]:disabled{opacity:.35}
 
 <div id="app">
   <header class="top">
-    <div class="marca"><span data-i18n="marca">BA Spots</span><small data-i18n="sub">Qué hacer en Bratislava</small></div>
+    <div class="marca"><span data-i18n="marca">Bratislava Spots</span><small data-i18n="sub">Qué hacer en la ciudad</small></div>
     <div class="reloj" id="reloj"></div>
     <div class="idioma" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es" aria-pressed="true">ES</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
   </header>
@@ -827,7 +834,7 @@ const LANGDATA = {
 const I18N = {
   es: {
     asa:"Arrastra o toca para ajustar el tamaño del mapa",
-    marca:"BA Spots", sub:"Qué hacer en Bratislava", mapaAria:"Mapa de Bratislava", acercar:"Acercar", alejar:"Alejar", volverUbic:"Volver a mi ubicación",
+    marca:"Bratislava Spots", sub:"Qué hacer en la ciudad", mapaAria:"Mapa de Bratislava", acercar:"Acercar", alejar:"Alejar", volverUbic:"Volver a mi ubicación",
     cargando:"Cargando el mapa de Bratislava…", tabCerca:"Cerca, ahora", tabExplorar:"Explorar", tabEventos:"Eventos", tabMis:"Mis cosas",
     attrib:"© colaboradores de OpenStreetMap",
     ab24:"Abierto las 24 h", cierraEn:m => `Cierra en ${m} min`, abiertoHasta:x => `Abierto hasta las ${x}`, cerradoAbre:x => `Cerrado · abre a las ${x}`,
@@ -850,7 +857,7 @@ const I18N = {
     infoUbic:(c, x, n) => `${c}, ${x} · hasta ${n} min a pie. Toca un punto para ver el lugar.`, mover:"Mover", sorpresa:"Sorpréndeme",
     noHay:(q, n) => `No hay ${q} abiertos a ${n} min a pie o menos.`, lugaresGen:"lugares", o:" o ",
     opcionesTodo:n => `${n} ${n === 1 ? "opción" : "opciones"}`,
-    filtrosOcultan:" El tipo de plan, la etapa u otros filtros también pueden estar ocultando opciones.",
+    filtrosOcultan:" El tipo de plan u otros filtros también pueden estar ocultando opciones.",
     masCercano:"Lo más cercano que está abierto", verEnMapa:"Ver en el mapa",
     ningunoCiudad:"Tampoco encontré ninguno abierto en toda la ciudad con estos filtros.",
     opcionesCerca:n => `${n} ${n === 1 ? "opción" : "opciones"} cerca`, anterior:"Opción anterior", siguiente:"Opción siguiente",
@@ -892,7 +899,7 @@ const I18N = {
   },
   en: {
     asa:"Drag or tap to resize the map",
-    marca:"BA Spots", sub:"Things to do in Bratislava", mapaAria:"Map of Bratislava", acercar:"Zoom in", alejar:"Zoom out", volverUbic:"Back to my location",
+    marca:"Bratislava Spots", sub:"Things to do in the city", mapaAria:"Map of Bratislava", acercar:"Zoom in", alejar:"Zoom out", volverUbic:"Back to my location",
     cargando:"Loading the map of Bratislava…", tabCerca:"Nearby now", tabExplorar:"Explore", tabEventos:"Events", tabMis:"My stuff",
     attrib:"© OpenStreetMap contributors",
     ab24:"Open 24 hours", cierraEn:m => `Closes in ${m} min`, abiertoHasta:x => `Open until ${x}`, cerradoAbre:x => `Closed · opens at ${x}`,
@@ -915,7 +922,7 @@ const I18N = {
     infoUbic:(c, x, n) => `${c}, ${x} · up to ${n} min walk. Tap a dot to see the place.`, mover:"Move", sorpresa:"Surprise me",
     noHay:(q, n) => `No ${q} open within ${n} min walk.`, lugaresGen:"places", o:" or ",
     opcionesTodo:n => `${n} ${n === 1 ? "option" : "options"}`,
-    filtrosOcultan:" The plan type, stage or other filters may also be hiding options.",
+    filtrosOcultan:" The plan type or other filters may also be hiding options.",
     masCercano:"Nearest place that's open", verEnMapa:"Show on map",
     ningunoCiudad:"I couldn't find any open in the whole city with these filters either.",
     opcionesCerca:n => `${n} ${n === 1 ? "option" : "options"} nearby`, anterior:"Previous option", siguiente:"Next option",
@@ -956,7 +963,7 @@ const I18N = {
     tDescNo:"Downloads aren't available in this view", tRespaldoNo:"The backup wasn't downloaded", nombreArchivo:"ba-spots-backup",
   },
 };
-let LANG = "es";
+let LANG = "en";
 try { const v = localStorage.getItem("citas-ba-lang"); if (v === "es" || v === "en") LANG = v; } catch(e){}
 function tr(k, ...a){ const s = I18N[LANG][k] ?? I18N.es[k] ?? k; return typeof s === "function" ? s(...a) : s; }
 /* Campo de un evento o nota en el idioma elegido: usa "<campo>_en" en inglés si existe. */
@@ -1288,7 +1295,7 @@ function iniciarMapa(){
   map.on("click", e => tocarMapa(e));
   $("#z-mas").onclick = () => map.zoomIn(0.5);
   $("#z-menos").onclick = () => map.zoomOut(0.5);
-  $("#z-yo").onclick = () => { if (S.ubic) map.setView([S.ubic.lat, S.ubic.lng], Math.max(map.getZoom(), 16)); else toast(tr("marcaPrimero")); };
+  $("#z-yo").onclick = () => { if (S.ubic) map.setView([S.ubic.lat, S.ubic.lng], Math.max(map.getZoom(), 16)); else if (hayGPS()) usarGPS(); else toast(tr("marcaPrimero")); };
   matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => capa.pedir());
   new MutationObserver(() => capa.pedir()).observe(document.documentElement, {attributes:true, attributeFilter:["data-theme"]});
 }
@@ -1581,17 +1588,19 @@ function linkRuta(p, min){
   if (S.ubic) u += "&origin=" + S.ubic.lat.toFixed(6) + "," + S.ubic.lng.toFixed(6);
   return u;
 }
+const ICONO_GPS = `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.6" fill="currentColor" stroke="none"/><path d="M12 1.5v3.5M12 19v3.5M1.5 12H5M19 12h3.5"/></svg>`;
 function cajaBuscar(ph){
-  return `<div class="buscar"><input type="search" id="q" placeholder="${ph}" autocomplete="off" value="${esc(S.texto)}" aria-label="${ph}"><div class="sugs" id="sugs" hidden></div></div>`;
+  const g = hayGPS() && ph === tr("buscaCerca");
+  return `<div class="buscar${g ? " con-gps" : ""}"><input type="search" id="q" placeholder="${ph}" autocomplete="off" value="${esc(S.texto)}" aria-label="${ph}">${g ? `<button type="button" class="gps-in" id="gps-in" data-a="gps" aria-label="${tr("usarGPS")}" title="${tr("usarGPS")}">${ICONO_GPS}</button>` : ""}<div class="sugs" id="sugs" hidden></div></div>`;
 }
 function vistaCerca(){
   const m = momento();
   const tarjetasPrimero = esMovil() && S.ubic && S.res.length;
   let h = tarjetasPrimero ? "" : cajaBuscar(tr("buscaCerca"));
   if (!S.ubic){
-    h += `<div class="estado"><div><b>${tr("tocaMapaTit")}</b><p class="muted small">${tr(hayGPS() ? "tocaMapaTxtWeb" : "tocaMapaTxt")}</p></div>${hayGPS() ? `<button type="button" class="btn prim" data-a="gps">◎ ${tr("usarGPS")}</button>` : ""}</div>`;
+    if (!hayGPS()) h += `<div class="estado"><div><b>${tr("tocaMapaTit")}</b><p class="muted small">${tr("tocaMapaTxt")}</p></div></div>`;
   } else {
-    h += `<div class="estado"><div class="min-w0"><b>${S.ubic.calle ? esc(tr("estasCerca", S.ubic.calle)) : tr("ubicMarcada")}</b><p class="muted small">${tr("infoUbicTodo", m.cualquiera ? tr("cualquierMomento") : m.ahora ? tr("ahora") : DIAS_L[m.dia], m.cualquiera ? "" : hhmm(m.min), S.sinLimite ? tr("sinLimiteDist") : tr("aPieMax", S.maxMin))}</p></div><div class="row">${hayGPS() ? `<button type="button" class="btn chico" data-a="gps">◎ ${tr("usarGPS")}</button>` : ""}<button type="button" class="btn chico" data-a="mover">${tr("mover")}</button><button type="button" class="btn chico" data-a="sorpresa">${tr("sorpresa")}</button></div></div>`;
+    h += `<div class="estado"><div class="min-w0"><b>${S.ubic.calle ? esc(tr("estasCerca", S.ubic.calle)) : tr("ubicMarcada")}</b><p class="muted small">${tr("infoUbicTodo", m.cualquiera ? tr("cualquierMomento") : m.ahora ? tr("ahora") : DIAS_L[m.dia], m.cualquiera ? "" : hhmm(m.min), S.sinLimite ? tr("sinLimiteDist") : tr("aPieMax", S.maxMin))}</p></div><div class="row"><button type="button" class="btn chico" data-a="mover">${tr("mover")}</button><button type="button" class="btn chico" data-a="sorpresa">${tr("sorpresa")}</button></div></div>`;
   }
   if (S.ubic){
     if (!S.res.length){
@@ -1933,11 +1942,14 @@ function hayGPS(){ return !!(navigator.geolocation && window.isSecureContext); }
 function usarGPS(){
   if (!hayGPS()) return;
   toast(tr("gpsBuscando"));
+  const ic = $("#gps-in"), parar = () => { const b = $("#gps-in"); if (b) b.classList.remove("girando"); };
+  if (ic) ic.classList.add("girando");
   navigator.geolocation.getCurrentPosition(pos => {
+    parar();
     const {latitude: la, longitude: lo} = pos.coords;
     if (la < 48.01 || la > 48.26 || lo < 16.97 || lo > 17.25){ toast(tr("gpsFuera")); return; }
-    fijarUbic(la, lo); map.setView([la, lo], Math.max(map.getZoom(), 16));
-  }, () => toast(tr("gpsError")), {enableHighAccuracy: true, timeout: 15000, maximumAge: 60000});
+    S.texto = ""; fijarUbic(la, lo); map.setView([la, lo], Math.max(map.getZoom(), 16));
+  }, () => { parar(); toast(tr("gpsError")); }, {enableHighAccuracy: true, timeout: 15000, maximumAge: 60000});
 }
 async function respaldo(){
   const data = JSON.stringify({fecha: new Date().toISOString(), info: INFO, propios: PROPIOS, eventos: EVENTOS}, null, 2);

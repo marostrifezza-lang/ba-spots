@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="es">
 <meta charset="utf-8">
-<meta name="description" content="Mapa de Bratislava para encontrar adónde ir en una cita: lo que está abierto y cerca, con filtros y eventos.">
-<title>Citas en Bratislava</title>
+<meta name="description" content="BA Spots: qué hacer en Bratislava ahora mismo. Lugares abiertos y cerca, a pie por calles reales, con filtros por actividad y una agenda de eventos.">
+<title>BA Spots</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -745,7 +745,7 @@ input[type=range]:disabled{opacity:.35}
 
 <div id="app">
   <header class="top">
-    <div class="marca"><span data-i18n="marca">Citas en Bratislava</span><small data-i18n="sub">Adónde vamos</small></div>
+    <div class="marca"><span data-i18n="marca">BA Spots</span><small data-i18n="sub">Qué hacer en Bratislava</small></div>
     <div class="reloj" id="reloj"></div>
     <div class="idioma" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es" aria-pressed="true">ES</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
   </header>
@@ -827,7 +827,7 @@ const LANGDATA = {
 const I18N = {
   es: {
     asa:"Arrastra o toca para ajustar el tamaño del mapa",
-    marca:"Citas en Bratislava", sub:"Adónde vamos", mapaAria:"Mapa de Bratislava", acercar:"Acercar", alejar:"Alejar", volverUbic:"Volver a mi ubicación",
+    marca:"BA Spots", sub:"Qué hacer en Bratislava", mapaAria:"Mapa de Bratislava", acercar:"Acercar", alejar:"Alejar", volverUbic:"Volver a mi ubicación",
     cargando:"Cargando el mapa de Bratislava…", tabCerca:"Cerca, ahora", tabExplorar:"Explorar", tabEventos:"Eventos", tabMis:"Mis cosas",
     attrib:"© colaboradores de OpenStreetMap",
     ab24:"Abierto las 24 h", cierraEn:m => `Cierra en ${m} min`, abiertoHasta:x => `Abierto hasta las ${x}`, cerradoAbre:x => `Cerrado · abre a las ${x}`,
@@ -888,11 +888,11 @@ const I18N = {
     tEventoBorrado:"Evento borrado", tTocaEstas:"Toca el mapa donde estás", sugDir:"Dirección", sugCalle:"Calle",
     errNombreLugar:"Escribe el nombre del lugar.", tLugarGuardado:"Lugar guardado", errNombreEv:"Escribe el nombre del evento.", errFecha:"Pon al menos una fecha.",
     errOrden:"La fecha de fin es anterior a la de inicio.", tEventoGuardado:"Evento guardado", tRespaldo:"Respaldo descargado",
-    tDescNo:"La descarga no está disponible en esta vista", tRespaldoNo:"No se descargó el respaldo", nombreArchivo:"citas-bratislava-respaldo",
+    tDescNo:"La descarga no está disponible en esta vista", tRespaldoNo:"No se descargó el respaldo", nombreArchivo:"ba-spots-respaldo",
   },
   en: {
     asa:"Drag or tap to resize the map",
-    marca:"Bratislava Date Spots", sub:"Where to go", mapaAria:"Map of Bratislava", acercar:"Zoom in", alejar:"Zoom out", volverUbic:"Back to my location",
+    marca:"BA Spots", sub:"Things to do in Bratislava", mapaAria:"Map of Bratislava", acercar:"Zoom in", alejar:"Zoom out", volverUbic:"Back to my location",
     cargando:"Loading the map of Bratislava…", tabCerca:"Nearby now", tabExplorar:"Explore", tabEventos:"Events", tabMis:"My stuff",
     attrib:"© OpenStreetMap contributors",
     ab24:"Open 24 hours", cierraEn:m => `Closes in ${m} min`, abiertoHasta:x => `Open until ${x}`, cerradoAbre:x => `Closed · opens at ${x}`,
@@ -953,7 +953,7 @@ const I18N = {
     tEventoBorrado:"Event deleted", tTocaEstas:"Tap the map where you are", sugDir:"Address", sugCalle:"Street",
     errNombreLugar:"Enter the place name.", tLugarGuardado:"Place saved", errNombreEv:"Enter the event name.", errFecha:"Enter at least one date.",
     errOrden:"The end date is before the start date.", tEventoGuardado:"Event saved", tRespaldo:"Backup downloaded",
-    tDescNo:"Downloads aren't available in this view", tRespaldoNo:"The backup wasn't downloaded", nombreArchivo:"bratislava-date-spots-backup",
+    tDescNo:"Downloads aren't available in this view", tRespaldoNo:"The backup wasn't downloaded", nombreArchivo:"ba-spots-backup",
   },
 };
 let LANG = "es";
@@ -1542,13 +1542,12 @@ function chipsPlanes(){
 function bloqueFiltros(conDist){
   const m = momento();
   const actsSel = [...S.act].map(a => ACTS[a]);
-  const otros = (S.presuMax !== "todos" ? 1 : 0) + (S.io !== "todos" ? 1 : 0) + (S.etapa !== "todas" ? 1 : 0) + (S.cuando !== "ahora" ? 1 : 0) + (conDist && (S.sinLimite || S.maxMin !== 15) ? 1 : 0);
+  const otros = (S.presuMax !== "todos" ? 1 : 0) + (S.io !== "todos" ? 1 : 0) + (S.cuando !== "ahora" ? 1 : 0) + (conDist && (S.sinLimite || S.maxMin !== 15) ? 1 : 0);
   const resumen = (actsSel.length ? " · " + actsSel.join(", ") : "") + (otros ? tr("nMas", otros) : "");
   return `<details class="filtros" id="filtros" ${S.filtrosAbiertos ? "open" : ""}><summary>${tr("masFiltros")}<span class="muted" style="font-weight:500">${esc(resumen)}</span></summary><div class="campos">
     <div class="campo"><span class="lbl">${tr("actividad")}${S.act.size ? ` · <button type="button" class="linkbtn" data-a="act-limpiar">${tr("quitar")}</button>` : ""}</span>
       ${ACT_GRUPOS.map(([g, items]) => { const ch = Object.entries(items).filter(([k]) => ACT_HAY.has(k)); return ch.length ? `<div class="grupo-act"><span class="small muted">${g}</span><div class="chips">${ch.map(([k, x]) => `<button type="button" class="chip" data-a="act" data-v="${k}" aria-pressed="${S.act.has(k)}">${x}</button>`).join("")}</div></div>` : ""; }).join("")}
     </div>
-    <div class="campo"><span class="lbl">${tr("etapa")}</span><div class="seg">${Object.keys(ETAPAS).map(k => `<button type="button" data-a="etapa" data-v="${k}" aria-pressed="${S.etapa === k}">${ETAPA_TXT[k]}</button>`).join("")}</div></div>
     <div class="campo"><span class="lbl">${tr("presupuestoPP")}</span><div class="seg">${Object.entries(PRESU_MAX).map(([k, x]) => `<button type="button" data-a="presu" data-v="${k}" aria-pressed="${S.presuMax === k}">${x}</button>`).join("")}</div><span class="small muted">${tr("presuNota")}</span></div>
     <div class="campo"><span class="lbl">${tr("lugarIO")}</span><div class="seg">${[["todos",tr("todos")],["int",tr("interior")],["ext",tr("exterior")]].map(([k, x]) => `<button type="button" data-a="io" data-v="${k}" aria-pressed="${S.io === k}">${x}</button>`).join("")}</div></div>
     ${conDist ? `<div class="campo"><span class="lbl">${tr("distancia")}</span>

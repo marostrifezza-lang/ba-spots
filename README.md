@@ -1,7 +1,9 @@
-# Citas en Bratislava
+# BA Spots
 
-Mapa de Bratislava para encontrar adónde ir en una cita: lugares abiertos y cerca, a pie por calles reales, con filtros por actividad, presupuesto y momento, y una agenda de eventos.
+Qué hacer en Bratislava ahora mismo: lugares abiertos y cerca, a pie por calles reales, con filtros por actividad, presupuesto y momento, y una agenda de eventos. En castellano e inglés.
 
-- Abrir: https://marostrifezza-lang.github.io/citas-bratislava/
-- Tus favoritos, notas y lugares se guardan solo en tu navegador.
-- Mapa y lugares: © colaboradores de OpenStreetMap (licencia ODbL). Eventos: GoOut y Eventbrite.
+Things to do in Bratislava right now: open places nearby, real walking routes, filters by activity, budget and time, and an events calendar. In Spanish and English.
+
+- Abrir / Open: https://marostrifezza-lang.github.io/ba-spots/
+- Tus favoritos, notas y lugares se guardan solo en tu navegador. / Your favorites, notes and places stay in your browser.
+- Mapa y lugares / Map and places: © colaboradores de OpenStreetMap / OpenStreetMap contributors (ODbL). Eventos / Events: GoOut, Eventbrite.

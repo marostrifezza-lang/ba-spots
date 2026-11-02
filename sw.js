@@ -1,8 +1,8 @@
 // Bratislava Spots: service worker.
 // Permite instalarla como app y abrirla sin conexión con lo último que se cargó.
-// Archivos propios: primero la red (el navegador revalida con su caché, así siempre ves la última versión);
+// Archivos propios: primero la red (la página y los datos se revalidan siempre con GitHub, así ves la última versión);
 // si no hay conexión, se usa lo guardado. Leaflet y las fuentes (versión fija): primero lo guardado.
-const CACHE = "ba-spots-v1";
+const CACHE = "ba-spots-v2";
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => Promise.all([
@@ -31,7 +31,11 @@ self.addEventListener("fetch", e => {
   }
 
   const clave = u.origin + u.pathname;   // sin "?v=..." para no llenar la caché
-  e.respondWith(fetch(r).then(resp => {
+  // la página y los eventos se piden "sin caché": el navegador pregunta a GitHub si cambiaron
+  // (si no cambiaron, la respuesta es mínima), así una versión nueva aparece al abrir la app.
+  const fresco = r.mode === "navigate" || /\/$|\.html$|\.json$|\.webmanifest$/.test(u.pathname);
+  const pedido = fresco ? fetch(u.href, {cache: "no-cache", credentials: "same-origin"}) : fetch(r);
+  e.respondWith(pedido.then(resp => {
     if (resp.ok){ const copia = resp.clone(); caches.open(CACHE).then(ca => ca.put(clave, copia)); }
     return resp;
   }).catch(() => caches.match(clave).then(c => c || caches.match("./"))));

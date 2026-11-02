@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <meta charset="utf-8">
+<meta name="author" content="Maro Strifezza">
 <meta name="description" content="Bratislava Spots: things to do in Bratislava right now. Places that are open and nearby, on foot along real streets, with activity filters and an events calendar.">
 <title>Bratislava Spots</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -614,6 +615,9 @@ header.top{grid-area:top;display:flex;align-items:center;gap:12px;padding-block:
 @media (max-width:420px){.marca small{display:none}}
 .marca small{font-weight:500;color:var(--muted);font-size:13px;margin-left:6px;letter-spacing:0}
 .idioma{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.tema{flex:none;display:grid;place-items:center;width:34px;height:30px;border:1px solid var(--line);border-radius:999px;background:none;color:var(--ink);cursor:pointer;padding:0}
+.tema:hover{background:var(--surface-2)}
+.tema:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .idioma button{border:0;background:none;padding:5px 10px;font-size:12.5px;font-weight:600;cursor:pointer;color:var(--muted)}
 .idioma button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 @media (max-width:380px){.reloj{display:none}}
@@ -656,6 +660,10 @@ p{margin:0}
 .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .chips{display:flex;gap:6px;flex-wrap:wrap}
 .grupo-act{display:grid;gap:6px;margin-top:4px}
+.ico{flex:none;display:grid;place-items:center;width:32px;height:32px;border:0;border-radius:8px;background:none;color:var(--muted);cursor:pointer;padding:0}
+.ico:hover{background:var(--surface-2);color:var(--ink)}
+.ico:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.autor{text-align:center;color:var(--muted);padding-block:6px 4px;border-top:1px solid var(--line);margin-top:4px}
 .linkbtn{border:0;background:none;padding:0;color:var(--accent);font:inherit;font-weight:600;cursor:pointer;text-decoration:underline}
 .btn{border:1px solid var(--line);background:var(--surface);border-radius:var(--r);padding:9px 14px;cursor:pointer;font-weight:600;display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--ink)}
 .btn.prim{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
@@ -730,7 +738,7 @@ input[type=range]:disabled{opacity:.35}
   .marca{font-size:17px}
   .marca small{display:none}
   .reloj{display:none}
-  .idioma{margin-left:auto}
+  .tema{margin-left:auto;width:40px;height:36px}
   h2{font-size:18px}
   .navcar{gap:4px}
   .navcar span{min-width:44px}
@@ -754,6 +762,7 @@ input[type=range]:disabled{opacity:.35}
   <header class="top">
     <div class="marca"><span data-i18n="marca">Bratislava Spots</span><small data-i18n="sub">Qué hacer en la ciudad</small></div>
     <div class="reloj" id="reloj"></div>
+    <button type="button" class="tema" id="btn-tema" data-a="tema"></button>
     <div class="idioma" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es" aria-pressed="true">ES</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
   </header>
   <div id="mapa-wrap">
@@ -841,7 +850,7 @@ const I18N = {
     cerradoHoy:"Cerrado hoy", cerradoDia:"Cerrado ese día", extSinHorario:"Al aire libre, sin horario", horarioDesc:"Horario desconocido",
     marcaPrimero:"Primero marca dónde estás", ubicLugarMarcada:"Ubicación del lugar marcada", ubicacion:s => `Ubicación: ${s}`,
     calleSinNum:s => `Estás en algún punto de ${s}. Escribe también el número para ubicarte exacto.`, noGuardo:c => `No se pudo guardar: ${c}`,
-    masFiltros:"Más filtros", nMas:n => ` · ${n} más`, actividad:"Actividad", quitar:"quitar", etapa:"Etapa de la relación", presupuesto:"Presupuesto",
+    temaOscuro:"Cambiar a modo oscuro", temaClaro:"Cambiar a modo claro", masFiltros:"Más filtros", nMas:n => ` · ${n} más`, actividad:"Actividad", quitar:"quitar", etapa:"Etapa de la relación", presupuesto:"Presupuesto",
     lugarIO:"Lugar", todos:"Todos", interior:"Interior", exterior:"Al aire libre", hastaMin:n => `Hasta ${n} min a pie`,
     abiertoAlMenos:"Que quede abierto al menos", loQueSea:"Lo que sea", m30:"30 min", h1:"1 hora", h1m30:"1 h 30 min", h2:"2 horas",
     cuando:"Cuándo", ahora:"Ahora", otroMomento:"Otro momento", dia:"Día", hora:"Hora", incluirSinHorario:"Incluir lugares sin horario conocido",
@@ -866,14 +875,14 @@ const I18N = {
     ningunLugar:"Ningún lugar coincide con estos filtros.", verNMas:n => `Ver ${n} más`,
     eventos:"Eventos", agregarEvento:"Agregar evento",
     sinEventos:"No hay eventos cargados. Agrega uno, o pídele a Claude en un chat que busque los eventos de esta semana.",
-    hastaEl:d => `Hasta el ${d}`, precio:"Precio", hoy:"Hoy", enCurso:"En curso", paginaEvento:"Página del evento", comprarEntradas:"Comprar entradas", borrar:"Borrar",
+    evCercaHoy:n => `Eventos de hoy, cerca (${n})`, evCercaDia:(d, n) => `Eventos del ${d}, cerca (${n})`, compartir:"Compartir", copiado:"Copiado. Pégalo en WhatsApp o donde quieras.", noCopiado:"No se pudo copiar.", compartidoDesde:u => `Encontrado con Bratislava Spots: ${u}`, hastaEl:d => `Hasta el ${d}`, precio:"Precio", hoy:"Hoy", enCurso:"En curso", paginaEvento:"Página del evento", comprarEntradas:"Comprar entradas", borrar:"Borrar",
     eventosDesaparecen:"Los eventos desaparecen solos cuando pasa su fecha de fin.",
     importarEventos:"Importar eventos", importAyuda:"Para cargar muchos eventos de una vez: en la PC corre scripts/eventos.py y elige aquí el archivo eventos-AAAA-MM-DD.json que genera.",
     importOk:(n, a, r) => `${n} eventos nuevos, ${a} actualizados${r ? `, ${r} repetidos omitidos` : ""}.`, importErr:"El archivo no tiene el formato esperado (eventos-AAAA-MM-DD.json).",
     importLeyendo:"Leyendo el archivo…", fuenteEv:f => `Fuente: ${f}`,
     misCosas:"Mis cosas", agregarLugar:"Agregar lugar",
     soloLocal:"Tus marcas, notas y lugares se guardan solo en este navegador. Usa \"Descargar respaldo\" para no perderlos.",
-    usarGPS:"Usar mi ubicación", gpsBuscando:"Buscando tu ubicación…", gpsFuera:"Tu ubicación está fuera del mapa de Bratislava.",
+    autor:"App creada por Maro Strifezza", usarGPS:"Usar mi ubicación", gpsBuscando:"Buscando tu ubicación…", gpsFuera:"Tu ubicación está fuera del mapa de Bratislava.",
     gpsError:"No se pudo obtener tu ubicación. Revisa el permiso de ubicación del navegador o toca el mapa.",
     tocaMapaTxtWeb:"o usa tu ubicación, o escribe la calle arriba. Te muestro lo que está abierto y cerca, en este momento.",
     eventosActualizados:d => `Eventos actualizados el ${d}.`,
@@ -906,7 +915,7 @@ const I18N = {
     cerradoHoy:"Closed today", cerradoDia:"Closed that day", extSinHorario:"Outdoors, no opening hours", horarioDesc:"Opening hours unknown",
     marcaPrimero:"First mark where you are", ubicLugarMarcada:"Place location set", ubicacion:s => `Location: ${s}`,
     calleSinNum:s => `You're somewhere on ${s}. Add the house number for an exact location.`, noGuardo:c => `Couldn't save: ${c}`,
-    masFiltros:"More filters", nMas:n => ` · ${n} more`, actividad:"Activity", quitar:"clear", etapa:"Relationship stage", presupuesto:"Budget",
+    temaOscuro:"Switch to dark mode", temaClaro:"Switch to light mode", masFiltros:"More filters", nMas:n => ` · ${n} more`, actividad:"Activity", quitar:"clear", etapa:"Relationship stage", presupuesto:"Budget",
     lugarIO:"Setting", todos:"All", interior:"Indoors", exterior:"Outdoors", hastaMin:n => `Up to ${n} min walk`,
     abiertoAlMenos:"Still open for at least", loQueSea:"Any", m30:"30 min", h1:"1 hour", h1m30:"1 h 30 min", h2:"2 hours",
     cuando:"When", ahora:"Now", otroMomento:"Another time", dia:"Day", hora:"Time", incluirSinHorario:"Include places with unknown opening hours",
@@ -931,14 +940,14 @@ const I18N = {
     ningunLugar:"No places match these filters.", verNMas:n => `Show ${n} more`,
     eventos:"Events", agregarEvento:"Add event",
     sinEventos:"No events yet. Add one, or ask Claude in a chat to look up this week's events.",
-    hastaEl:d => `Until ${d}`, precio:"Price", hoy:"Today", enCurso:"On now", paginaEvento:"Event page", comprarEntradas:"Buy tickets", borrar:"Delete",
+    evCercaHoy:n => `Today's events nearby (${n})`, evCercaDia:(d, n) => `Events on ${d} nearby (${n})`, compartir:"Share", copiado:"Copied. Paste it in WhatsApp or anywhere.", noCopiado:"Couldn't copy.", compartidoDesde:u => `Found with Bratislava Spots: ${u}`, hastaEl:d => `Until ${d}`, precio:"Price", hoy:"Today", enCurso:"On now", paginaEvento:"Event page", comprarEntradas:"Buy tickets", borrar:"Delete",
     eventosDesaparecen:"Events disappear automatically after their end date.",
     importarEventos:"Import events", importAyuda:"To load many events at once: run scripts/eventos.py on the PC and pick the eventos-YYYY-MM-DD.json file it creates here.",
     importOk:(n, a, r) => `${n} new events, ${a} updated${r ? `, ${r} duplicates skipped` : ""}.`, importErr:"The file isn't in the expected format (eventos-YYYY-MM-DD.json).",
     importLeyendo:"Reading the file…", fuenteEv:f => `Source: ${f}`,
     misCosas:"My stuff", agregarLugar:"Add place",
     soloLocal:"Your marks, notes and places are saved only in this browser. Use \"Download backup\" so you don't lose them.",
-    usarGPS:"Use my location", gpsBuscando:"Finding your location…", gpsFuera:"Your location is outside the Bratislava map.",
+    autor:"App created by Maro Strifezza", usarGPS:"Use my location", gpsBuscando:"Finding your location…", gpsFuera:"Your location is outside the Bratislava map.",
     gpsError:"Couldn't get your location. Check the browser's location permission or tap the map.",
     tocaMapaTxtWeb:"or use your location, or type the street above. I'll show you what's open and nearby right now.",
     eventosActualizados:d => `Events updated on ${d}.`,
@@ -1225,6 +1234,42 @@ function pasaHorario(p, m, noche){
   if (e.k === "abierto") return e.resta >= S.minAbierto;
   if (!S.sinHorario) return false;
   return !(p.io === "ext" && noche);
+}
+
+/* ============================================================ eventos cerca (en "Cerca, ahora") */
+const _sitioEv = new Map();
+function fechaMomento(){
+  const d = new Date();
+  if (S.cuando === "otro" && S.dia != null) d.setDate(d.getDate() + ((S.dia - (d.getDay() + 6) % 7 + 7) % 7));
+  return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+}
+function eventosCerca(){
+  if (!S.ubic || !G || !ultimoDij) return {iso: "", lista: []};
+  const iso = fechaMomento(), m = momento(), maxM = S.sinLimite ? Infinity : S.maxMin * VEL, out = [];
+  for (const e of eventosActivos(iso)){
+    if ((e.desde || iso) > iso) continue;
+    // si ya empezó hace más de 3 horas (evento de un solo horario), no se muestra
+    const hh = String(loc(e, "horario") || "").match(/^(\d{1,2})[:.](\d{2})/);
+    if (hh && m.ahora && !m.cualquiera && (e.hasta || e.desde) === iso && m.min > (+hh[1]) * 60 + (+hh[2]) + 180) continue;
+    const c = coordsEv(e); if (!c) continue;
+    const k = c.lat.toFixed(5) + "," + c.lng.toFixed(5);
+    if (!_sitioEv.has(k)) _sitioEv.set(k, enganchar(c.lat, c.lng));
+    const sn = _sitioEv.get(k); if (!sn || sn.d > 300) continue;
+    const rc = recorrido(sn); if (!rc || rc.tot > maxM) continue;
+    out.push({e, min: Math.max(1, Math.round(rc.tot / VEL))});
+  }
+  out.sort((a, b) => a.min - b.min);
+  return {iso, lista: out.slice(0, 8)};
+}
+function bloqueEventosCerca(){
+  const {iso, lista} = eventosCerca(); if (!lista.length) return "";
+  const titulo = iso === hoyISO() ? tr("evCercaHoy", lista.length) : tr("evCercaDia", fechaCorta(iso), lista.length);
+  return `<div class="cab-res"><h2>${titulo}</h2></div><div class="lista">${lista.map(({e, min}) => {
+    const horario = loc(e, "horario"), web = urlSegura(e.web || e.link);
+    return `<div class="item" style="cursor:default"><div class="min-w0"><div class="t">${esc(loc(e, "n"))}</div>
+      <div class="small muted">${esc(loc(e, "lugar"))}${horario ? " · " + esc(horario) : ""}</div>
+      <div class="row small" style="margin-top:8px"><button type="button" class="btn chico" data-a="ir-evento" data-v="${esc(e.id)}">${tr("verEnMapa")}</button>${web ? `<a class="btn chico" href="${esc(web)}" target="_blank" rel="noopener">${tr("paginaEvento")}</a>` : ""}</div></div>
+      <div class="der small">${tr("minPie", min)}</div></div>`; }).join("")}</div>`;
 }
 
 /* ============================================================ "Cerca, ahora" */
@@ -1576,7 +1621,7 @@ function tagPresu(p){ const inf = p.info || {}, pr = loc(inf, "precio"); return 
 function tarjeta(r, i){
   const p = r.p, m = momento(), est = textoEstado(p, m), inf = p.info || {}, nota = loc(inf, "nota");
   return `<article class="card ${S.sel === p.id ? "sel" : ""}" data-id="${esc(p.id)}" data-i="${i}">
-    <div class="row" style="justify-content:space-between"><span class="tipo" style="--c:var(--t-${p.tipo})"><i></i>${TIPOS[p.tipo] || p.tipo}</span>${esMia(p) ? `<span class="tag mia">${tr("deMiLista")}</span>` : ""}</div>
+    <div class="row" style="justify-content:space-between"><span class="tipo" style="--c:var(--t-${p.tipo})"><i></i>${TIPOS[p.tipo] || p.tipo}</span><span class="row" style="gap:4px">${esMia(p) ? `<span class="tag mia">${tr("deMiLista")}</span>` : ""}${p.lat != null ? `<button type="button" class="ico" data-a="compartir" data-v="${esc(p.id)}" aria-label="${tr("compartir")}" title="${tr("compartir")}">${ICONO_COMPARTIR}</button>` : ""}</span></div>
     <h4>${esc(p.n)}</h4>
     <div class="dato"><span>${tr("minPie", r.min)}</span><span class="${est.cls}">${est.t}</span></div>
     <div class="row">${tagsAct(p, 3)}${tagPresu(p)}</div>
@@ -1587,6 +1632,21 @@ function tarjeta(r, i){
       <button type="button" class="btn chico" data-a="marca" data-k="fav" data-v="${esc(p.id)}" aria-pressed="${!!inf.fav}">${inf.fav ? "★" : "☆"} ${tr("favorito")}</button>
       <button type="button" class="btn chico" data-a="marca" data-k="desc" data-v="${esc(p.id)}">${tr("descartar")}</button>
     </div></article>`;
+}
+const ICONO_COMPARTIR = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-3px"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.4M8.3 13.2l7.4 4.4"/></svg>`;
+async function compartirLugar(id){
+  const p = porId.get(id); if (!p || p.lat == null) return;
+  let dir = p.dir || ""; if (!dir){ const i = dirCerca(p.lat, p.lng, 35); if (i != null) dir = textoDir(i); }
+  const mapa = "https://www.google.com/maps/search/?api=1&query=" + p.lat + "," + p.lng;
+  const app = /^https:$/.test(location.protocol) && !/claude\.ai|claudeusercontent/.test(location.hostname) ? location.origin + location.pathname : "";
+  const texto = p.n + (dir ? " — " + dir : "") + "\n" + mapa + (app ? "\n\n" + tr("compartidoDesde", app) : "");
+  const enMarco = window.self !== window.top;
+  if (navigator.share && !enMarco){
+    try { await navigator.share({title: p.n, text: texto}); return; }
+    catch(e){ if (e && e.name === "AbortError") return; }
+  }
+  try { await navigator.clipboard.writeText(texto); toast(tr("copiado")); }
+  catch(e){ toast(tr("noCopiado")); }
 }
 function linkRuta(p, min){
   let u = "https://www.google.com/maps/dir/?api=1&travelmode=" + (min > 25 ? "transit" : "walking") + "&destination=" + p.lat + "," + p.lng;
@@ -1621,6 +1681,7 @@ function vistaCerca(){
     else h = (tarjetasPrimero ? "" : h) + `<div class="cab-res"><h2>${S.sinLimite ? tr("opcionesTodo", S.res.length) : tr("opcionesCerca", S.res.length)}</h2><div class="navcar"><button type="button" data-a="car-prev" aria-label="${tr("anterior")}">‹</button><span id="car-pos">${posCarrusel()}</span><button type="button" data-a="car-next" aria-label="${tr("siguiente")}">›</button></div></div>
       <div class="carrusel" id="carrusel">${S.res.map(tarjeta).join("")}</div>` + (tarjetasPrimero ? h + cajaBuscar(tr("buscaCerca")) : "");
   }
+  if (S.ubic) h += bloqueEventosCerca();
   h += chipsPlanes() + bloqueFiltros(true);
   return h;
 }
@@ -1738,7 +1799,7 @@ function vistaMis(){
      + grupo(tr("gPropios"), propios, false) + grupo(tr("gDesc"), todos.filter(p => p.info.desc), false);
   if (!todos.some(p => p.info.fav || p.info.fui || p.info.amigos || p.info.desc) && !propios.length) h += `<div class="vacio">${tr("sinMarcas")}</div>`;
   h += `<div class="estado"><div><b>${tr("respaldo")}</b><p class="muted small">${tr("respaldoTxt")}</p></div><button type="button" class="btn chico" data-a="respaldo">${tr("descargarRespaldo")}</button></div>`;
-  h += `<p class="muted small">${tr("creditos")}</p>`;
+  h += `<p class="muted small">${tr("creditos")}</p><p class="small autor">${tr("autor")}</p>`;
   return h;
 }
 function formLugar(){
@@ -1788,7 +1849,7 @@ function vistaDetalle(){
     <div class="dato"><span class="${est.cls}">${est.t}</span>${mn != null ? `<span>${tr("minPie", mn)}</span>` : ""}</div>
     ${p.dir ? `<p class="muted">${esc(p.dir)}</p>` : (dc != null ? `<p class="muted">${esc(tr("cercaDe", textoDir(dc)))}</p>` : "")}
     <div class="row">${(p.act || []).map(x => `<span class="tag mia">${ACTS[x] || x}</span>`).join("")}${(p.planes || []).map(x => `<span class="tag">${PLANES[x] || x}</span>`).join("")}<span class="tag">${p.io === "ext" ? tr("exterior") : tr("interior")}</span><span class="tag">${tr("presuTag", PRESU[p.presu] || "?", !(p.propio || inf.presu))}</span></div>
-    <div class="row">${p.lat != null ? `<a class="btn prim" href="${linkRuta(p)}" target="_blank" rel="noopener">${tr("comoLlegar")}</a><button type="button" class="btn" data-a="ver-mapa" data-v="${esc(p.id)}">${tr("verEnMapa")}</button>` : `<span class="muted small">${tr("sinUbicMapa")}</span>`}${p.web ? `<a class="btn" href="${esc(p.web)}" target="_blank" rel="noopener">${tr("sitioWeb")}</a>` : ""}</div>
+    <div class="row">${p.lat != null ? `<a class="btn prim" href="${linkRuta(p)}" target="_blank" rel="noopener">${tr("comoLlegar")}</a><button type="button" class="btn" data-a="ver-mapa" data-v="${esc(p.id)}">${tr("verEnMapa")}</button><button type="button" class="btn" data-a="compartir" data-v="${esc(p.id)}">${ICONO_COMPARTIR} ${tr("compartir")}</button>` : `<span class="muted small">${tr("sinUbicMapa")}</span>`}${p.web ? `<a class="btn" href="${esc(p.web)}" target="_blank" rel="noopener">${tr("sitioWeb")}</a>` : ""}</div>
     <div class="campo"><span class="lbl">${tr("misMarcas")}</span><div class="marcas">${[["fav",tr("mFav")],["fui",tr("mFui")],["amigos",tr("mAmigos")],["desc",tr("mDesc")]].map(([k, x]) => `<button type="button" class="chip" data-a="marca" data-k="${k}" data-v="${esc(p.id)}" aria-pressed="${!!inf[k]}">${x}</button>`).join("")}</div></div>`;
   if (p.hs){
     h += `<div class="campo"><span class="lbl">${tr("horarioLbl")}</span><div class="horas">${p.hs.map((tt, i) => `<span class="${i === m.dia ? "hoy" : ""}">${DIAS[i]}</span><span class="${i === m.dia ? "hoy" : ""}">${tt.length ? tt.map(([a, b]) => b - a >= 1440 ? "24 h" : hhmm(a) + "–" + hhmm(b)).join(", ") : tr("cerrado")}</span>`).join("")}</div>
@@ -1879,6 +1940,7 @@ document.addEventListener("click", ev => {
     case "io": S.io = v; recalcular(); break;
     case "cuando": S.cuando = v; if (v === "otro"){ const m = new Date(); S.dia = (m.getDay()+6)%7; S.min = m.getHours()*60 + m.getMinutes(); } recalcular(); break;
     case "detalle": abrirDetalle(v); break;
+    case "compartir": compartirLugar(v); break;
     case "volver": ponerHoja(S.tab === "cerca" ? "medio" : "lista"); S.detalle = null; render(); capa.pedir(); break;
     case "ver-mapa": { const p = porId.get(v); if (p){ ponerHoja("mapa"); S.sel = v; irA(p, 17); capa.pedir(); } break; }
     case "marca": { const p = porId.get(v); if (!p) break; const k = b.dataset.k; const nuevo = !p.info[k];
@@ -1909,6 +1971,7 @@ document.addEventListener("click", ev => {
     case "fe-guardar": guardarEvento(); break;
     case "borrar-evento": if (EVENTOS_PUB[v]) EVENTOS[v] = {oculto: true}; else delete EVENTOS[v]; guardarLocal(); render(); toast(tr("tEventoBorrado")); break;
     case "ir-evento": { const e = todosEventos()[v]; const c = coordsEv(e); if (c){ S.marcaEv = c; ponerHoja("mapa"); map.setView([c.lat, c.lng], 17.5); capa.pedir(); } break; }
+    case "tema": cambiarTema(); break;
     case "respaldo": respaldo(); break;
     case "gps": usarGPS(); break;
     case "car-prev": moverCarrusel(-1); break;
@@ -2049,12 +2112,35 @@ function ponerHoja(e){
 new ResizeObserver(() => { if (typeof map !== "undefined" && map){ map.invalidateSize({pan:false}); capa.pedir(); } }).observe($("#mapa-wrap"));
 function ocultarTeclado(){ if (esMovil() && document.activeElement && document.activeElement.blur) document.activeElement.blur(); }
 
+/* ============================================================ tema claro / oscuro */
+const ICONO_LUNA = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>`;
+const ICONO_SOL = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>`;
+try { const t = localStorage.getItem("citas-ba-tema"); if (t === "dark" || t === "light") document.documentElement.dataset.theme = t; } catch(e){}
+function temaActual(){
+  const t = document.documentElement.dataset.theme;
+  return t === "dark" || t === "light" ? t : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+}
+function pintarBotonTema(){
+  const b = document.getElementById("btn-tema"); if (!b) return;
+  const oscuro = temaActual() === "dark", t = tr(oscuro ? "temaClaro" : "temaOscuro");
+  b.innerHTML = oscuro ? ICONO_SOL : ICONO_LUNA; b.setAttribute("aria-label", t); b.title = t;
+}
+function cambiarTema(){
+  const nuevo = temaActual() === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = nuevo;          // el mapa se redibuja solo (observa data-theme)
+  try { localStorage.setItem("citas-ba-tema", nuevo); } catch(e){}
+  pintarBotonTema();
+}
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", pintarBotonTema);
+new MutationObserver(pintarBotonTema).observe(document.documentElement, {attributes: true, attributeFilter: ["data-theme"]});
+
 /* ============================================================ idioma */
 function textosEstaticos(){
   document.documentElement.lang = LANG;
   document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = tr(el.dataset.i18n); });
   document.querySelectorAll("[data-i18n-aria]").forEach(el => { el.setAttribute("aria-label", tr(el.dataset.i18nAria)); if (el.title) el.title = tr(el.dataset.i18nAria); });
   document.querySelectorAll("[data-lang]").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === LANG));
+  pintarBotonTema();
   if (typeof map !== "undefined" && map && map._attribActual){ map.attributionControl.removeAttribution(map._attribActual); map._attribActual = tr("attrib"); map.attributionControl.addAttribution(map._attribActual); }
 }
 function cambiarIdioma(l){

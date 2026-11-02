@@ -9,6 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="BA Spots">
+<style>html,body{margin:0;padding:0}</style>
 <meta name="description" content="Bratislava Spots: things to do in Bratislava right now. Places that are open and nearby, on foot along real streets, with activity filters and an events calendar.">
 <title>Bratislava Spots</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -745,7 +746,9 @@ input[type=range]:disabled{opacity:.35}
   .marca{font-size:17px}
   .marca small{display:none}
   .reloj{display:none}
-  .tema{margin-left:auto;width:40px;height:36px}
+  .tema{width:40px;height:36px}
+  .top .tema:not([hidden]){margin-left:auto}
+  .top .tema:not([hidden]) ~ .tema{margin-left:0}
   h2{font-size:18px}
   .navcar{gap:4px}
   .navcar span{min-width:44px}
@@ -769,6 +772,7 @@ input[type=range]:disabled{opacity:.35}
   <header class="top">
     <div class="marca"><span data-i18n="marca">Bratislava Spots</span><small data-i18n="sub">Qué hacer en la ciudad</small></div>
     <div class="reloj" id="reloj"></div>
+    <button type="button" class="tema" id="btn-instalar" data-a="instalar" hidden></button>
     <button type="button" class="tema" id="btn-tema" data-a="tema"></button>
     <div class="idioma" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es" aria-pressed="true">ES</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
   </header>
@@ -1990,7 +1994,7 @@ document.addEventListener("click", ev => {
     case "tema": cambiarTema(); break;
     case "respaldo": respaldo(); break;
     case "gps": usarGPS(); break;
-    case "instalar": if (pedidoInstalar){ const pi = pedidoInstalar; pi.prompt(); pi.userChoice.finally(() => { pedidoInstalar = null; render(); }); } break;
+    case "instalar": if (pedidoInstalar){ const pi = pedidoInstalar; pi.prompt(); pi.userChoice.finally(() => { pedidoInstalar = null; botonInstalar(); render(); }); } break;
     case "car-prev": moverCarrusel(-1); break;
     case "car-next": moverCarrusel(1); break;
     case "mover": ponerHoja("mapa"); S.esperandoUbic = true; avisoMapa(tr("tTocaEstas")); break;
@@ -2081,8 +2085,10 @@ function guardarEvento(){
   const id = "e" + Date.now().toString(36); EVENTOS[id] = f; guardar("eventos", id, f); S.formEvento = null; render(); toast(tr("tEventoGuardado"));
 }
 let pedidoInstalar = null;
-addEventListener("beforeinstallprompt", e => { e.preventDefault(); pedidoInstalar = e; if (S.tab === "mis") render(); });
-addEventListener("appinstalled", () => { pedidoInstalar = null; toast(tr("instalada")); render(); });
+const ICONO_INSTALAR = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v3h16v-3"/></svg>`;
+function botonInstalar(){ const b = document.getElementById("btn-instalar"); if (!b) return; b.hidden = !pedidoInstalar || esApp(); b.innerHTML = ICONO_INSTALAR; b.setAttribute("aria-label", tr("instalar")); b.title = tr("instalar"); }
+addEventListener("beforeinstallprompt", e => { e.preventDefault(); pedidoInstalar = e; botonInstalar(); if (S.tab === "mis") render(); });
+addEventListener("appinstalled", () => { pedidoInstalar = null; botonInstalar(); toast(tr("instalada")); render(); });
 function esApp(){ return matchMedia("(display-mode: standalone)").matches || navigator.standalone === true; }
 function bloqueInstalar(){
   if (esApp() || location.protocol !== "https:") return "";

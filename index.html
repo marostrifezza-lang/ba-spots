@@ -2,6 +2,13 @@
 <html lang="en">
 <meta charset="utf-8">
 <meta name="author" content="Maro Strifezza">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BA Spots">
 <meta name="description" content="Bratislava Spots: things to do in Bratislava right now. Places that are open and nearby, on foot along real streets, with activity filters and an events calendar.">
 <title>Bratislava Spots</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -882,7 +889,11 @@ const I18N = {
     importLeyendo:"Leyendo el archivo…", fuenteEv:f => `Fuente: ${f}`,
     misCosas:"Mis cosas", agregarLugar:"Agregar lugar",
     soloLocal:"Tus marcas, notas y lugares se guardan solo en este navegador. Usa \"Descargar respaldo\" para no perderlos.",
-    autor:"App creada por Maro Strifezza", usarGPS:"Usar mi ubicación", gpsBuscando:"Buscando tu ubicación…", gpsFuera:"Tu ubicación está fuera del mapa de Bratislava.",
+    autor:"App creada por Maro Strifezza", instalar:"Instalar como app", instalarBtn:"Instalar", instalada:"App instalada",
+    instalarTxt:"Se abre a pantalla completa, sin la barra del navegador, con su propio ícono en el inicio del celular.",
+    instalarIOS:"En Safari: toca Compartir (el cuadrado con la flecha hacia arriba) y luego \"Agregar a inicio\". Se abre a pantalla completa, sin la barra del navegador.",
+    instalarOtro:"En el menú del navegador (⋮ o ⋯), elige \"Instalar app\" o \"Agregar a la pantalla de inicio\". Se abre a pantalla completa, sin la barra del navegador.",
+    usarGPS:"Usar mi ubicación", gpsBuscando:"Buscando tu ubicación…", gpsFuera:"Tu ubicación está fuera del mapa de Bratislava.",
     gpsError:"No se pudo obtener tu ubicación. Revisa el permiso de ubicación del navegador o toca el mapa.",
     tocaMapaTxtWeb:"o usa tu ubicación, o escribe la calle arriba. Te muestro lo que está abierto y cerca, en este momento.",
     eventosActualizados:d => `Eventos actualizados el ${d}.`,
@@ -947,7 +958,11 @@ const I18N = {
     importLeyendo:"Reading the file…", fuenteEv:f => `Source: ${f}`,
     misCosas:"My stuff", agregarLugar:"Add place",
     soloLocal:"Your marks, notes and places are saved only in this browser. Use \"Download backup\" so you don't lose them.",
-    autor:"App created by Maro Strifezza", usarGPS:"Use my location", gpsBuscando:"Finding your location…", gpsFuera:"Your location is outside the Bratislava map.",
+    autor:"App created by Maro Strifezza", instalar:"Install as an app", instalarBtn:"Install", instalada:"App installed",
+    instalarTxt:"Opens full screen, without the browser bar, with its own icon on your home screen.",
+    instalarIOS:"In Safari: tap Share (the square with the up arrow), then \"Add to Home Screen\". It opens full screen, without the browser bar.",
+    instalarOtro:"In the browser menu (⋮ or ⋯), choose \"Install app\" or \"Add to Home screen\". It opens full screen, without the browser bar.",
+    usarGPS:"Use my location", gpsBuscando:"Finding your location…", gpsFuera:"Your location is outside the Bratislava map.",
     gpsError:"Couldn't get your location. Check the browser's location permission or tap the map.",
     tocaMapaTxtWeb:"or use your location, or type the street above. I'll show you what's open and nearby right now.",
     eventosActualizados:d => `Events updated on ${d}.`,
@@ -1793,6 +1808,7 @@ function vistaMis(){
   const por = k => todos.filter(p => p.info[k]).sort((a, b) => a.n.localeCompare(b.n, "sk"));
   const propios = todos.filter(p => p.propio);
   let h = `<div class="cab-res"><h2>${tr("misCosas")}</h2><button type="button" class="btn chico prim" data-a="nuevo-lugar">${tr("agregarLugar")}</button></div>`;
+  h += bloqueInstalar();
   if (soloLocal) h += `<p class="banner">${tr("soloLocal")}</p>`;
   if (S.formLugar) h += formLugar();
   h += grupo(tr("gFav"), por("fav"), true) + grupo(tr("gFui"), por("fui"), false) + grupo(tr("gAmigos"), por("amigos"), false)
@@ -1974,6 +1990,7 @@ document.addEventListener("click", ev => {
     case "tema": cambiarTema(); break;
     case "respaldo": respaldo(); break;
     case "gps": usarGPS(); break;
+    case "instalar": if (pedidoInstalar){ const pi = pedidoInstalar; pi.prompt(); pi.userChoice.finally(() => { pedidoInstalar = null; render(); }); } break;
     case "car-prev": moverCarrusel(-1); break;
     case "car-next": moverCarrusel(1); break;
     case "mover": ponerHoja("mapa"); S.esperandoUbic = true; avisoMapa(tr("tTocaEstas")); break;
@@ -2063,6 +2080,22 @@ function guardarEvento(){
   if (f.desde && f.hasta && f.hasta < f.desde){ err.textContent = tr("errOrden"); err.hidden = false; return; }
   const id = "e" + Date.now().toString(36); EVENTOS[id] = f; guardar("eventos", id, f); S.formEvento = null; render(); toast(tr("tEventoGuardado"));
 }
+let pedidoInstalar = null;
+addEventListener("beforeinstallprompt", e => { e.preventDefault(); pedidoInstalar = e; if (S.tab === "mis") render(); });
+addEventListener("appinstalled", () => { pedidoInstalar = null; toast(tr("instalada")); render(); });
+function esApp(){ return matchMedia("(display-mode: standalone)").matches || navigator.standalone === true; }
+function bloqueInstalar(){
+  if (esApp() || location.protocol !== "https:") return "";
+  const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const txt = pedidoInstalar ? tr("instalarTxt") : ios ? tr("instalarIOS") : tr("instalarOtro");
+  return `<div class="estado"><div><b>${tr("instalar")}</b><p class="muted small">${txt}</p></div>${pedidoInstalar ? `<button type="button" class="btn chico prim" data-a="instalar">${tr("instalarBtn")}</button>` : ""}</div>`;
+}
+if ("serviceWorker" in navigator && location.protocol === "https:") addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+// color de la barra del sistema igual a la cabecera, también al cambiar claro/oscuro
+function colorBarra(){ const m = document.querySelector('meta[name="theme-color"]'); if (m) m.content = getComputedStyle(document.documentElement).getPropertyValue("--surface").trim() || "#FFFFFF"; }
+new MutationObserver(colorBarra).observe(document.documentElement, {attributes: true, attributeFilter: ["data-theme"]});
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", colorBarra);
+setTimeout(colorBarra, 0);
 function hayGPS(){ return !!(navigator.geolocation && window.isSecureContext); }
 function usarGPS(){
   if (!hayGPS()) return;

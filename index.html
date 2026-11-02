@@ -720,6 +720,10 @@ details.filtros[open] summary::after{content:" ▴"}
 .item:hover{border-color:var(--muted)}
 .item .t{font-weight:600;overflow-wrap:anywhere}
 .item .der{text-align:right;font-family:var(--f-mono);font-size:12.5px;white-space:nowrap}
+.item > .min-w0{flex:1}
+/* tarjetas de eventos: la fecha arriba y el texto a todo el ancho */
+.item.ev{flex-direction:column;gap:4px}
+.item.ev .der{order:-1;text-align:left;color:var(--muted);white-space:normal}
 .min-w0{min-width:0}
 .vacio{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r-lg);padding:18px;text-align:center;color:var(--muted)}
 .horas{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;font-family:var(--f-mono);font-size:13px;font-variant-numeric:tabular-nums}
@@ -1793,7 +1797,7 @@ function vistaEventos(){
     const activo = (e.desde || hoy) <= hoy;
     const rango = e.desde && e.hasta && e.desde !== e.hasta ? fechaCorta(e.desde) + " – " + fechaCorta(e.hasta) : e.hasta && !e.desde ? tr("hastaEl", fechaCorta(e.hasta)) : fechaCorta(e.desde || e.hasta);
     const horario = loc(e, "horario"), precio = loc(e, "precio"), desc = loc(e, "desc"), nota = loc(e, "nota"), lugar = loc(e, "lugar");
-    return `<div class="item" style="cursor:default"><div class="min-w0"><div class="t">${esc(loc(e, "n"))}</div>
+    return `<div class="item ev" style="cursor:default"><div class="min-w0"><div class="t">${esc(loc(e, "n"))}</div>
       <div class="small muted">${esc(lugar)}${horario ? " · " + esc(horario) : ""}</div>
       ${precio ? `<div class="small"><b>${tr("precio")}:</b> ${esc(precio)}</div>` : ""}
       ${desc ? `<p class="ev-desc">${esc(desc)}</p>` : ""}

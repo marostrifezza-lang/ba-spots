@@ -2327,8 +2327,12 @@ const esMovil = () => MQ_MOVIL.matches;
 const HOJA = {mapa: 0.70, medio: 0.46, lista: 0.20};   // parte de la pantalla que ocupa el mapa
 let hoja = "medio";
 function volverInicio(){
+  // todo vuelve a como al abrir la app; solo se mantienen el idioma y el tema (y tus lugares guardados)
   Object.assign(S, {tab: "cerca", ubic: null, res: [], sel: null, lejano: null, detalle: null, texto: "", verMas: 60,
-    esperandoUbic: false, ubicPara: null, formLugar: null, formEvento: null, marcaDir: null, marcaEv: null, confirmarBorrar: null});
+    esperandoUbic: false, ubicPara: null, formLugar: null, formEvento: null, marcaDir: null, marcaEv: null, confirmarBorrar: null,
+    act: new Set(), planes: new Set(), presuMax: "todos", sinLimite: false, io: "todos", etapa: "todas", maxMin: 15, minAbierto: 60,
+    cuando: "ahora", dia: 0, min: 0, sinHorario: true, filtrosAbiertos: false});
+  if (typeof menuIdioma === "function") menuIdioma(false);
   ultimoDij = null; avisoMapa("");
   if (typeof map !== "undefined" && map) map.setView([48.1440, 17.1085], 15.5);
   ponerHoja("medio"); render(); capa.pedir();

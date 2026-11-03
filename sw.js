@@ -2,7 +2,7 @@
 // Permite instalarla como app y abrirla sin conexión con lo último que se cargó.
 // Archivos propios: primero la red (la página y los datos se revalidan siempre con GitHub, así ves la última versión);
 // si no hay conexión, se usa lo guardado. Leaflet y las fuentes (versión fija): primero lo guardado.
-const CACHE = "ba-spots-v2";
+const CACHE = "ba-spots-v3";
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => Promise.all([

@@ -1,7 +1,20 @@
 {
  "formato": "citas-bratislava-eventos/1",
- "generado": "2026-11-09T19:21+01:00",
+ "generado": "2026-11-09T19:31+01:00",
  "eventos": [
+  {
+   "n": "Bratislava Mozart Festival 2026",
+   "lugar": "Bratislava – various venues",
+   "desde": "2026-10-30",
+   "hasta": "2026-11-24",
+   "horario": "",
+   "precio": "",
+   "desc": "During its 13th edition, the Bratislava Mozart Festival will feature the traditional Mozart Requiem, Brahms’s clarinet sonatas performed by Róbert Šebesta and Ladislav Fančovič, Mozart’s Gran Partita Academic with the VŠMU Harmoniemusik wind ensemble, a journey through the musical history of the former Pressburg via a musical walk led by Zuzana Godárová, and a unique presentation of a collection of historical clarinets from the 18th and 19th centuries, with practical demonstrations of their…",
+   "web": "https://goout.net/en/bratislava-mozart-festival-2026/szhisoy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "id": "imp-ed2f073f6696"
+  },
   {
    "n": "Mestológia",
    "lugar": "TU–BA, Štúrová 12/4",
@@ -27,6 +40,19 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-7b15a10b438c"
+  },
+  {
+   "n": "Príbehy z Írska",
+   "lugar": "Kino Lumière, Špitálska 4",
+   "desde": "2026-11-07",
+   "hasta": "2026-12-10",
+   "horario": "",
+   "precio": "",
+   "desc": "The “Stories from Ireland film series brings a selection of four Irish films to Bratislava’s Kino Lumière, showcasing various facets of Irish history, mythology, culture, and distinctive humor. The series features two internationally acclaimed, Oscar-nominated animated films – Song of the Sea and Wolfwalkers, the historical biographical drama Michael Collins, and the comedy The Guard. The event is being held to mark Ireland’s presidency of the Council of the European Union and is organized by…",
+   "web": "https://goout.net/en/pribehy-z-irska/szghwny/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "id": "imp-9d96f50b5edf"
   },
   {
    "n": "Rodinné skutočnosti: Obraz života bratislavských rodín",
@@ -150,6 +176,19 @@
    "id": "imp-afe37c7cbf7e"
   },
   {
+   "n": "Palantir Conference v0.1",
+   "lugar": "Swiss Re, Twin City, House B, Mlynské nivy 12, 821 05 Bratislava, Slovakia, Bratislava",
+   "desde": "2026-11-10",
+   "hasta": "2026-11-10",
+   "horario": "16:30",
+   "precio": "",
+   "desc": "Everyone talks about AI and data-driven transformation. But what does it actually look like in practice? That's exactly what we want to explore at Palantir Conference 0.1, which we're organizing together with @Swiss Re in Bratislava on November 10. No generic AI hype or endless theoretical discussions. We're bringing together people who work with Palantir and AI to share real experiences, practical approaches, and lessons learned. What can you expect? 🟢Real-world Palantir use cases – Get a…",
+   "web": "https://www.meetup.com/palantir-conference-svk/events/316981763/",
+   "tickets": "",
+   "fuente": "Meetup",
+   "id": "imp-95fd046bb44d"
+  },
+  {
    "n": "Festival Slobody: Analóg Z Exilu – Maya Deren + Viliam Solovic",
    "lugar": "A4 – priestor súčasnej kultúry, Karpatská 2",
    "desde": "2026-11-10",
@@ -215,6 +254,19 @@
    "id": "imp-942098adfe92"
   },
   {
+   "n": "Agents & Dragons: Once Upon Agentic AI Workshop [AWS User Group Bratislava]",
+   "lugar": "Jurská 19, Jurská 19, 831 02 Bratislava-Rača, Slovakia, Bratislava",
+   "desde": "2026-11-11",
+   "hasta": "2026-11-11",
+   "horario": "17:30",
+   "precio": "",
+   "desc": "This time we’re doing something different. Instead of talks, we’re running a three-hour hands-on workshop where you’ll build your own AI Game Master: an agent that runs a fantasy role-playing adventure, rolls the dice, knows the rules and keeps track of your characters. Along the way you’ll learn how to build agents with Strands Agents, the open source SDK from AWS. You’ll start with a single agent, then give it vended and custom tools, connect it to external services over MCP, and finally…",
+   "web": "https://www.meetup.com/aws-user-group-bratislava/events/317205977/",
+   "tickets": "",
+   "fuente": "Meetup",
+   "id": "imp-1ed8df1b77ef"
+  },
+  {
    "n": "Komentovaný sprievod výstavou Byť prírodou",
    "lugar": "Mirbachov palác, Františkánske nám. 11",
    "desde": "2026-11-11",
@@ -243,6 +295,19 @@
    "id": "imp-ab214b791c8f"
   },
   {
+   "n": "Večer inšpirácií",
+   "lugar": "Nová Cvernovka, Račianska 78, 831 02 Bratislava-Nové Mesto, Slovakia, Bratislava",
+   "desde": "2026-11-12",
+   "hasta": "2026-11-12",
+   "horario": "17:00",
+   "precio": "",
+   "desc": "Séria podujatí Ľudskosť 5.0 pokračuje! Pozývame vás na večer, kde sa formálne tituly menia na úprimné zdieľanie skúseností. Grow-up Večer inšpirácií je miestom pre všetkých, ktorí veria, že ľudskosť a výkon si neodporujú. ČO VÁS ČAKÁ? • Inšpiratívni hostia a otvorené diskusie. • Krátke workshopy plné AHA momentov. • Ochutnávka koučingu a kariérneho poradenstva. • Kvalitný networking a výborný catering. Téma večera: UDRŽATEĽNOSŤ V LEADERSHIPE O udržateľnosti sa najčastejšie rozprávame v…",
+   "web": "https://www.meetup.com/bratislava-strategic-management-meetup-group/events/316811432/",
+   "tickets": "",
+   "fuente": "Meetup",
+   "id": "imp-13bf9289f922"
+  },
+  {
    "n": "Girlspoint: Moon art",
    "lugar": "Kubi's the nook, Mlynské nivy 10",
    "desde": "2026-11-12",
@@ -254,6 +319,19 @@
    "tickets": "https://goout.net/sale/623594",
    "fuente": "GoOut",
    "id": "imp-ae4c972e4a70"
+  },
+  {
+   "n": "🎟️ TICKET REQUIRED | Fuckup Nights Bratislava – Four Untold Stories (in Slovak)",
+   "lugar": "A4 – Priestor súčasnej kultúry, Karpatská 2, 811 05 Bratislava-Staré Mesto, Slovakia, Bratislava",
+   "desde": "2026-11-12",
+   "hasta": "2026-11-12",
+   "horario": "19:00",
+   "precio": "",
+   "desc": "IMPORTANT: This is a ticketed event. You must purchase a ticket in advance to attend. An RSVP on Meetup alone does NOT guarantee entry. What do accomplished women, ambitious decisions, unexpected plot twists, and a room full of strangers have in common? Four remarkable stories you probably won't hear anywhere else. For one special evening, [Fuckup Nights Bratislava](https://www.tickettailor.com/events/fuckupnightsbratislava/2456730) is handing the microphone to four inspiring women who are…",
+   "web": "https://www.meetup.com/agilebratislava/events/317337191/",
+   "tickets": "",
+   "fuente": "Meetup",
+   "id": "imp-4956d3a994ae"
   },
   {
    "n": "Vrana",
@@ -338,6 +416,19 @@
    "id": "imp-286bd60375e9"
   },
   {
+   "n": "Vôid 2026",
+   "lugar": "Nová Cvernovka, Račianska 1575/78",
+   "desde": "2026-11-14",
+   "hasta": "2026-11-14",
+   "horario": "20:00",
+   "precio": "14 €",
+   "desc": "Vôid is returning to Nová Cvernovka. It will transform familiar spaces into unrecognisable places with new, uncharted music. Vôid is a chamber music festival for curious ears, straddling the boundaries of ambient, experimental electronica and alternative live music. In the ever-changing setting of Nová Cvernovka, it brings together a carefully curated evening of visionary electronic music creators, ambient exploration and distinctive live performances. An opportunity to enjoy music that…",
+   "web": "https://goout.net/en/void-2026/szmcpoy/",
+   "tickets": "https://goout.net/sale/630995",
+   "fuente": "GoOut",
+   "id": "imp-06919590876e"
+  },
+  {
    "n": "Endsieg – Dobytie",
    "lugar": "Malá scéna STU, Dostojevského rad 7",
    "desde": "2026-11-16",
@@ -349,6 +440,19 @@
    "tickets": "https://goout.net/sale/602330",
    "fuente": "GoOut",
    "id": "imp-f98c0fd31a7b"
+  },
+  {
+   "n": "AI 4 DEV — 11/2026 @ Bratislava",
+   "lugar": "Alma Career, Pribinova 19, Bratislava",
+   "desde": "2026-11-18",
+   "hasta": "2026-11-18",
+   "horario": "17:30",
+   "precio": "",
+   "desc": "AI mění způsob, jakým píšeme software. A AI4DEV je meetup pro vývojáře, kteří chtějí být u toho. Je to setkání lidí, které baví zkoumat, kam až se dá AI ve vývoji posunout. Jak z rutiny udělat práci pro agenta. Jak refaktorovat legacy projekt s pomocí AI na dny místo měsíců. Jak zapojit nové modely do existujících systémů — nebo jak úplně změnit způsob, jak přemýšlíme o programování. AI4DEV vznikl v Česku a má za sebou řadu meetupů plných experimentů, diskuzí a sdílení zkušeností z praxe. A…",
+   "web": "https://www.meetup.com/ai-4-dev/events/317203520/",
+   "tickets": "",
+   "fuente": "Meetup",
+   "id": "imp-5e54be219c21"
   },
   {
    "n": "Bratislava Discovery: Bunkers",
@@ -394,6 +498,19 @@
    "lat": 48.156258,
    "lng": 17.108029,
    "id": "imp-5489f0060381"
+  },
+  {
+   "n": "International Night Bratislava (from Vienna)",
+   "lugar": "Clarion Congress Hotel Bratislava, Žabotova 2, Bratislava-Staré Mesto",
+   "desde": "2026-11-21",
+   "hasta": "2026-11-21",
+   "horario": "19:00",
+   "precio": "",
+   "desc": "Note: This event will start and end in Bratislava (Slovakia), which is easy to reach by direct train or bus from Vienna. A night of global networking and cultural exchange for expats and locals. Join our group, strike up a chat and build instant rapport with new friends from around the world. To keep things fun and mingly, we'll also host a community quiz and other social games. Space will be arranged into a main international section for English speakers as well as designated corners for…",
+   "web": "https://www.meetup.com/vienna/events/317242514/",
+   "tickets": "",
+   "fuente": "Meetup",
+   "id": "imp-7716ff94bc39"
   }
  ]
 }

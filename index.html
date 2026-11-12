@@ -814,6 +814,32 @@ details.filtros[open] summary::after{content:" ▴"}
 .ev-mas{align-self:flex-start;font-size:13.5px;margin-top:2px}
 .item.ev.sel{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
 .ev-fechas{margin-bottom:2px}
+.ev-sec, .ev-vista{width:100%}
+.ev-sec{margin-top:-8px}
+.cart-der{display:inline-flex;align-items:center;gap:8px;flex:none}
+.cart-exp{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);display:grid;place-items:center;cursor:pointer;padding:0;transition:transform .15s}
+.cart-exp[aria-expanded="true"]{transform:rotate(180deg);background:var(--accent-soft);color:var(--accent);border-color:var(--accent-soft)}
+.cart-exp:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.cart-exp{transition:none}}
+.ev-vista{max-width:320px}
+.item.cart{flex-direction:column;align-items:stretch}
+.item.cart > .min-w0{width:100%}
+.item.cart.sel{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
+.lin-cart{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.cart-sala{margin-top:8px;font-size:14px}
+.cart-obra{border-top:1px solid var(--line);padding-top:8px;margin-top:8px}
+.notas{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.nota{font-size:12px;padding:1px 6px;border-radius:6px;border:1px solid var(--line);color:var(--ink);text-decoration:none;font-variant-numeric:tabular-nums;white-space:nowrap}
+.nota b{font-weight:700;color:var(--muted);margin-right:2px}
+a.nota:hover{border-color:var(--accent)}
+.cart-dia{display:flex;gap:8px;align-items:flex-start;margin-top:4px}
+.cart-d{flex:none;min-width:44px;font-size:12.5px;color:var(--muted);padding-top:4px;text-transform:capitalize}
+.cart-hs{display:flex;flex-wrap:wrap;gap:4px 10px;min-width:0}
+.cart-grupo{display:inline-flex;flex-wrap:wrap;align-items:center;gap:4px}
+.cart-k{font-size:11.5px;color:var(--muted)}
+.hora-c{font-family:var(--f-mono);font-size:13px;font-weight:600;padding:3px 7px;border-radius:7px;background:var(--accent-soft);color:var(--accent);text-decoration:none;font-variant-numeric:tabular-nums}
+a.hora-c:hover{filter:brightness(.95)}
+.hora-c.agot{background:var(--surface-2);color:var(--muted);text-decoration:line-through}
 .ev-dia{position:relative;cursor:pointer}
 .ev-dia input{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer;border:0;padding:0}
 .ev-estrellas{margin:0}
@@ -828,10 +854,34 @@ details.filtros[open] summary::after{content:" ▴"}
 .item > .min-w0{flex:1}
 /* tarjetas de eventos: la fecha arriba y el texto a todo el ancho */
 .item.ev{flex-direction:column;gap:4px}
-.item.ev .der{order:-1;text-align:left;color:var(--muted);white-space:normal;padding-right:128px}
+.item.ev .der{order:-1;text-align:left;color:var(--muted);white-space:normal;padding-right:40px}
+.ev-ahora{vertical-align:2px;margin-left:4px;white-space:nowrap}
 .item.ev{position:relative}
 .ev-sup{position:absolute;top:8px;right:8px;display:flex;align-items:center;gap:6px}
 .ev-x{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--muted);font-size:12px;line-height:1;display:grid;place-items:center;cursor:pointer;padding:0}
+.item-guard{position:relative}
+.item-guard > .item{width:100%;padding-right:46px}
+.guard-x{position:absolute;top:8px;right:8px}
+.item.ev, .item.ev-g{cursor:pointer!important}
+@keyframes entraIzq{from{transform:translateX(32px);opacity:.35}to{transform:none;opacity:1}}
+@keyframes entraDer{from{transform:translateX(-32px);opacity:.35}to{transform:none;opacity:1}}
+#vista.desliza-izq{animation:entraIzq .22s ease-out}
+#vista.desliza-der{animation:entraDer .22s ease-out}
+@media (prefers-reduced-motion: reduce){#vista.desliza-izq,#vista.desliza-der{animation:none}}
+.det-cab{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.det-cab h2{padding-top:4px;min-width:0}
+.det-dir{margin:4px 0 0}
+.det-sub{align-items:center;gap:10px 14px;margin-top:-4px}
+.det-x{flex:none;width:34px;height:34px;font-size:14px}
+.btn-fav[aria-pressed="true"]{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.item.ev-g{flex-direction:column;cursor:default}
+.fav-estrella{position:absolute;right:10px;bottom:10px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--muted);font-size:20px;line-height:1;display:grid;place-items:center;cursor:pointer;padding:0;z-index:2}
+.fav-estrella[aria-pressed="true"]{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.fav-estrella:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.card{position:relative}
+.card .acciones{padding-right:48px}
+.item.ev > .min-w0{padding-right:48px;min-height:44px}
+.item.ev-fin{opacity:.6}
 .ev-x:hover{color:var(--ink);border-color:var(--muted)}
 .ev-x:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .min-w0{min-width:0}
@@ -854,8 +904,9 @@ input[type=range]:disabled{opacity:.35}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 /* ---------- celular: se activa solo en pantallas angostas ---------- */
 .asa{display:none}
+.tab-max{display:none}
 @media (max-width:899px){
-  #app{grid-template-rows:auto var(--mapa-h,46%) minmax(0,1fr)}
+  #app{grid-template-rows:auto var(--mapa-h,20%) minmax(0,1fr)}
   header.top{padding-block:7px}
   .marca{font-size:17px}
   .marca small{display:none}
@@ -884,6 +935,12 @@ input[type=range]:disabled{opacity:.35}
   .idioma button{padding:7px 11px}
   .idioma-btn{height:36px;padding:0 9px 0 10px}
   #mapa-wrap{border-bottom:0}
+  .tab-max{display:grid!important;place-items:center;flex:none!important;width:46px;padding:8px 0!important;border:0;background:none;color:var(--ink);cursor:pointer;border-radius:12px}
+  .tab-max[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent)}
+  @media (hover:hover){.tab-max:hover{background:var(--accent-soft);color:var(--accent)}}
+  .tab-max:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+  #app.mapa-max{grid-template-rows:auto minmax(0,1fr) auto}
+  #app.mapa-max #vista, #app.mapa-max .asa{display:none}
 }
 </style>
 
@@ -925,10 +982,11 @@ input[type=range]:disabled{opacity:.35}
   <section id="panel">
     <div class="asa" id="asa" role="separator" aria-orientation="horizontal" tabindex="0" aria-label="Arrastra para ajustar el mapa" data-i18n-aria="asa"><span></span><small class="asa-txt" data-i18n="asaTxt" aria-hidden="true">Arrastra esta barra para cambiar el tamaño del mapa</small></div>
     <nav class="tabs" role="tablist">
-      <button type="button" role="tab" data-tab="cerca" aria-selected="true" data-i18n="tabCerca">Cerca, ahora</button>
+      <button type="button" role="tab" data-tab="cerca" aria-selected="true" data-i18n="tabCerca">Cerca mío</button>
       <button type="button" role="tab" data-tab="explorar" aria-selected="false" data-i18n="tabExplorar">Explorar</button>
       <button type="button" role="tab" data-tab="eventos" aria-selected="false" data-i18n="tabEventos">Eventos</button>
-      <button type="button" role="tab" data-tab="mis" aria-selected="false" data-i18n="tabMis">Mis lugares</button>
+      <button type="button" role="tab" data-tab="mis" aria-selected="false" data-i18n="tabMis">★ Spots</button>
+      <button type="button" class="tab-max" id="btn-mapa-max" data-a="mapa-max" aria-pressed="false" aria-label="Ver el mapa completo" title="Ver el mapa completo"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
     </nav>
     <div id="vista"></div>
   </section>
@@ -1006,11 +1064,18 @@ const LANGDATA = {
 const I18N = {
   es: {
     asa:"Arrastra o toca para ajustar el tamaño del mapa",
-    asaTxt:"Arrastra esta barra para cambiar el tamaño del mapa", irAbajo:"Ir al final",
+    asaTxt:"Arrastra esta barra para cambiar el tamaño del mapa", mapaMax:"Ver el mapa completo", mapaMin:"Volver a la lista",
+    resenas:"Google", notasFuente:"Puntajes de IMDb (vía OMDb) y TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.", tituloSk:t => `En eslovaco: ${t}`,
+    evSecEventos:"Eventos", evSecCines:"Cines", evSecTeatros:"Teatros", porPelicula:"Por película", porCine:"Por cine",
+    sinFunciones:"No hay funciones para esa fecha.", carteleraNo:"La cartelera no está disponible en este momento.",
+    dab:"doblada", tit:"subtítulos", ov:"versión original", agotado:"Agotado", entradas:"Entradas", fichaObra:"Ficha",
+    nFunciones:n => n === 1 ? "1 función" : `${n} funciones`, nPeliculas:n => n === 1 ? "1 película" : `${n} películas`,
+    cartFuente:d => `Cartelera actualizada el ${d}. Horarios de Cinema City, Kino Lumière, Nová scéna, Divadlo Aréna y SND: confírmalos en la web de cada sala antes de ir.`,
+    verSalaMapa:"Ver en el mapa", verCartelera:"Ver cartelera", plegar:"Ocultar cartelera", carSalas:"Los círculos del mapa son las salas, con la cantidad de funciones.", irAbajo:"Ir al final",
     comodidades:"Comodidades", xtNota:"Según OpenStreetMap: no todos los lugares lo indican.",
     XT:{ter:"Terraza", acc:"Silla de ruedas", veg:"Vegetariano", vgn:"Vegano", dog:"Se admiten perros", wifi:"Wifi"},
     verMasTxt:"Ver más", verMenos:"Ver menos",
-    evF:{todas:"Todas", hoy:"Hoy", manana:"Mañana", finde:"Este fin de semana", semana:"Esta semana", mes:"Este mes", dia:"Elegir día"},
+    evF:{todas:"Todos", hoy:"Hoy", manana:"Mañana", finde:"Este fin de semana", semana:"Esta semana", mes:"Este mes", dia:"Elegir día"},
     evFDia:"Día", sinEventosFecha:"No hay eventos para esa fecha.", evEstrellas:"Las estrellas del mapa son los eventos de esta lista.",
     desdeDonde:"¿Desde dónde sales?", queGanas:"¿Qué tienes ganas de hacer?", desdeDondeTxt:"Escribe tu dirección y te muestro lo que está abierto cerca.",
     usarUbic:"Usar mi ubicación", oTocaMapa:"o toca el mapa donde estás", recientes:"Direcciones recientes",
@@ -1019,7 +1084,7 @@ const I18N = {
     abrirEnApp:u => `Ábrelo en Bratislava Spots: ${u}`, verEnMapaG:u => `Mapa: ${u}`,
     temaDalt:"Cambiar a modo para daltónicos", temaDaltOn:"Modo para daltónicos activado", temaDaltOsc:"Cambiar a modo para daltónicos oscuro", temaDaltOscOn:"Modo para daltónicos oscuro",
     marca:"Bratislava Spots", sub:"Qué hacer en la ciudad", mapaAria:"Mapa de Bratislava", acercar:"Acercar", alejar:"Alejar", volverUbic:"Volver a mi ubicación",
-    cargando:"Cargando el mapa de Bratislava…", tabCerca:"Cerca, ahora", tabExplorar:"Explorar", tabEventos:"Eventos", tabMis:"Mis lugares",
+    cargando:"Cargando el mapa de Bratislava…", tabCerca:"Cerca mío", tabExplorar:"Explorar", tabEventos:"Eventos", tabMis:"★ Spots",
     attrib:"© colaboradores de OpenStreetMap",
     ab24:"Abierto las 24 h", cierraEn:m => `Cierra en ${m} min`, abiertoHasta:x => `Abierto hasta las ${x}`, cerradoAbre:x => `Cerrado · abre a las ${x}`,
     cerradoHoy:"Cerrado hoy", cerradoDia:"Cerrado ese día", extSinHorario:"Al aire libre, sin horario", horarioDesc:"Horario desconocido",
@@ -1055,7 +1120,7 @@ const I18N = {
     importarEventos:"Importar eventos", importAyuda:"Para cargar muchos eventos de una vez: en la PC corre scripts/eventos.py y elige aquí el archivo eventos-AAAA-MM-DD.json que genera.",
     importOk:(n, a, r) => `${n} eventos nuevos, ${a} actualizados${r ? `, ${r} repetidos omitidos` : ""}.`, importErr:"El archivo no tiene el formato esperado (eventos-AAAA-MM-DD.json).",
     importLeyendo:"Leyendo el archivo…", fuenteEv:f => `Fuente: ${f}`,
-    misCosas:"Mis lugares", agregarLugar:"Agregar lugar",
+    misCosas:"Spots", agregarLugar:"Agregar lugar",
     soloLocal:"Tus marcas, notas y lugares se guardan solo en este navegador. Usa el botón \"Respaldo\" para no perderlos.",
     autor:"App creada por Maro Strifezza", instalar:"Instalar como app", instalarBtn:"Instalar", instalada:"App instalada",
     instalarTxt:"Se abre a pantalla completa, sin la barra del navegador, con su propio ícono en el inicio del celular.",
@@ -1076,14 +1141,14 @@ const I18N = {
     creditos:"Mapa y lugares: © colaboradores de OpenStreetMap (datos de noviembre 2026). Los horarios de OpenStreetMap pueden estar desactualizados: los de tu lista se verifican aparte.",
     editarLugar:"Editar lugar", nuevoLugar:"Nuevo lugar", nombre:"Nombre", tipo:"Tipo", tipoPlan:"Tipo de plan", actividades:"Actividades", direccion:"Dirección",
     precioPh:"Ej.: 9 €/h", horarioTexto:"Horario (texto)", horarioPh:"Ej.: mié–sáb 16–22", link:"Link", notas:"Notas",
-    ubicMarcadaCambiar:"Ubicación marcada · cambiar", marcarMapa:"Marcar en el mapa", sinUbicAviso:"Sin ubicación no aparece en Cerca, ahora", guardar:"Guardar", cancelar:"Cancelar",
+    ubicMarcadaCambiar:"Ubicación marcada · cambiar", marcarMapa:"Marcar en el mapa", sinUbicAviso:"Sin ubicación no aparece en Cerca mío", guardar:"Guardar", cancelar:"Cancelar",
     nuevoEvento:"Nuevo evento", lugarEv:"Lugar", desde:"Desde", hasta:"Hasta", horario:"Horario", horarioEvPh:"Ej.: 20:00 y 21:45", precioEvPh:"Ej.: gratis, 15–60 €",
     paginaComprar:"Página para comprar entradas", descripcion:"Descripción", misNotas:"Mis notas",
     volver:"← Volver", cercaDe:s => `Cerca de ${s}`, sinUbicMapa:"Sin ubicación en el mapa", sitioWeb:"Sitio web", misMarcas:"Mis marcas",
     mFav:"★ Favorito", mFui:"Ya fui", mAmigos:"Para ir con amigos", mDesc:"Descartado", horarioLbl:"Horario", cerrado:"Cerrado",
     fuenteOSM:"Fuente: OpenStreetMap. Puede estar desactualizado.", notasPh:"Qué pedir, con quién fui, si conviene reservar…", precioDetPh:"Ej.: 39 €/h por box",
     guardarNotas:"Guardar notas", borrarLugar:"Borrar lugar", confirmBorrar:n => `¿Borrar "${n}" para siempre?`, siBorrar:"Sí, borrar", no:"No",
-    tFav:"Guardado en favoritos", tFui:"Marcado como ya fui", tAmigos:"Guardado para ir con amigos", tDesc:"Descartado", tQuitada:"Marca quitada",
+    tFav:"Guardado en favoritos", tFui:"Marcado como ya fui", tAmigos:"Guardado para ir con amigos", tDesc:"Descartado", tQuitada:"Marca quitada", quitarMarca:"Quitar de esta lista", cerrarFicha:"Cerrar", quitarEv:"Quitar de favoritos", quitarFav:"Quitar de favoritos", gEventos:"Eventos favoritos", terminado:"Terminado",
     tNotas:"Notas guardadas", tSinOpc:"No hay opciones con estos filtros", tTocaLugar:"Toca el mapa donde está el lugar", tLugarBorrado:"Lugar borrado",
     tEventoBorrado:"Evento borrado", tTocaEstas:"Toca el mapa donde estás", sugDir:"Dirección", sugCalle:"Calle",
     errNombreLugar:"Escribe el nombre del lugar.", tLugarGuardado:"Lugar guardado", errNombreEv:"Escribe el nombre del evento.", errFecha:"Pon al menos una fecha.",
@@ -1092,7 +1157,14 @@ const I18N = {
   },
   en: {
     asa:"Drag or tap to resize the map",
-    asaTxt:"Drag this bar to resize the map", irAbajo:"Go to the bottom",
+    asaTxt:"Drag this bar to resize the map", mapaMax:"Full-screen map", mapaMin:"Back to the list",
+    resenas:"Google", notasFuente:"Ratings from IMDb (via OMDb) and TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.", tituloSk:t => `In Slovak: ${t}`,
+    evSecEventos:"Events", evSecCines:"Cinemas", evSecTeatros:"Theatres", porPelicula:"By film", porCine:"By cinema",
+    sinFunciones:"No showings for that date.", carteleraNo:"The listings aren't available right now.",
+    dab:"dubbed", tit:"subtitles", ov:"original version", agotado:"Sold out", entradas:"Tickets", fichaObra:"Details",
+    nFunciones:n => n === 1 ? "1 showing" : `${n} showings`, nPeliculas:n => n === 1 ? "1 film" : `${n} films`,
+    cartFuente:d => `Listings updated on ${d}. Times from Cinema City, Kino Lumière, Nová scéna, Divadlo Aréna and SND: check each venue's website before you go.`,
+    verSalaMapa:"Show on map", verCartelera:"Show listings", plegar:"Hide listings", carSalas:"The circles on the map are the venues, with the number of showings.", irAbajo:"Go to the bottom",
     comodidades:"Amenities", xtNota:"From OpenStreetMap: not every place lists this.",
     XT:{ter:"Outdoor seating", acc:"Wheelchair access", veg:"Vegetarian", vgn:"Vegan", dog:"Dogs welcome", wifi:"Wi-Fi"},
     verMasTxt:"Show more", verMenos:"Show less",
@@ -1105,7 +1177,7 @@ const I18N = {
     abrirEnApp:u => `Open it in Bratislava Spots: ${u}`, verEnMapaG:u => `Map: ${u}`,
     temaDalt:"Switch to color-blind mode", temaDaltOn:"Color-blind mode on", temaDaltOsc:"Switch to dark color-blind mode", temaDaltOscOn:"Dark color-blind mode on",
     marca:"Bratislava Spots", sub:"Things to do in the city", mapaAria:"Map of Bratislava", acercar:"Zoom in", alejar:"Zoom out", volverUbic:"Back to my location",
-    cargando:"Loading the map of Bratislava…", tabCerca:"Nearby now", tabExplorar:"Explore", tabEventos:"Events", tabMis:"My spots",
+    cargando:"Loading the map of Bratislava…", tabCerca:"Near me", tabExplorar:"Explore", tabEventos:"Events", tabMis:"★ Spots",
     attrib:"© OpenStreetMap contributors",
     ab24:"Open 24 hours", cierraEn:m => `Closes in ${m} min`, abiertoHasta:x => `Open until ${x}`, cerradoAbre:x => `Closed · opens at ${x}`,
     cerradoHoy:"Closed today", cerradoDia:"Closed that day", extSinHorario:"Outdoors, no opening hours", horarioDesc:"Opening hours unknown",
@@ -1141,7 +1213,7 @@ const I18N = {
     importarEventos:"Import events", importAyuda:"To load many events at once: run scripts/eventos.py on the PC and pick the eventos-YYYY-MM-DD.json file it creates here.",
     importOk:(n, a, r) => `${n} new events, ${a} updated${r ? `, ${r} duplicates skipped` : ""}.`, importErr:"The file isn't in the expected format (eventos-YYYY-MM-DD.json).",
     importLeyendo:"Reading the file…", fuenteEv:f => `Source: ${f}`,
-    misCosas:"My spots", agregarLugar:"Add place",
+    misCosas:"Spots", agregarLugar:"Add place",
     soloLocal:"Your marks, notes and places are saved only in this browser. Use the \"Backup\" button so you don't lose them.",
     autor:"App created by Maro Strifezza", instalar:"Install as an app", instalarBtn:"Install", instalada:"App installed",
     instalarTxt:"Opens full screen, without the browser bar, with its own icon on your home screen.",
@@ -1162,14 +1234,14 @@ const I18N = {
     creditos:"Map and places: © OpenStreetMap contributors (November 2026 data). OpenStreetMap opening hours may be out of date; the ones on your list are checked separately.",
     editarLugar:"Edit place", nuevoLugar:"New place", nombre:"Name", tipo:"Type", tipoPlan:"Plan type", actividades:"Activities", direccion:"Address",
     precioPh:"E.g. €9/h", horarioTexto:"Opening hours (text)", horarioPh:"E.g. Wed–Sat 16–22", link:"Link", notas:"Notes",
-    ubicMarcadaCambiar:"Location set · change", marcarMapa:"Mark on the map", sinUbicAviso:"Without a location it won't show in Nearby now", guardar:"Save", cancelar:"Cancel",
+    ubicMarcadaCambiar:"Location set · change", marcarMapa:"Mark on the map", sinUbicAviso:"Without a location it won't show in Near me", guardar:"Save", cancelar:"Cancel",
     nuevoEvento:"New event", lugarEv:"Venue", desde:"From", hasta:"To", horario:"Time", horarioEvPh:"E.g. 20:00 and 21:45", precioEvPh:"E.g. free, €15–60",
     paginaComprar:"Ticket page", descripcion:"Description", misNotas:"My notes",
     volver:"← Back", cercaDe:s => `Near ${s}`, sinUbicMapa:"No location on the map", sitioWeb:"Website", misMarcas:"My marks",
     mFav:"★ Favorite", mFui:"Been there", mAmigos:"To go with friends", mDesc:"Dismissed", horarioLbl:"Opening hours", cerrado:"Closed",
     fuenteOSM:"Source: OpenStreetMap. May be out of date.", notasPh:"What to order, who I went with, whether to book…", precioDetPh:"E.g. €39/h per booth",
     guardarNotas:"Save notes", borrarLugar:"Delete place", confirmBorrar:n => `Delete "${n}" for good?`, siBorrar:"Yes, delete", no:"No",
-    tFav:"Saved to favorites", tFui:"Marked as been there", tAmigos:"Saved to go with friends", tDesc:"Dismissed", tQuitada:"Mark removed",
+    tFav:"Saved to favorites", tFui:"Marked as been there", tAmigos:"Saved to go with friends", tDesc:"Dismissed", tQuitada:"Mark removed", quitarMarca:"Remove from this list", cerrarFicha:"Close", quitarEv:"Remove from favorites", quitarFav:"Remove from favorites", gEventos:"Favorite events", terminado:"Ended",
     tNotas:"Notes saved", tSinOpc:"No options with these filters", tTocaLugar:"Tap the map where the place is", tLugarBorrado:"Place deleted",
     tEventoBorrado:"Event deleted", tTocaEstas:"Tap the map where you are", sugDir:"Address", sugCalle:"Street",
     errNombreLugar:"Enter the place name.", tLugarGuardado:"Place saved", errNombreEv:"Enter the event name.", errFecha:"Enter at least one date.",
@@ -1178,7 +1250,14 @@ const I18N = {
   },
   sk: {
     asa:"Potiahni alebo ťukni a zmeň veľkosť mapy",
-    asaTxt:"Potiahni túto lištu a zmeň veľkosť mapy", irAbajo:"Prejsť na koniec",
+    asaTxt:"Potiahni túto lištu a zmeň veľkosť mapy", mapaMax:"Mapa na celú obrazovku", mapaMin:"Späť na zoznam",
+    resenas:"Google", notasFuente:"Hodnotenia z IMDb (cez OMDb) a TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.", tituloSk:t => t,
+    evSecEventos:"Podujatia", evSecCines:"Kiná", evSecTeatros:"Divadlá", porPelicula:"Podľa filmu", porCine:"Podľa kina",
+    sinFunciones:"Na tento dátum nie sú žiadne predstavenia.", carteleraNo:"Program momentálne nie je dostupný.",
+    dab:"dabing", tit:"titulky", ov:"pôvodné znenie", agotado:"Vypredané", entradas:"Vstupenky", fichaObra:"Detail",
+    nFunciones:n => n === 1 ? "1 predstavenie" : (n < 5 ? `${n} predstavenia` : `${n} predstavení`), nPeliculas:n => n === 1 ? "1 film" : (n < 5 ? `${n} filmy` : `${n} filmov`),
+    cartFuente:d => `Program aktualizovaný ${d}. Časy z Cinema City, Kina Lumière, Novej scény, Divadla Aréna a SND: pred návštevou si ich over na webe sály.`,
+    verSalaMapa:"Ukázať na mape", verCartelera:"Zobraziť program", plegar:"Skryť program", carSalas:"Krúžky na mape sú sály s počtom predstavení.", irAbajo:"Prejsť na koniec",
     comodidades:"Vybavenie", xtNota:"Podľa OpenStreetMap: nie každé miesto to uvádza.",
     XT:{ter:"Terasa", acc:"Bezbariérový prístup", veg:"Vegetariánske", vgn:"Vegánske", dog:"Psy vítané", wifi:"Wi-Fi"},
     verMasTxt:"Zobraziť viac", verMenos:"Zobraziť menej",
@@ -1191,7 +1270,7 @@ const I18N = {
     abrirEnApp:u => `Otvor v Bratislava Spots: ${u}`, verEnMapaG:u => `Mapa: ${u}`,
     temaDalt:"Prepnúť na režim pre farboslepých", temaDaltOn:"Režim pre farboslepých je zapnutý", temaDaltOsc:"Prepnúť na tmavý režim pre farboslepých", temaDaltOscOn:"Tmavý režim pre farboslepých je zapnutý",
     marca:"Bratislava Spots", sub:"Čo robiť v meste", mapaAria:"Mapa Bratislavy", acercar:"Priblížiť", alejar:"Oddialiť", volverUbic:"Späť na moju polohu",
-    cargando:"Načítava sa mapa Bratislavy…", tabCerca:"Teraz v okolí", tabExplorar:"Objavuj", tabEventos:"Podujatia", tabMis:"Moje miesta",
+    cargando:"Načítava sa mapa Bratislavy…", tabCerca:"Teraz v okolí", tabExplorar:"Objavuj", tabEventos:"Podujatia", tabMis:"★ Spots",
     attrib:"© prispievatelia OpenStreetMap",
     ab24:"Otvorené nonstop", cierraEn:m => `Zatvára o ${m} min`, abiertoHasta:x => `Otvorené do ${x}`, cerradoAbre:x => `Zatvorené · otvára o ${x}`,
     cerradoHoy:"Dnes zatvorené", cerradoDia:"V ten deň zatvorené", extSinHorario:"Vonku, bez otváracích hodín", horarioDesc:"Otváracie hodiny neznáme",
@@ -1227,7 +1306,7 @@ const I18N = {
     importarEventos:"Importovať podujatia", importAyuda:"Na načítanie viacerých podujatí naraz: spusti na PC scripts/eventos.py a vyber tu súbor eventos-RRRR-MM-DD.json, ktorý vytvorí.",
     importOk:(n, a, r) => `Nové podujatia: ${n}, aktualizované: ${a}${r ? `, preskočené duplikáty: ${r}` : ""}.`, importErr:"Súbor nemá očakávaný formát (eventos-RRRR-MM-DD.json).",
     importLeyendo:"Čítam súbor…", fuenteEv:f => `Zdroj: ${f}`,
-    misCosas:"Moje miesta", agregarLugar:"Pridať miesto",
+    misCosas:"Spots", agregarLugar:"Pridať miesto",
     soloLocal:"Tvoje značky, poznámky a miesta sa ukladajú len v tomto prehliadači. Aby si o ne neprišiel/neprišla, použi tlačidlo „Záloha“.",
     autor:"Aplikáciu vytvoril Maro Strifezza", instalar:"Nainštalovať ako aplikáciu", instalarBtn:"Nainštalovať", instalada:"Aplikácia nainštalovaná",
     instalarTxt:"Otvára sa na celú obrazovku, bez lišty prehliadača, s vlastnou ikonou na ploche.",
@@ -1255,7 +1334,7 @@ const I18N = {
     mFav:"★ Obľúbené", mFui:"Už som tam bol/a", mAmigos:"S priateľmi", mDesc:"Skryté", horarioLbl:"Otváracie hodiny", cerrado:"Zatvorené",
     fuenteOSM:"Zdroj: OpenStreetMap. Môže byť neaktuálne.", notasPh:"Čo si objednať, s kým som bol/a, či treba rezervovať…", precioDetPh:"Napr. 39 €/h za box",
     guardarNotas:"Uložiť poznámky", borrarLugar:"Vymazať miesto", confirmBorrar:n => `Natrvalo vymazať „${n}“?`, siBorrar:"Áno, vymazať", no:"Nie",
-    tFav:"Uložené do obľúbených", tFui:"Označené ako navštívené", tAmigos:"Uložené na výlet s priateľmi", tDesc:"Skryté", tQuitada:"Značka odstránená",
+    tFav:"Uložené do obľúbených", tFui:"Označené ako navštívené", tAmigos:"Uložené na výlet s priateľmi", tDesc:"Skryté", tQuitada:"Značka odstránená", quitarMarca:"Odstrániť zo zoznamu", cerrarFicha:"Zavrieť", quitarEv:"Odstrániť z obľúbených", quitarFav:"Odstrániť z obľúbených", gEventos:"Obľúbené podujatia", terminado:"Skončené",
     tNotas:"Poznámky uložené", tSinOpc:"S týmito filtrami nie sú žiadne možnosti", tTocaLugar:"Ťukni na mapu tam, kde je miesto", tLugarBorrado:"Miesto vymazané",
     tEventoBorrado:"Podujatie vymazané", tTocaEstas:"Ťukni na mapu tam, kde si", sugDir:"Adresa", sugCalle:"Ulica",
     errNombreLugar:"Zadaj názov miesta.", tLugarGuardado:"Miesto uložené", errNombreEv:"Zadaj názov podujatia.", errFecha:"Zadaj aspoň jeden dátum.",
@@ -1630,6 +1709,7 @@ function iniciarMapa(){
     zoomSnap:0.25, zoomDelta:0.5, wheelPxPerZoomLevel:110, minZoom:11, maxZoom:19,
     maxBounds:[[47.98,16.90],[48.29,17.32]], maxBoundsViscosity:0.7}).setView([48.1440, 17.1085], 15.5);
   map.attributionControl.setPrefix(false);
+  map.attributionControl.setPosition("bottomleft");
   map.attributionControl.addAttribution(tr("attrib")); map._attribActual = tr("attrib");
   const Capa = L.Layer.extend({
     onAdd(m){ this.c = L.DomUtil.create("canvas"); this.c.style.pointerEvents = "none"; m.getPanes().overlayPane.appendChild(this.c);
@@ -1746,6 +1826,22 @@ function dibujar(c){
     trazarForma(ctx, "estrella", X, Y, rEv); ctx.fillStyle = colEv; ctx.fill(); ctx.lineWidth = 2.2; ctx.strokeStyle = surf; ctx.stroke();
     ctx.lineWidth = .8; ctx.strokeStyle = bordeEv; ctx.globalAlpha = .5; ctx.stroke(); ctx.globalAlpha = 1;
   }
+  if (S.tab === "eventos" && S.evSec !== "eventos" && CART){
+    const tipo = S.evSec === "cines" ? "cine" : "teatro", cnt = {};
+    for (const f of funcionesCart(tipo)) cnt[f[1]] = (cnt[f[1]] || 0) + 1;
+    const colS = tipo === "cine" ? css("--accent") : css("--t-cultura");
+    for (const id in CART.salas){
+      const sa = CART.salas[id]; if (sa.tipo !== tipo) continue; const c = salaCoords(id); if (!c) continue;
+      const X = PX(c.lng)*s + ox, Y = PY(c.lat)*s + oy; if (X < -30 || Y < -30 || X > W + 30 || Y > H + 30) continue;
+      const n = cnt[id] || 0, txt = n > 999 ? "999+" : String(n), r = txt.length > 2 ? 16 : 13;
+      ctx.beginPath(); ctx.arc(X, Y, r + (S.carSala === id ? 3 : 0), 0, 7); ctx.fillStyle = colS; ctx.globalAlpha = n ? 1 : .45; ctx.fill(); ctx.globalAlpha = 1;
+      ctx.lineWidth = 2.5; ctx.strokeStyle = surf; ctx.stroke();
+      ctx.font = "700 11.5px " + css("--f-body"); ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillStyle = "#fff"; ctx.fillText(txt, X, Y + .5);
+      if (z >= 13 || S.carSala === id){
+        ctx.font = "600 12px " + css("--f-body"); ctx.textBaseline = "top"; ctx.lineWidth = 4; ctx.strokeStyle = css("--halo"); ctx.strokeText(sa.n, X, Y + r + 4); ctx.fillStyle = css("--ink"); ctx.fillText(sa.n, X, Y + r + 4);
+      }
+    }
+  }
   if (selP && selP.x != null && S.tab !== "eventos"){
     const X = selP.x*s + ox, Y = selP.y*s + oy;
     ctx.beginPath(); ctx.arc(X, Y, r0 + 7, 0, 7); ctx.lineWidth = 3; ctx.strokeStyle = css("--accent"); ctx.stroke();
@@ -1800,6 +1896,7 @@ function etiquetas(ctx, s, ox, oy, vx0, vy0, vx1, vy1, W, H){
 /* Eventos del día con lugar conocido (se dibujan como estrellas). En la pestaña Eventos, el día del filtro; si no, hoy. */
 let _evMapa = {k: "", lista: []};
 function eventosMapa(){
+  if (S.tab === "eventos" && S.evSec !== "eventos") return [];
   const rg = S.tab === "eventos" ? rangoEvF() : null, iso = rg ? rg[0] : (S.tab === "cerca" ? fechaMomento() : hoyISO()), fin = rg ? rg[1] : (S.tab === "eventos" ? "9999-12-31" : iso);
   const k = iso + fin + "|" + Object.keys(EVENTOS).length + "|" + (typeof EVENTOS_PUB !== "undefined" ? Object.keys(EVENTOS_PUB).length : 0) + "|" + porId.size;
   if (_evMapa.k === k) return _evMapa.lista;
@@ -1836,9 +1933,13 @@ function tocarMapa(e){
   // En "Cerca, ahora": el primer toque marca dónde estás. Después, tocar un punto abre el lugar
   // y tocar una zona libre mueve tu ubicación.
   if (S.tab === "cerca" && (!S.ubic || S.esperandoUbic)){ fijarUbic(e.latlng.lat, e.latlng.lng); return; }
+  const sala = salaEnPunto(e.containerPoint);
+  if (sala){ abrirSala(sala); return; }
   const evt = eventoEnPunto(e.containerPoint);
   if (evt){ abrirEvento(evt.id); return; }
   const p = S.tab === "eventos" ? null : lugarEnPunto(e.containerPoint);
+  // con el mapa grande, tocar un lugar de los resultados lo elige en el carrusel (se ve al volver a la lista)
+  if (p && mapaMax && S.tab === "cerca" && S.res.some(r => r.p.id === p.id)){ irATarjeta(p.id); return; }
   if (p){ abrirDetalle(p.id); return; }
   if (S.tab === "cerca"){ fijarUbic(e.latlng.lat, e.latlng.lng); }
 }
@@ -2016,8 +2117,8 @@ function tagsAct(p, n){ return (p.act || []).slice(0, n).map(x => `<span class="
 function tagPresu(p){ const inf = p.info || {}, pr = loc(inf, "precio"); return `<span class="tag">${pr ? esc(pr) : tr("presuTag", PRESU[p.presu] || "?", !(p.propio || inf.presu))}</span>`; }
 function tarjeta(r, i){
   const p = r.p, m = momento(), est = textoEstado(p, m), inf = p.info || {}, nota = loc(inf, "nota");
-  return `<article class="card ${S.sel === p.id ? "sel" : ""}" data-id="${esc(p.id)}" data-i="${i}">
-    <div class="row" style="justify-content:space-between"><span class="tipo" style="--c:var(--t-${p.tipo})"><i class="f-${p.tipo}"></i>${TIPOS[p.tipo] || p.tipo}</span><span class="row" style="gap:4px">${esMia(p) ? `<span class="tag mia">${tr("deMiLista")}</span>` : ""}${p.lat != null ? `<button type="button" class="ico" data-a="compartir" data-v="${esc(p.id)}" aria-label="${tr("compartir")}" title="${tr("compartir")}">${ICONO_COMPARTIR}</button>` : ""}</span></div>
+  return `<article class="card ${S.sel === p.id ? "sel" : ""}" data-id="${esc(p.id)}" data-i="${i}"><button type="button" class="fav-estrella" data-a="marca" data-k="fav" data-v="${esc(p.id)}" aria-pressed="${!!inf.fav}" aria-label="${esc(tr(inf.fav ? "quitarFav" : "favorito"))}" title="${esc(tr(inf.fav ? "quitarFav" : "favorito"))}">${inf.fav ? "★" : "☆"}</button>
+    <div class="row" style="justify-content:space-between"><span class="tipo" style="--c:var(--t-${p.tipo})"><i class="f-${p.tipo}"></i>${TIPOS[p.tipo] || p.tipo}</span><span class="row" style="gap:4px">${p.lat != null ? `<button type="button" class="ico" data-a="compartir" data-v="${esc(p.id)}" aria-label="${tr("compartir")}" title="${tr("compartir")}">${ICONO_COMPARTIR}</button>` : ""}</span></div>
     <h4>${esc(p.n)}</h4>
     <div class="dato"><span>${tr("minPie", r.min)}</span><span class="${est.cls}">${est.t}</span></div>
     <div class="row">${tagsAct(p, 3)}${tagPresu(p)}</div>
@@ -2026,7 +2127,6 @@ function tarjeta(r, i){
       <a class="btn prim chico" href="${linkRuta(p, r.min)}" target="_blank" rel="noopener">${tr("comoLlegar")}${r.min > 25 ? tr("transporte") : ""}</a>
       ${r.min > 25 ? "" : `<a class="btn chico" href="${linkTransporte(p)}" target="_blank" rel="noopener" aria-label="${tr("transporteBtn")}" title="${tr("transporteBtn")}">${ICONO_TRANVIA} ${tr("transporteCorto")}</a>`}
       <button type="button" class="btn chico" data-a="detalle" data-v="${esc(p.id)}">${tr("verMas")}</button>
-      <button type="button" class="btn chico" data-a="marca" data-k="fav" data-v="${esc(p.id)}" aria-pressed="${!!inf.fav}">${inf.fav ? "★" : "☆"} ${tr("favorito")}</button>
       <button type="button" class="btn chico" data-a="marca" data-k="desc" data-v="${esc(p.id)}">${tr("descartar")}</button>
     </div></article>`;
 }
@@ -2040,6 +2140,11 @@ function abrirDesdeLink(){
   S.tab = "explorar"; abrirDetalle(p.id); irA(p, 17);
 }
 addEventListener("hashchange", () => { if (porId.size) abrirDesdeLink(); });
+function linkResenas(p){
+  // búsqueda por nombre y dirección: Google Maps abre la ficha del local con sus reseñas
+  let dir = p.dir || ""; if (!dir && p.lat != null){ const i = dirCerca(p.lat, p.lng, 35); if (i != null) dir = textoDir(i); }
+  return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent([p.n, dir, "Bratislava"].filter(Boolean).join(", "));
+}
 async function compartirLugar(id){
   const p = porId.get(id); if (!p || p.lat == null) return;
   let dir = p.dir || ""; if (!dir){ const i = dirCerca(p.lat, p.lng, 35); if (i != null) dir = textoDir(i); }
@@ -2115,7 +2220,7 @@ function listaExplorar(){
 function itemLugar(p){
   const m = momento(), est = textoEstado(p, m), mn = minutosA(p);
   return `<button type="button" class="item" data-a="detalle" data-v="${esc(p.id)}"><div class="min-w0"><div class="t">${esc(p.n)}${p.info.fav ? " ★" : ""}</div>
-    <div class="row small"><span class="tipo" style="--c:var(--t-${p.tipo})"><i class="f-${p.tipo}"></i>${TIPOS[p.tipo] || p.tipo}</span>${esMia(p) ? `<span class="tag mia">${tr("deMiLista")}</span>` : ""}<span class="${est.cls}">${est.t}</span></div></div>
+    <div class="row small"><span class="tipo" style="--c:var(--t-${p.tipo})"><i class="f-${p.tipo}"></i>${TIPOS[p.tipo] || p.tipo}</span><span class="${est.cls}">${est.t}</span></div></div>
     <div class="der">${mn != null ? mn + " min" : ""}</div></button>`;
 }
 function vistaExplorar(){
@@ -2184,6 +2289,138 @@ function dirDeCalle(calle, nums){
   }
   return null;
 }
+/* ============================================================ cartelera de cines y teatros */
+let CART = null;
+S.evSec = "eventos"; S.carVista = "cine"; S.carSala = null; S.carAbiertas = new Set();
+async function cargarCartelera(){
+  try {
+    const r = await fetch("cartelera.json?v=" + Date.now(), {cache: "no-store"}); if (!r.ok) return;
+    const d = await r.json(); if (!d || !Array.isArray(d.funciones) || !d.salas || !d.obras) return;
+    CART = d; if (S.tab === "eventos") { render(); capa.pedir(); }
+  } catch(e){}
+}
+function salaCoords(id){
+  const s = CART && CART.salas[id]; if (!s) return null;
+  if (s._c !== undefined) return s._c;
+  if (s.lat != null && s.lng != null){ s._c = {lat: +s.lat, lng: +s.lng}; return s._c; }
+  if (!DIR || !porId.size) return null;                     // todavía no cargó el mapa: se intenta después
+  s._c = ubicarTexto(s.dir || "") || ubicarTexto(s.n || "") || null;
+  return s._c;
+}
+function minSala(id){
+  if (!S.ubic || !ultimoDij) return null;
+  const c = salaCoords(id), s = CART.salas[id]; if (!c) return null;
+  if (s._sn === undefined) s._sn = enganchar(c.lat, c.lng);
+  if (!s._sn || s._sn.d > 300) return null;
+  const rc = recorrido(s._sn); return rc ? Math.max(1, Math.round(rc.tot / VEL)) : null;
+}
+function rangoCart(){ return S.evF === "todas" ? [hoyISO(), (CART && CART.hasta) || isoMas(30)] : (rangoEvF() || [hoyISO(), hoyISO()]); }
+function funcionesCart(tipo){
+  if (!CART) return [];
+  const rg = rangoCart(), hoy = hoyISO(), a = new Date(), lim = hoy + "T" + hhmm(Math.max(0, a.getHours() * 60 + a.getMinutes() - 10));
+  return CART.funciones.filter(f => {
+    const s = CART.salas[f[1]], o = CART.obras[f[0]]; if (!s || !o || s.tipo !== tipo) return false;
+    const d = f[2].slice(0, 10); if (d < rg[0] || d > rg[1]) return false;
+    return !(d === hoy && f[2] < lim);
+  });
+}
+function infoCart(info){
+  return String(info || "").split(" · ").filter(Boolean).map(t => {
+    let m;
+    if (t === "#agotado") return tr("agotado");
+    if ((m = t.match(/^dab\s*(.*)$/))) return tr("dab") + (m[1] ? " " + m[1] : "");
+    if ((m = t.match(/^tit\s*(.*)$/))) return tr("tit") + (m[1] ? " " + m[1] : "");
+    if ((m = t.match(/^ov\s*(.*)$/))) return tr("ov") + (m[1] ? " " + m[1] : "");
+    return t;
+  }).join(" · ");
+}
+function diaCart(iso){ const d = new Date(iso + "T12:00:00"); return DIAS[(d.getDay() + 6) % 7] + " " + d.getDate() + "."; }
+function chipHora(f){
+  const ag = String(f[3] || "").includes("#agotado"), l = urlSegura(f[4]);
+  return l && !ag ? `<a class="hora-c" href="${esc(l)}" target="_blank" rel="noopener" title="${tr("entradas")}">${f[2].slice(11)}</a>`
+                  : `<span class="hora-c${ag ? " agot" : ""}" ${ag ? `title="${tr("agotado")}"` : ""}>${f[2].slice(11)}</span>`;
+}
+/* horarios de una obra en una sala: por día (si el rango tiene varios días) y por idioma/formato */
+function horariosSala(fs, varios){
+  const porDia = new Map(); for (const f of fs){ const d = f[2].slice(0, 10); if (!porDia.has(d)) porDia.set(d, []); porDia.get(d).push(f); }
+  let out = "";
+  for (const [d, lista] of porDia){
+    const porInfo = new Map(); for (const f of lista){ const k = String(f[3] || "").split(" · ").filter(t => t !== "#agotado").join(" · ").trim(); if (!porInfo.has(k)) porInfo.set(k, []); porInfo.get(k).push(f); }
+    out += `<div class="cart-dia">${varios ? `<span class="cart-d">${diaCart(d)}</span>` : ""}<div class="cart-hs">${[...porInfo].map(([k, l]) => `<span class="cart-grupo">${k ? `<span class="cart-k">${esc(infoCart(k))}</span>` : ""}${l.map(chipHora).join("")}</span>`).join("")}</div></div>`;
+  }
+  return out;
+}
+function tituloObra(o){
+  const t = o.t || {};
+  return LANG === "sk" ? o.n : (t[LANG] || t.en || o.n);
+}
+function notasObra(o){
+  const out = [];
+  if (o.imdb && /^tt\d+$/.test(o.imdbId || "")) out.push(`<a class="nota" href="https://www.imdb.com/title/${o.imdbId}/" target="_blank" rel="noopener" title="IMDb"><b>IMDb</b> ${esc(Number(o.imdb).toFixed(1))}</a>`);
+  if (o.tmdb && /^\d+$/.test(String(o.tmdbId || ""))) out.push(`<a class="nota" href="https://www.themoviedb.org/movie/${o.tmdbId}" target="_blank" rel="noopener" title="TMDB"><b>TMDB</b> ${esc(Number(o.tmdb).toFixed(1))}</a>`);
+  return out.length ? `<span class="notas">${out.join("")}</span>` : "";
+}
+function datosObra(o){
+  const sk = tituloObra(o) !== o.n ? esc(tr("tituloSk", o.n)) : "";
+  const txt = [o.dur ? o.dur + " min" : "", o.edad ? o.edad : "", o.info || ""].filter(Boolean).map(esc).join(" · ");
+  return [sk, txt].filter(Boolean).join(" · ") + notasObra(o);
+}
+function salaCab(id){
+  const s = CART.salas[id], mn = minSala(id);
+  return `<div class="cart-sala"><b>${esc(s.n)}</b>${mn != null ? `<span class="muted"> · ${tr("minPie", mn)}</span>` : ""}</div>`;
+}
+function ordenSalas(ids){ return ids.sort((a, b) => ((minSala(a) ?? 1e9) - (minSala(b) ?? 1e9)) || CART.salas[a].n.localeCompare(CART.salas[b].n, "sk")); }
+function selVistaCart(){
+  return S.evSec === "cines" ? `<div class="seg ev-vista">${[["cine", tr("porCine")], ["pelicula", tr("porPelicula")]].map(([k, x]) => `<button type="button" data-a="car-vista" data-v="${k}" aria-pressed="${S.carVista === k}">${x}</button>`).join("")}</div>` : "";
+}
+function claveEstreno(o){ return o.estreno || (o.nov ? CART.desde || hoyISO() : (o.anio ? o.anio + "-01-01" : "")); }
+function vistaCartelera(){
+  if (!CART) return `<div class="vacio">${tr("carteleraNo")}</div>`;
+  const cine = S.evSec === "cines", tipo = cine ? "cine" : "teatro", fs = funcionesCart(tipo), rg = rangoCart(), varios = rg[0] !== rg[1];
+  let h = `<p class="muted small ev-estrellas">${tr("carSalas")}</p>`;
+  if (!fs.length) return h + `<div class="vacio">${tr("sinFunciones")}</div>` + pieCart();
+  if (cine && S.carVista === "pelicula"){
+    const porObra = new Map(); for (const f of fs){ if (!porObra.has(f[0])) porObra.set(f[0], []); porObra.get(f[0]).push(f); }
+    const obras = [...porObra].sort((a, b) => claveEstreno(CART.obras[b[0]]).localeCompare(claveEstreno(CART.obras[a[0]])) || b[1].length - a[1].length || a[1][0][2].localeCompare(b[1][0][2]));
+    h += `<div class="lista">${obras.map(([oid, l]) => {
+      const o = CART.obras[oid], porSala = new Map(); for (const f of l){ if (!porSala.has(f[1])) porSala.set(f[1], []); porSala.get(f[1]).push(f); }
+      return `<div class="item cart" style="cursor:default"><div class="min-w0"><div class="lin-cart"><span class="t">${esc(tituloObra(o))}</span>${urlSegura(o.web) ? `<a class="linkbtn small" href="${esc(urlSegura(o.web))}" target="_blank" rel="noopener">${tr("fichaObra")}</a>` : ""}</div>
+        ${datosObra(o) ? `<div class="small muted">${datosObra(o)}</div>` : ""}
+        ${ordenSalas([...porSala.keys()]).map(sid => salaCab(sid) + horariosSala(porSala.get(sid), varios)).join("")}</div></div>`; }).join("")}</div>`;
+  } else {
+    const porSala = new Map(); for (const f of fs){ if (!porSala.has(f[1])) porSala.set(f[1], []); porSala.get(f[1]).push(f); }
+    h += `<div class="lista">${ordenSalas([...porSala.keys()]).map(sid => {
+      const s = CART.salas[sid], l = porSala.get(sid), porObra = new Map();
+      for (const f of l){ if (!porObra.has(f[0])) porObra.set(f[0], []); porObra.get(f[0]).push(f); }
+      const mn = minSala(sid), c = salaCoords(sid), abierta = S.carAbiertas.has(sid);
+      return `<div class="item cart${S.carSala === sid ? " sel" : ""}" data-sala="${esc(sid)}" style="cursor:default"><div class="min-w0">
+        <div class="lin-cart"><span class="t">${esc(s.n)}</span><span class="cart-der"><span class="small muted">${mn != null ? tr("minPie", mn) : ""}</span><button type="button" class="cart-exp" data-a="car-exp" data-v="${esc(sid)}" aria-expanded="${abierta}" aria-label="${tr(abierta ? "plegar" : "verCartelera")}" title="${tr(abierta ? "plegar" : "verCartelera")}"><svg viewBox="0 0 12 12" width="14" height="14" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button></span></div>
+        <div class="small muted">${esc(s.dir || "")}${s.dir ? " · " : ""}${cine ? tr("nPeliculas", porObra.size) : tr("nFunciones", l.length)}</div>
+        <div class="row small" style="margin:6px 0 2px">${c ? `<button type="button" class="btn chico" data-a="ver-sala" data-v="${esc(sid)}">${tr("verSalaMapa")}</button>` : ""}${urlSegura(s.web) ? `<a class="btn chico" href="${esc(urlSegura(s.web))}" target="_blank" rel="noopener">${tr("sitioWeb")}</a>` : ""}</div>
+        ${!abierta ? "" : [...porObra].sort((a, b) => a[1][0][2].localeCompare(b[1][0][2])).map(([oid, lo]) => { const o = CART.obras[oid];
+          return `<div class="cart-obra"><div class="lin-cart"><b>${esc(tituloObra(o))}</b>${urlSegura(o.web) ? `<a class="linkbtn small" href="${esc(urlSegura(o.web))}" target="_blank" rel="noopener">${tr("fichaObra")}</a>` : ""}</div>${datosObra(o) ? `<div class="small muted">${datosObra(o)}</div>` : ""}${horariosSala(lo, varios)}</div>`; }).join("")}
+      </div></div>`; }).join("")}</div>`;
+  }
+  return h + pieCart();
+}
+function pieCart(){
+  if (!CART || !CART.generado) return "";
+  const notas = Object.values(CART.obras || {}).some(o => o.imdb || o.tmdb);
+  return `<p class="muted small">${tr("cartFuente", fechaCorta(String(CART.generado).slice(0, 10)))}${notas ? " " + tr("notasFuente") : ""}</p>`;
+}
+function salaEnPunto(cp){
+  if (!CART || S.tab !== "eventos" || S.evSec === "eventos") return null;
+  const tipo = S.evSec === "cines" ? "cine" : "teatro", {s, min} = vistaGeo(); let mejor = null, md = 18;
+  for (const id in CART.salas){ if (CART.salas[id].tipo !== tipo) continue; const c = salaCoords(id); if (!c) continue;
+    const d = Math.hypot(PX(c.lng)*s - min.x - cp.x, PY(c.lat)*s - min.y - cp.y); if (d < md){ md = d; mejor = id; } }
+  return mejor;
+}
+function abrirSala(id){
+  S.carSala = id; S.carAbiertas.add(id); if (S.evSec === "cines") S.carVista = "cine";
+  if (typeof mapaMax !== "undefined" && mapaMax) mapaGrande(false);
+  render(); capa.pedir();
+  const el = document.querySelector(`[data-sala="${CSS.escape(id)}"]`); if (el) el.scrollIntoView({block: "start", behavior: "smooth"});
+}
 function isoMas(n){ const d = new Date(); d.setDate(d.getDate() + n); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
 function rangoEvF(){
   const dow = (new Date().getDay() + 6) % 7;           // 0 = lunes ... 6 = domingo
@@ -2197,14 +2434,17 @@ function rangoEvF(){
   }
   return null;
 }
-function filtroFechaEv(){
-  return `<div class="chips ev-fechas">${["todas","hoy","manana","finde","semana","mes"].map(k => `<button type="button" class="chip" data-a="ev-f" data-v="${k}" aria-pressed="${S.evF === k}">${tr("evF")[k]}</button>`).join("")}
+function filtroFechaEv(cart){
+  const sel = S.evF;
+  return `<div class="chips ev-fechas">${["todas","hoy","manana","finde","semana","mes"].map(k => `<button type="button" class="chip" data-a="ev-f" data-v="${k}" aria-pressed="${sel === k}">${tr("evF")[k]}</button>`).join("")}
     <label class="chip ev-dia" aria-pressed="${S.evF === "dia"}"><span>${S.evF === "dia" && S.evDia ? fechaCorta(S.evDia) : tr("evF").dia}</span><input type="date" id="ev-dia" min="${isoMas(0)}" value="${S.evDia}" aria-label="${tr("evFDia")}"></label></div>`;
 }
 function vistaEventos(){
   const hoy = hoyISO(), rg = rangoEvF();
   const ev = eventosActivos(hoy).filter(e => !rg || ((e.desde || hoy) <= rg[1] && (e.hasta || e.desde || hoy) >= rg[0]));
   let h = `<div class="cab-res"><h2>${tr("eventos")}</h2><div class="row"></div></div>`;
+  h += `<div class="seg ev-sec">${[["eventos", tr("evSecEventos")], ["cines", "🎬 " + tr("evSecCines")], ["teatros", "🎭 " + tr("evSecTeatros")]].map(([k, x]) => `<button type="button" data-a="ev-sec" data-v="${k}" aria-pressed="${S.evSec === k}">${x}</button>`).join("")}</div>`;
+  if (S.evSec !== "eventos") return h + selVistaCart() + filtroFechaEv(true) + vistaCartelera();
   if (S.formEvento) h += formEvento();
   h += filtroFechaEv() + `<p class="muted small ev-estrellas"><span class="estrella-ic" aria-hidden="true">★</span> ${tr("evEstrellas")}</p>`;
   if (!ev.length) h += `<div class="vacio">${rg ? tr("sinEventosFecha") : tr("sinEventos")}</div>`;
@@ -2212,19 +2452,40 @@ function vistaEventos(){
     const activo = (e.desde || hoy) <= hoy;
     const rango = e.desde && e.hasta && e.desde !== e.hasta ? fechaCorta(e.desde) + " – " + fechaCorta(e.hasta) : e.hasta && !e.desde ? tr("hastaEl", fechaCorta(e.hasta)) : fechaCorta(e.desde || e.hasta);
     const horario = loc(e, "horario"), precio = loc(e, "precio"), desc = loc(e, "desc"), nota = loc(e, "nota"), lugar = loc(e, "lugar");
-    return `<div class="item ev${S.evSel === e.id ? " sel" : ""}" data-ev="${esc(e.id)}" style="cursor:default"><div class="ev-sup">${activo ? `<span class="tag mia">${e.hasta === hoy || (!e.hasta && e.desde === hoy) ? tr("hoy") : tr("enCurso")}</span>` : ""}<button type="button" class="ev-x" data-a="borrar-evento" data-v="${esc(e.id)}" aria-label="${tr("borrar")}: ${esc(loc(e, "n"))}" title="${tr("borrar")}">✕</button></div><div class="min-w0"><div class="t">${esc(loc(e, "n"))}</div>
+    return `<div class="item ev${S.evSel === e.id ? " sel" : ""}" data-ev="${esc(e.id)}" style="cursor:default"><button type="button" class="fav-estrella" data-a="guardar-evento" data-v="${esc(e.id)}" aria-pressed="${!!INFO["ev_" + e.id]}" aria-label="${esc(tr(INFO["ev_" + e.id] ? "quitarEv" : "favorito"))}" title="${esc(tr(INFO["ev_" + e.id] ? "quitarEv" : "favorito"))}">${INFO["ev_" + e.id] ? "★" : "☆"}</button><div class="ev-sup"><button type="button" class="ev-x" data-a="borrar-evento" data-v="${esc(e.id)}" aria-label="${tr("borrar")}: ${esc(loc(e, "n"))}" title="${tr("borrar")}">✕</button></div><div class="min-w0"><div class="t">${esc(loc(e, "n"))}${activo ? ` <span class="tag mia ev-ahora">${e.hasta === hoy || (!e.hasta && e.desde === hoy) ? tr("hoy") : tr("enCurso")}</span>` : ""}</div>
       <div class="small muted">${esc(lugar)}${horario ? " · " + esc(horario) : ""}</div>
       ${precio ? `<div class="small"><b>${tr("precio")}:</b> ${esc(precio)}</div>` : ""}
       ${desc ? `<p class="ev-desc${S.evAbiertos.has(e.id) ? "" : " corto"}">${esc(desc)}</p><button type="button" class="linkbtn ev-mas" data-a="ev-mas" data-v="${esc(e.id)}" hidden>${S.evAbiertos.has(e.id) ? tr("verMenos") : tr("verMasTxt")}</button>` : ""}
       ${nota ? `<p class="small muted" style="margin-top:4px">${esc(nota)}</p>` : ""}
-      <div class="row small" style="margin-top:8px">${urlSegura(e.web || e.link) ? `<a class="btn chico" href="${esc(urlSegura(e.web || e.link))}" target="_blank" rel="noopener">${tr("paginaEvento")}</a>` : ""}${urlSegura(e.tickets) ? `<a class="btn chico prim" href="${esc(urlSegura(e.tickets))}" target="_blank" rel="noopener">${tr("comprarEntradas")}</a>` : ""}${coordsEv(e) ? `<button type="button" class="btn chico" data-a="ir-evento" data-v="${esc(e.id)}">${tr("verEnMapa")}</button>` : ""}</div></div>
+      <div class="row small" style="margin-top:8px">${urlSegura(e.web || e.link) ? `<a class="btn chico" href="${esc(urlSegura(e.web || e.link))}" target="_blank" rel="noopener">${tr("paginaEvento")}</a>` : ""}${urlSegura(e.tickets) ? `<a class="btn chico prim" href="${esc(urlSegura(e.tickets))}" target="_blank" rel="noopener">${tr("comprarEntradas")}</a>` : ""}</div></div>
       <div class="der">${rango}</div></div>`; }).join("")}</div>`;
   h += `<p class="muted small">${tr("eventosDesaparecen")}${EVENTOS_FECHA ? " " + tr("eventosActualizados", fechaCorta(EVENTOS_FECHA)) : ""}</p>`;
   return h;
 }
-function grupo(titulo, arr, abierto){
+function eventoPorId(id){ return (typeof todosEventos === "function" ? todosEventos() : EVENTOS)[id]; }
+function eventosGuardados(){
+  const hoy = hoyISO();
+  return Object.entries(INFO).filter(([k, v]) => k.startsWith("ev_") && v && v.evg && v.ev)
+    .map(([k, v]) => Object.assign({}, v.ev, {id: k.slice(3), fin: (v.ev.hasta || v.ev.desde || "") < hoy}))
+    .sort((a, b) => (a.fin - b.fin) || (a.desde || "").localeCompare(b.desde || ""));
+}
+function grupoEventos(){
+  const arr = eventosGuardados(); if (!arr.length) return "";
+  const it = e => {
+    const rango = e.desde && e.hasta && e.desde !== e.hasta ? fechaCorta(e.desde) + " – " + fechaCorta(e.hasta) : fechaCorta(e.desde || e.hasta);
+    const horario = loc(e, "horario"), lugar = loc(e, "lugar"), web = urlSegura(e.web || e.link), tk = urlSegura(e.tickets);
+    return `<div class="item-guard"><div class="item ev-g${e.fin ? " ev-fin" : ""}" data-evg="${esc(e.id)}"><div class="min-w0">
+      <div class="small muted">${e.fin ? `<span class="tag">${tr("terminado")}</span> ` : ""}${rango}${horario ? " · " + esc(horario) : ""}</div>
+      <div class="t">${esc(loc(e, "n"))}</div>${lugar ? `<div class="small muted">${esc(lugar)}</div>` : ""}
+      <div class="row small" style="margin-top:6px">${web ? `<a class="btn chico" href="${esc(web)}" target="_blank" rel="noopener">${tr("paginaEvento")}</a>` : ""}${tk && !e.fin ? `<a class="btn chico prim" href="${esc(tk)}" target="_blank" rel="noopener">${tr("comprarEntradas")}</a>` : ""}</div>
+    </div></div><button type="button" class="ev-x guard-x" data-a="guardar-evento" data-v="${esc(e.id)}" aria-label="${esc(tr("quitarEv"))}" title="${esc(tr("quitarEv"))}">✕</button></div>`;
+  };
+  return `<details class="filtros" open><summary>${tr("gEventos")} (${arr.length})</summary><div class="lista" style="margin-top:10px">${arr.map(it).join("")}</div></details>`;
+}
+function grupo(titulo, arr, abierto, k){
   if (!arr.length) return "";
-  return `<details class="filtros" ${abierto ? "open" : ""}><summary>${titulo} (${arr.length})</summary><div class="lista" style="margin-top:10px">${arr.map(itemLugar).join("")}</div></details>`;
+  const it = p => k ? `<div class="item-guard">${itemLugar(p)}<button type="button" class="ev-x guard-x" data-a="quitar-marca" data-v="${esc(p.id)}" data-k="${k}" aria-label="${esc(tr("quitarMarca"))}" title="${esc(tr("quitarMarca"))}">✕</button></div>` : itemLugar(p);
+  return `<details class="filtros" ${abierto ? "open" : ""}><summary>${titulo} (${arr.length})</summary><div class="lista" style="margin-top:10px">${arr.map(it).join("")}</div></details>`;
 }
 function vistaMis(){
   const todos = [...porId.values()];
@@ -2234,9 +2495,10 @@ function vistaMis(){
   h += bloqueInstalar();
   if (soloLocal) h += `<div class="banner resp-banner"><p>${tr("soloLocal")}</p><button type="button" class="btn chico" data-a="respaldo">${tr("descargarRespaldo")}</button></div>`;
   if (S.formLugar) h += formLugar();
-  h += grupo(tr("gFav"), por("fav"), true) + grupo(tr("gFui"), por("fui"), false) + grupo(tr("gAmigos"), por("amigos"), false)
-     + grupo(tr("gPropios"), propios, false) + grupo(tr("gDesc"), todos.filter(p => p.info.desc), false);
-  if (!todos.some(p => p.info.fav || p.info.fui || p.info.amigos || p.info.desc) && !propios.length) h += `<div class="vacio">${tr("sinMarcas")}</div>`;
+  h += grupoEventos();
+  h += grupo(tr("gFav"), por("fav"), true, "fav") + grupo(tr("gFui"), por("fui"), false, "fui") + grupo(tr("gAmigos"), por("amigos"), false, "amigos")
+     + grupo(tr("gPropios"), propios, false) + grupo(tr("gDesc"), todos.filter(p => p.info.desc), false, "desc");
+  if (!todos.some(p => p.info.fav || p.info.fui || p.info.amigos || p.info.desc) && !propios.length && !eventosGuardados().length) h += `<div class="vacio">${tr("sinMarcas")}</div>`;
   if (!soloLocal) h += `<div class="estado resp"><p class="muted small min-w0">${tr("respaldoTxt")}</p><button type="button" class="btn chico" data-a="respaldo">${tr("descargarRespaldo")}</button></div>`;
   h += `<p class="muted small">${tr("creditos")}</p>`;
   return h;
@@ -2282,29 +2544,23 @@ function vistaDetalle(){
   const p = porId.get(S.detalle); if (!p){ S.detalle = null; return vistaActual(); }
   const m = momento(), est = textoEstado(p, m), inf = p.info, mn = minutosA(p);
   const dc = p.lat != null ? dirCerca(p.lat, p.lng, 35) : null;
-  let h = `<button type="button" class="btn chico" data-a="volver" style="align-self:flex-start">${tr("volver")}</button>
-    <div class="row"><span class="tipo" style="--c:var(--t-${p.tipo})"><i class="f-${p.tipo}"></i>${TIPOS[p.tipo] || p.tipo}</span>${esMia(p) ? `<span class="tag mia">${tr("deMiLista")}</span>` : ""}</div>
-    <h2>${esc(p.n)}</h2>
-    <div class="dato"><span class="${est.cls}">${est.t}</span>${mn != null ? `<span>${tr("minPie", mn)}</span>` : ""}</div>
-    ${p.dir ? `<p class="muted">${esc(p.dir)}</p>` : (dc != null ? `<p class="muted">${esc(tr("cercaDe", textoDir(dc)))}</p>` : "")}
+  let h = `<div class="det-cab"><div class="min-w0"><h2>${esc(p.n)}</h2>${p.dir ? `<p class="muted det-dir">${esc(p.dir)}</p>` : (dc != null ? `<p class="muted det-dir">${esc(tr("cercaDe", textoDir(dc)))}</p>` : "")}</div><button type="button" class="ev-x det-x" data-a="volver" aria-label="${esc(tr("cerrarFicha"))}" title="${esc(tr("cerrarFicha"))}">✕</button></div>
+    <div class="dato det-sub"><span class="tipo" style="--c:var(--t-${p.tipo})"><i class="f-${p.tipo}"></i>${TIPOS[p.tipo] || p.tipo}</span><span class="${est.cls}">${est.t}</span>${mn != null ? `<span>${tr("minPie", mn)}</span>` : ""}</div>
     <div class="row">${(p.act || []).map(x => `<span class="tag mia">${ACTS[x] || x}</span>`).join("")}${(p.planes || []).map(x => `<span class="tag">${PLANES[x] || x}</span>`).join("")}<span class="tag">${p.io === "ext" ? tr("exterior") : tr("interior")}</span><span class="tag">${tr("presuTag", PRESU[p.presu] || "?", !(p.propio || inf.presu))}</span>${XT_ORDEN.filter(k => (p.xt || []).includes(k)).map(k => `<span class="tag xt">${XT_ICONO[k]}${tr("XT")[k]}</span>`).join("")}</div>
-    <div class="row">${p.lat != null ? `<a class="btn prim" href="${linkRuta(p)}" target="_blank" rel="noopener">${tr("comoLlegar")}</a><a class="btn" href="${linkTransporte(p)}" target="_blank" rel="noopener">${ICONO_TRANVIA} ${tr("transporteBtn")}</a><button type="button" class="btn" data-a="ver-mapa" data-v="${esc(p.id)}">${tr("verEnMapa")}</button><button type="button" class="btn" data-a="compartir" data-v="${esc(p.id)}">${ICONO_COMPARTIR} ${tr("compartir")}</button>` : `<span class="muted small">${tr("sinUbicMapa")}</span>`}${p.web ? `<a class="btn" href="${esc(p.web)}" target="_blank" rel="noopener">${tr("sitioWeb")}</a>` : ""}</div>
-    <div class="campo"><span class="lbl">${tr("misMarcas")}</span><div class="marcas">${[["fav",tr("mFav")],["fui",tr("mFui")],["amigos",tr("mAmigos")],["desc",tr("mDesc")]].map(([k, x]) => `<button type="button" class="chip" data-a="marca" data-k="${k}" data-v="${esc(p.id)}" aria-pressed="${!!inf[k]}">${x}</button>`).join("")}</div></div>`;
+    <div class="row">${p.lat != null ? `<a class="btn prim" href="${linkRuta(p)}" target="_blank" rel="noopener">${tr("comoLlegar")}</a><a class="btn" href="${linkTransporte(p)}" target="_blank" rel="noopener">${ICONO_TRANVIA} ${tr("transporteBtn")}</a><button type="button" class="btn" data-a="ver-mapa" data-v="${esc(p.id)}">${tr("verEnMapa")}</button><button type="button" class="btn" data-a="compartir" data-v="${esc(p.id)}">${ICONO_COMPARTIR} ${tr("compartir")}</button><a class="btn" href="${linkResenas(p)}" target="_blank" rel="noopener"><span class="estrella-ic" aria-hidden="true">★</span> ${tr("resenas")}</a>` : `<span class="muted small">${tr("sinUbicMapa")}</span>`}${p.web ? `<a class="btn" href="${esc(p.web)}" target="_blank" rel="noopener">${tr("sitioWeb")}</a>` : ""}<button type="button" class="btn btn-fav" data-a="marca" data-k="fav" data-v="${esc(p.id)}" aria-pressed="${!!inf.fav}">${inf.fav ? "★" : "☆"} ${tr("favorito")}</button></div>`;
   if (p.hs){
     h += `<div class="campo"><span class="lbl">${tr("horarioLbl")}</span><div class="horas">${p.hs.map((tt, i) => `<span class="${i === m.dia ? "hoy" : ""}">${DIAS[i]}</span><span class="${i === m.dia ? "hoy" : ""}">${tt.length ? tt.map(([a, b]) => b - a >= 1440 ? "24 h" : hhmm(a) + "–" + hhmm(b)).join(", ") : tr("cerrado")}</span>`).join("")}</div>
       <p class="muted small">${p.propio ? "" : tr("fuenteOSM")}</p></div>`;
   } else if (p.oh){
     h += `<div class="campo"><span class="lbl">${tr("horarioLbl")}</span><p class="small">${esc(p.oh)}</p></div>`;
   }
-  h += `<div class="campo"><label for="d-nota">${tr("misNotas")}</label><textarea id="d-nota" placeholder="${tr("notasPh")}">${esc(loc(inf, "nota"))}</textarea></div>
-    <div class="campo"><label for="d-precio">${tr("precio")}</label><input type="text" id="d-precio" placeholder="${tr("precioDetPh")}" value="${esc(loc(inf, "precio"))}"></div>
-    <div class="row"><button type="button" class="btn" data-a="guardar-nota" data-v="${esc(p.id)}">${tr("guardarNotas")}</button>${p.propio ? `<button type="button" class="btn" data-a="editar-propio" data-v="${esc(p.id)}">${tr("editarLugar")}</button><button type="button" class="btn" data-a="borrar-propio" data-v="${esc(p.id)}">${tr("borrarLugar")}</button>` : ""}</div>`;
+  if (p.propio) h += `<div class="row"><button type="button" class="btn" data-a="editar-propio" data-v="${esc(p.id)}">${tr("editarLugar")}</button><button type="button" class="btn" data-a="borrar-propio" data-v="${esc(p.id)}">${tr("borrarLugar")}</button></div>`;
   if (S.confirmarBorrar === p.id) h += `<div class="banner row">${esc(tr("confirmBorrar", p.n))} <button type="button" class="btn chico" data-a="borrar-propio-si" data-v="${esc(p.id)}">${tr("siBorrar")}</button><button type="button" class="btn chico" data-a="borrar-propio-no">${tr("no")}</button></div>`;
   return h;
 }
 function vistaActual(){ return S.tab === "cerca" ? vistaCerca() : S.tab === "explorar" ? vistaExplorar() : S.tab === "eventos" ? vistaEventos() : vistaMis(); }
 function render(){
-  document.querySelectorAll("nav.tabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.tab === S.tab));
+  document.querySelectorAll("nav.tabs button[data-tab]").forEach(b => b.setAttribute("aria-selected", b.dataset.tab === S.tab));
   const v = $("#vista"), y = v.scrollTop, cx = $("#carrusel") ? $("#carrusel").scrollLeft : 0;
   v.innerHTML = S.detalle ? vistaDetalle() : vistaActual();
   if (!S.detalle) v.scrollTop = y;
@@ -2363,10 +2619,19 @@ document.addEventListener("click", ev => {
   const lg = ev.target.closest("[data-lang]");
   if (lg){ menuIdioma(false); cambiarIdioma(lg.dataset.lang); return; }
   if (!ev.target.closest(".idioma-sel")) menuIdioma(false);
-  const tab = ev.target.closest("nav.tabs button");
+  const tab = ev.target.closest("nav.tabs button[data-tab]");
+  if (tab && mapaMax) mapaGrande(false);
   if (tab){ S.tab = tab.dataset.tab; S.detalle = null; S.texto = ""; S.verMas = 60; if (S.tab === "cerca" && S.ubic) calcularCerca(); render(); capa.pedir(); return; }
   const sug = ev.target.closest(".sugs button:not([data-a])");
   if (sug){ $("#sugs").hidden = true; if (sug.dataset.k === "rec") usarReciente(+sug.dataset.v); else if (sug.dataset.k === "dir") elegirDir(+sug.dataset.v); else if (sug.dataset.k === "calle") elegirCalle(+sug.dataset.v); else abrirDetalle(sug.dataset.v); return; }
+  const tarjEv = !ev.target.closest("a, button, input, textarea, select") && ev.target.closest(".item.ev, .item.ev-g");
+  if (tarjEv){
+    const id = tarjEv.dataset.ev || tarjEv.dataset.evg;
+    const e = tarjEv.dataset.ev ? (typeof todosEventos === "function" ? todosEventos() : EVENTOS)[id] : (INFO["ev_" + id] || {}).ev;
+    const c = e && coordsEv(e);
+    if (c){ S.marcaEv = c; if (tarjEv.dataset.ev) S.evSel = id; map.setView([c.lat, c.lng], 17.5); render(); capa.pedir(); }
+    return;
+  }
   const b = ev.target.closest("[data-a]"); if (!b) { if (!ev.target.closest(".buscar") && $("#sugs")) $("#sugs").hidden = true; return; }
   const a = b.dataset.a, v = b.dataset.v;
   const recalcular = () => { if (S.tab === "cerca") calcularCerca(); render(); capa.pedir(); };
@@ -2381,10 +2646,15 @@ document.addEventListener("click", ev => {
     case "io": S.io = v; recalcular(); break;
     case "bajar": { const vv = $("#vista"); vv.scrollTo({top: vv.scrollHeight, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"}); break; }
     case "filtros": S.filtrosAbiertos = !S.filtrosAbiertos; render(); break;
+    case "mapa-max": mapaGrande(!mapaMax); break;
     case "xt": S.xt.has(v) ? S.xt.delete(v) : S.xt.add(v); S.verMas = 60; recalcular(); break;
     case "cuando": S.cuando = v; if (v === "otro"){ const m = new Date(); S.dia = (m.getDay()+6)%7; S.min = m.getHours()*60 + m.getMinutes(); } recalcular(); break;
     case "detalle": abrirDetalle(v); break;
     case "ev-f": S.evF = v; S.evSel = null; render(); capa.pedir(); break;
+    case "ev-sec": S.evSec = v; S.carSala = null; if (v === "cines") S.carVista = "cine"; render(); capa.pedir(); $("#vista").scrollTop = 0; break;
+    case "car-vista": S.carVista = v; S.carSala = null; render(); break;
+    case "car-exp": S.carAbiertas.has(v) ? S.carAbiertas.delete(v) : S.carAbiertas.add(v); render(); break;
+    case "ver-sala": { const c = salaCoords(v); if (c){ S.carSala = v; map.setView([c.lat, c.lng], Math.max(map.getZoom(), 16)); render(); capa.pedir(); } break; }
     case "ev-mas": S.evAbiertos.has(v) ? S.evAbiertos.delete(v) : S.evAbiertos.add(v); render(); break;
     case "cambiar-origen": cambiarOrigen(); break;
     case "usar-reciente": usarReciente(+v); break;
@@ -2394,6 +2664,14 @@ document.addEventListener("click", ev => {
     case "compartir": compartirLugar(v); break;
     case "volver": S.detalle = null; render(); capa.pedir(); break;
     case "ver-mapa": { const p = porId.get(v); if (p){ S.sel = v; irA(p, 17); capa.pedir(); } break; }
+    case "guardar-evento": { const k = "ev_" + v;
+      if (INFO[k]){ setInfo(k, {evg: false, ev: null}); toast(tr("tQuitada")); break; }
+      const e = eventoPorId(v); if (!e || e.oculto) break;
+      const copia = {}; for (const c of ["n", "lugar", "desde", "hasta", "horario", "precio", "web", "link", "tickets", "fuente", "lat", "lng"]) if (e[c] != null && e[c] !== "") copia[c] = e[c];
+      setInfo(k, {evg: true, ev: copia}); toast(tr("tFav")); break; }
+    case "ir-evento-g": { const g = INFO["ev_" + v]; const c = g && g.ev && coordsEv(g.ev); if (c){ S.marcaEv = c; map.setView([c.lat, c.lng], 17.5); render(); capa.pedir(); if (typeof mapaGrande === "function" && esMovil()) ponerHoja("mapa"); } break; }
+    case "quitar-marca": { const k = b.dataset.k; if (!porId.get(v) || !["fav", "fui", "amigos", "desc"].includes(k)) break;
+      setInfo(v, {[k]: false}); toast(tr("tQuitada")); break; }
     case "marca": { const p = porId.get(v); if (!p) break; const k = b.dataset.k; const nuevo = !p.info[k];
       setInfo(v, {[k]: nuevo}); toast(nuevo ? tr({fav:"tFav", fui:"tFui", amigos:"tAmigos", desc:"tDesc"}[k]) : tr("tQuitada")); break; }
     case "guardar-nota": { const inf = (porId.get(v) || {}).info || {}, en = LANG !== "es";
@@ -2579,19 +2857,72 @@ async function respaldo(){
 const MQ_MOVIL = matchMedia("(max-width: 899px)");
 const esMovil = () => MQ_MOVIL.matches;
 const HOJA = {mapa: 0.70, medio: 0.46, lista: 0.20};   // parte de la pantalla que ocupa el mapa
-let hoja = "medio";
+let hoja = "lista";
 function volverInicio(){
   // todo vuelve a como al abrir la app; solo se mantienen el idioma y el tema (y tus lugares guardados)
   Object.assign(S, {tab: "cerca", ubic: null, res: [], sel: null, lejano: null, detalle: null, texto: "", verMas: 60,
     esperandoUbic: false, ubicPara: null, formLugar: null, formEvento: null, marcaDir: null, marcaEv: null, confirmarBorrar: null,
     act: new Set(), planes: new Set(), presuMax: "todos", sinLimite: true, io: "todos", etapa: "todas", maxMin: 15, minAbierto: 60,
-    cuando: "ahora", dia: 0, min: 0, sinHorario: true, filtrosAbiertos: false, xt: new Set(), evF: "todas", evDia: "", evAbiertos: new Set(), evSel: null});
+    cuando: "ahora", dia: 0, min: 0, sinHorario: true, filtrosAbiertos: false, xt: new Set(), evF: "todas", evDia: "", evAbiertos: new Set(), evSel: null, evSec: "eventos", carVista: "cine", carSala: null, carAbiertas: new Set()});
   if (typeof menuIdioma === "function") menuIdioma(false);
   ultimoDij = null; avisoMapa("");
   if (typeof map !== "undefined" && map) map.setView([48.1440, 17.1085], 15.5);
   render(); capa.pedir();
   const v = $("#vista"); if (v) v.scrollTop = 0;
 }
+/* Mapa grande: en el celular el mapa ocupa todo, menos la cabecera y la barra de abajo */
+let mapaMax = false;
+function mapaGrande(si){
+  mapaMax = !!si && esMovil();
+  $("#app").classList.toggle("mapa-max", mapaMax);
+  const b = $("#btn-mapa-max"); if (!b) return;
+  const t = tr(mapaMax ? "mapaMin" : "mapaMax");
+  b.innerHTML = mapaMax ? `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>` : `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>`;
+  b.setAttribute("aria-pressed", mapaMax); b.setAttribute("aria-label", t); b.title = t;
+  // al volver a la lista: si hay lugares encontrados, la pantalla queda sobre el carrusel (con el lugar elegido en el mapa)
+  if (!mapaMax) requestAnimationFrame(() => {
+    const v = $("#vista"); if (!v) return;
+    if (S.detalle){ v.scrollTop = 0; return; }
+    const car = $("#carrusel"), cab = car && car.previousElementSibling;
+    if (S.tab !== "cerca" || !car) return;
+    const ref = cab && cab.classList.contains("cab-res") ? cab : car;
+    v.scrollTop += ref.getBoundingClientRect().top - v.getBoundingClientRect().top - 8;
+    if (S.sel && car.querySelector(`.card[data-id="${CSS.escape(S.sel)}"]`)) irATarjeta(S.sel);
+  });
+}
+MQ_MOVIL.addEventListener("change", () => { if (!esMovil() && mapaMax) mapaGrande(false); });
+(function deslizarPestanas(){
+  const v = $("#vista"); if (!v) return;
+  let x0 = null, y0 = 0, t0 = 0;
+  const ignora = el => {
+    for (let n = el; n && n !== v; n = n.parentElement){
+      if (n.matches && n.matches("input, textarea, select, .carrusel, [contenteditable]")) return true;
+      const cs = getComputedStyle(n);
+      if ((cs.overflowX === "auto" || cs.overflowX === "scroll") && n.scrollWidth > n.clientWidth + 2) return true;
+    }
+    return false;
+  };
+  v.addEventListener("touchstart", e => {
+    x0 = null;
+    if (!esMovil() || e.touches.length !== 1) return;
+    const t = e.touches[0];
+    if (t.clientX < 20 || t.clientX > innerWidth - 20 || ignora(e.target)) return;
+    x0 = t.clientX; y0 = t.clientY; t0 = Date.now();
+  }, {passive: true});
+  v.addEventListener("touchend", e => {
+    if (x0 == null) return;
+    const t = e.changedTouches[0], dx = t.clientX - x0, dy = t.clientY - y0; x0 = null;
+    if (Date.now() - t0 > 700 || Math.abs(dx) < 70 || Math.abs(dx) < Math.abs(dy) * 1.8) return;
+    const orden = [...document.querySelectorAll("nav.tabs button[data-tab]")].map(b => b.dataset.tab);
+    const i = orden.indexOf(S.tab); if (i < 0) return;
+    const j = (i + (dx < 0 ? 1 : -1) + orden.length) % orden.length;   // en círculo: Spots ↔ Cerca, ahora
+    v.classList.remove("desliza-izq", "desliza-der"); void v.offsetWidth;
+    v.classList.add(dx < 0 ? "desliza-izq" : "desliza-der");
+    document.querySelector(`nav.tabs button[data-tab="${orden[j]}"]`).click();
+    v.scrollTop = 0;
+  }, {passive: true});
+  v.addEventListener("animationend", () => v.classList.remove("desliza-izq", "desliza-der"));
+})();
 function ponerHoja(e, usuario){
   // solo el arrastre o el toque de la barra cambia el tamaño; las pestañas, los detalles y las búsquedas no lo tocan
   if (!usuario || !esMovil() || !HOJA[e]) return;
@@ -2653,7 +2984,7 @@ function textosEstaticos(){
   document.querySelectorAll(".idioma-menu [data-lang]").forEach(b => b.setAttribute("aria-checked", b.dataset.lang === LANG));
   const bi = document.getElementById("btn-idioma"), bl = document.querySelector(`.idioma-menu [data-lang="${LANG}"] svg`);
   if (bi && bl) bi.innerHTML = bl.outerHTML + `<svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-  pintarBotonTema();
+  pintarBotonTema(); mapaGrande(mapaMax);
   if (typeof map !== "undefined" && map && map._attribActual){ map.attributionControl.removeAttribution(map._attribActual); map._attribActual = tr("attrib"); map.attributionControl.addAttribution(map._attribActual); }
 }
 function menuIdioma(abrir){
@@ -2687,7 +3018,7 @@ const CIUDAD = "bratislava";
 fetch("ciudades/" + CIUDAD + ".json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }).then(D => {
   cargarCalles(D); cargarGrafo(D.grafo); if (D.dirs) cargarDirs(D.dirs);
   LUG = D.lugares.map(p => { const q = Object.assign({}, p); q.x = PX(p.lng); q.y = PY(p.lat); q.sn = enganchar(p.lat, p.lng); return q; });
-  reconstruir(); iniciarMapa(); textosEstaticos(); $("#cargando").hidden = true; render(); abrirDesdeLink(); reloj(); setInterval(() => { reloj(); if (S.cuando === "ahora" && S.tab === "cerca" && S.ubic && !S.detalle){ calcularCerca(); renderSuave(); capa.pedir(); } }, 60000);
+  reconstruir(); iniciarMapa(); textosEstaticos(); $("#cargando").hidden = true; render(); abrirDesdeLink(); cargarCartelera(); reloj(); setInterval(() => { reloj(); if (S.cuando === "ahora" && S.tab === "cerca" && S.ubic && !S.detalle){ calcularCerca(); renderSuave(); capa.pedir(); } }, 60000);
   conectarDB();
 }).catch(() => { const c = $("#cargando"); c.removeAttribute("data-i18n"); c.textContent = tr("errorCarga"); c.hidden = false; });
 </script>

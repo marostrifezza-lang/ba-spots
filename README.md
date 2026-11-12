@@ -8,3 +8,4 @@ Qué hacer en Bratislava ahora mismo: lugares abiertos y cerca (por GPS o direcc
 - Tus favoritos, notas y lugares se guardan solo en tu navegador. / Your favorites, notes and places stay in your browser.
 - Mapa y lugares / Map and places: © colaboradores de OpenStreetMap / OpenStreetMap contributors (ODbL). Eventos / Events: GoOut, Eventbrite.
 - Creada por / Created by: Maro Strifezza
+- © 2026 Maro Strifezza. Todos los derechos reservados / All rights reserved. Ver / See [LICENSE](LICENSE).

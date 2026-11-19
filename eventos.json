@@ -13,7 +13,11 @@
    "web": "https://goout.net/en/bratislava-mozart-festival-2026/szhisoy/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-ed2f073f6696"
+   "id": "imp-ed2f073f6696",
+   "t": {
+    "es": "Festival Mozart de Bratislava 2026",
+    "en": "Bratislava Mozart Festival 2026"
+   }
   },
   {
    "n": "Dávid Soboň: Počkať, čo?",
@@ -26,7 +30,11 @@
    "web": "https://goout.net/en/david-sobon-pockat-co/szvrsmy/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-16d28cfefcd0"
+   "id": "imp-16d28cfefcd0",
+   "t": {
+    "es": "Dávid Soboň: ¿Espera, qué?",
+    "en": "Dávid Soboň: Wait, What?"
+   }
   },
   {
    "n": "Ivan Ouhel: Pod povrchom",
@@ -39,7 +47,11 @@
    "web": "https://goout.net/en/ivan-ouhel-pod-povrchom/szsdfmy/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-e31814dc48e0"
+   "id": "imp-e31814dc48e0",
+   "t": {
+    "es": "Ivan Ouhel: Bajo la superficie",
+    "en": "Ivan Ouhel: Beneath the Surface"
+   }
   },
   {
    "n": "Off Bratislava 2026: White Noise",
@@ -52,7 +64,11 @@
    "web": "https://goout.net/en/off-bratislava-2026-white-noise/szenjny/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-7b15a10b438c"
+   "id": "imp-7b15a10b438c",
+   "t": {
+    "es": "Off Bratislava 2026: White Noise",
+    "en": "Off Bratislava 2026: White Noise"
+   }
   },
   {
    "n": "Príbehy z Írska",
@@ -65,7 +81,11 @@
    "web": "https://goout.net/en/pribehy-z-irska/szghwny/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-9d96f50b5edf"
+   "id": "imp-9d96f50b5edf",
+   "t": {
+    "es": "Historias de Irlanda",
+    "en": "Stories from Ireland"
+   }
   },
   {
    "n": "Space to Space",
@@ -78,7 +98,11 @@
    "web": "https://goout.net/en/space-to-space/szadepy/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-20bdff60a7f0"
+   "id": "imp-20bdff60a7f0",
+   "t": {
+    "es": "Space to Space",
+    "en": "Space to Space"
+   }
   },
   {
    "n": "dizajn.sk",
@@ -91,7 +115,11 @@
    "web": "https://goout.net/en/dizajnsk/szpcmby/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-0fc109cde5fc"
+   "id": "imp-0fc109cde5fc",
+   "t": {
+    "es": "dizajn.sk",
+    "en": "dizajn.sk"
+   }
   },
   {
    "n": "Vincent van Gogh",
@@ -104,7 +132,11 @@
    "web": "https://goout.net/en/vincent-van-gogh/szhpiky/",
    "tickets": "https://goout.net/sale/583175",
    "fuente": "GoOut",
-   "id": "imp-3426e0923a4f"
+   "id": "imp-3426e0923a4f",
+   "t": {
+    "es": "Vincent van Gogh",
+    "en": "Vincent van Gogh"
+   }
   },
   {
    "n": "Slovenská otázka: Ján Lajčiak",
@@ -117,7 +149,11 @@
    "web": "https://goout.net/en/slovenska-otazka-jan-lajciak/szcmcoy/",
    "tickets": "https://goout.net/sale/623641",
    "fuente": "GoOut",
-   "id": "imp-2abe30ed5dd0"
+   "id": "imp-2abe30ed5dd0",
+   "t": {
+    "es": "La cuestión eslovaca: Ján Lajčiak",
+    "en": "The Slovak Question: Ján Lajčiak"
+   }
   },
   {
    "n": "Komentovaná prehliadka výstavy Closer (an archive 24 project)",
@@ -130,7 +166,11 @@
    "web": "https://goout.net/en/komentovana-prehliadka-vystavy-closer-an-archive-24-project/szibuoy/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-1be186f717f3"
+   "id": "imp-1be186f717f3",
+   "t": {
+    "es": "Visita guiada a la exposición Closer (an archive 24 project)",
+    "en": "Guided tour of the exhibition Closer (an archive 24 project)"
+   }
   },
   {
    "n": "Svadba",
@@ -143,7 +183,11 @@
    "web": "https://goout.net/en/svadba/szxytny/",
    "tickets": "https://goout.net/sale/619831",
    "fuente": "GoOut",
-   "id": "imp-bc0508eb864b"
+   "id": "imp-bc0508eb864b",
+   "t": {
+    "es": "La boda",
+    "en": "The Wedding"
+   }
   },
   {
    "n": "Separ & Raphael: Monarchia tour",
@@ -156,7 +200,11 @@
    "web": "https://goout.net/en/separ-and-raphael-monarchia-tour/szbfrny/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-ec04bfe1d3c4"
+   "id": "imp-ec04bfe1d3c4",
+   "t": {
+    "es": "Separ & Raphael: Monarchia tour",
+    "en": "Separ & Raphael: Monarchia Tour"
+   }
   },
   {
    "n": "TU–BA Youth: Je bývanie v komunite pre mňa?",
@@ -169,7 +217,11 @@
    "web": "https://goout.net/en/tu-ba-youth-je-byvanie-v-komunite-pre-mna/szauuoy/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-56b99cf07ada"
+   "id": "imp-56b99cf07ada",
+   "t": {
+    "es": "TU–BA Youth: ¿Vivir en comunidad es para mí?",
+    "en": "TU–BA Youth: Is Community Living for Me?"
+   }
   },
   {
    "n": "Knihohranie: Zavárané tajomstvo",
@@ -182,7 +234,11 @@
    "web": "https://goout.net/en/knihohranie-zavarane-tajomstvo/szqeepy/",
    "tickets": "https://goout.net/sale/638279",
    "fuente": "GoOut",
-   "id": "imp-06a2ae8df910"
+   "id": "imp-06a2ae8df910",
+   "t": {
+    "es": "Jugar con libros: El secreto en conserva",
+    "en": "Book Play: The Preserved Secret"
+   }
   },
   {
    "n": "Vesmírna kolíska",
@@ -195,7 +251,11 @@
    "web": "https://goout.net/en/vesmirna-koliska/szpiepy/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-ffa744f68545"
+   "id": "imp-ffa744f68545",
+   "t": {
+    "es": "La cuna cósmica",
+    "en": "The Cosmic Cradle"
+   }
   },
   {
    "n": "Mikrozvuk #65: Pablo Diserens + Stefan Maier",
@@ -208,7 +268,11 @@
    "web": "https://goout.net/en/mikrozvuk-65-pablo-diserens+stefan-maier/szriuoy/",
    "tickets": "https://goout.net/sale/633379",
    "fuente": "GoOut",
-   "id": "imp-26bf1984bd11"
+   "id": "imp-26bf1984bd11",
+   "t": {
+    "es": "Mikrozvuk #65: Pablo Diserens + Stefan Maier",
+    "en": "Mikrozvuk #65: Pablo Diserens + Stefan Maier"
+   }
   },
   {
    "n": "Stano Petrov (krst albumu)",
@@ -221,7 +285,11 @@
    "web": "https://goout.net/en/stano-petrov-krst-albumu/szhppoy/",
    "tickets": "https://goout.net/sale/631300",
    "fuente": "GoOut",
-   "id": "imp-cb54ffe1c637"
+   "id": "imp-cb54ffe1c637",
+   "t": {
+    "es": "Stano Petrov (presentación del álbum)",
+    "en": "Stano Petrov (album launch)"
+   }
   },
   {
    "n": "Modestep",
@@ -234,7 +302,11 @@
    "web": "https://goout.net/en/modestep/szlccpy/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-460332f5a06d"
+   "id": "imp-460332f5a06d",
+   "t": {
+    "es": "Modestep",
+    "en": "Modestep"
+   }
   },
   {
    "n": "Víno v Tržnici",
@@ -247,7 +319,11 @@
    "web": "https://goout.net/en/vino-v-trznici/szmisoy/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-4ec126d682df"
+   "id": "imp-4ec126d682df",
+   "t": {
+    "es": "Vino en el mercado Tržnica",
+    "en": "Wine at the Tržnica Market Hall"
+   }
   },
   {
    "n": "Levity: Bizzare + Edina + ďalší",
@@ -260,7 +336,11 @@
    "web": "https://goout.net/en/levity-bizzare+edina+dalsi/szhowny/",
    "tickets": "https://goout.net/sale/620780",
    "fuente": "GoOut",
-   "id": "imp-ffaea5da064b"
+   "id": "imp-ffaea5da064b",
+   "t": {
+    "es": "Levity: Bizzare + Edina y más",
+    "en": "Levity: Bizzare + Edina + more"
+   }
   },
   {
    "n": "German Language Lab Aupark",
@@ -273,7 +353,11 @@
    "web": "https://www.meetup.com/bratislava/events/317319367/",
    "tickets": "",
    "fuente": "Meetup",
-   "id": "imp-36d711c59a3e"
+   "id": "imp-36d711c59a3e",
+   "t": {
+    "es": "Laboratorio de alemán en Aupark",
+    "en": "German Language Lab Aupark"
+   }
   },
   {
    "n": "Profil bez hriechu",
@@ -286,7 +370,11 @@
    "web": "https://goout.net/en/profil-bez-hriechu/szvoopy/",
    "tickets": "https://goout.net/sale/643460",
    "fuente": "GoOut",
-   "id": "imp-f196665caefa"
+   "id": "imp-f196665caefa",
+   "t": {
+    "es": "Un perfil sin pecado",
+    "en": "A Profile Without Sin"
+   }
   },
   {
    "n": "Slovak Language Walk Aupark",
@@ -299,7 +387,11 @@
    "web": "https://www.meetup.com/bratislava/events/317319388/",
    "tickets": "",
    "fuente": "Meetup",
-   "id": "imp-1904550f305f"
+   "id": "imp-1904550f305f",
+   "t": {
+    "es": "Paseo para practicar eslovaco en Aupark",
+    "en": "Slovak Language Walk Aupark"
+   }
   },
   {
    "n": "International Night Bratislava",
@@ -312,7 +404,11 @@
    "web": "https://www.meetup.com/bratislava/events/316838343/",
    "tickets": "",
    "fuente": "Meetup",
-   "id": "imp-44143749baa8"
+   "id": "imp-44143749baa8",
+   "t": {
+    "es": "Noche internacional de Bratislava",
+    "en": "International Night Bratislava"
+   }
   },
   {
    "n": "International Night Bratislava (from Vienna)",
@@ -325,7 +421,11 @@
    "web": "https://www.meetup.com/vienna/events/317242514/",
    "tickets": "",
    "fuente": "Meetup",
-   "id": "imp-7716ff94bc39"
+   "id": "imp-7716ff94bc39",
+   "t": {
+    "es": "Noche internacional de Bratislava (desde Viena)",
+    "en": "International Night Bratislava (from Vienna)"
+   }
   },
   {
    "n": "Starec a more",
@@ -338,7 +438,11 @@
    "web": "https://goout.net/en/starec-a-more/szpcjny/",
    "tickets": "https://goout.net/sale/614245",
    "fuente": "GoOut",
-   "id": "imp-265a053b1a90"
+   "id": "imp-265a053b1a90",
+   "t": {
+    "es": "El viejo y el mar",
+    "en": "The Old Man and the Sea"
+   }
   },
   {
    "n": "Vianočný Cverna Market 2026",
@@ -351,7 +455,11 @@
    "web": "https://goout.net/en/vianocny-cverna-market-2026/szedvmy/",
    "tickets": "https://goout.net/sale/620751",
    "fuente": "GoOut",
-   "id": "imp-3bb28536622c"
+   "id": "imp-3bb28536622c",
+   "t": {
+    "es": "Mercado navideño Cverna 2026",
+    "en": "Cverna Christmas Market 2026"
+   }
   },
   {
    "n": "Komentovaný sprievod: Medzi obrazom a interiérom",
@@ -364,7 +472,11 @@
    "web": "https://goout.net/en/komentovany-sprievod-medzi-obrazom-a-interierom/sznaxny/",
    "tickets": "https://goout.net/sale/622569",
    "fuente": "GoOut",
-   "id": "imp-c6a3223f324a"
+   "id": "imp-c6a3223f324a",
+   "t": {
+    "es": "Visita guiada: Entre la imagen y el interior",
+    "en": "Guided tour: Between Image and Interior"
+   }
   },
   {
    "n": "🤖 Agile Day 2026 Človek a umelá inteligencia (in Slovak, FREE)",
@@ -377,7 +489,11 @@
    "web": "https://www.meetup.com/agilebratislava/events/317337244/",
    "tickets": "",
    "fuente": "Meetup",
-   "id": "imp-cdecc20e864b"
+   "id": "imp-cdecc20e864b",
+   "t": {
+    "es": "🤖 Agile Day 2026: El ser humano y la inteligencia artificial (en eslovaco, GRATIS)",
+    "en": "🤖 Agile Day 2026: People and Artificial Intelligence (in Slovak, FREE)"
+   }
   },
   {
    "n": "Next 2026: Advanced Music Festival",
@@ -390,7 +506,11 @@
    "web": "https://goout.net/en/next-2026-advanced-music-festival/szxpooy/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-13920c18dfff"
+   "id": "imp-13920c18dfff",
+   "t": {
+    "es": "Next 2026: Advanced Music Festival",
+    "en": "Next 2026: Advanced Music Festival"
+   }
   },
   {
    "n": "Champagne Gala 2026",
@@ -403,7 +523,11 @@
    "web": "https://goout.net/en/champagne-gala-2026/szdtjly/",
    "tickets": "https://goout.net/sale/592683",
    "fuente": "GoOut",
-   "id": "imp-4f0d89aafa39"
+   "id": "imp-4f0d89aafa39",
+   "t": {
+    "es": "Gala de champán 2026",
+    "en": "Champagne Gala 2026"
+   }
   },
   {
    "n": "Property Investor Networking Bratislava | Investors, Developers & Agents",
@@ -416,7 +540,11 @@
    "web": "https://www.meetup.com/propertydealnetwork/events/317107151/",
    "tickets": "",
    "fuente": "Meetup",
-   "id": "imp-1edf9377bd5e"
+   "id": "imp-1edf9377bd5e",
+   "t": {
+    "es": "Encuentro de inversores inmobiliarios en Bratislava | Inversores, desarrolladores y agentes",
+    "en": "Property Investor Networking Bratislava | Investors, Developers & Agents"
+   }
   },
   {
    "n": "Bratislavský Kaviár zimný",
@@ -429,7 +557,11 @@
    "web": "https://goout.net/en/bratislavsky-kaviar-zimny/szshxcy/",
    "tickets": "https://goout.net/sale/525312",
    "fuente": "GoOut",
-   "id": "imp-3450d024fc3c"
+   "id": "imp-3450d024fc3c",
+   "t": {
+    "es": "Bratislavský Kaviár: edición de invierno",
+    "en": "Bratislavský Kaviár: Winter Edition"
+   }
   },
   {
    "n": "Error Fest 2026",
@@ -442,7 +574,11 @@
    "web": "https://goout.net/en/error-fest-2026/szcyuoy/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-3e07eb2720af"
+   "id": "imp-3e07eb2720af",
+   "t": {
+    "es": "Error Fest 2026",
+    "en": "Error Fest 2026"
+   }
   },
   {
    "n": "Pulsation Face2Face: The Nexus",
@@ -455,7 +591,11 @@
    "web": "https://goout.net/en/pulsation-face2face-the-nexus/szorsmy/",
    "tickets": "https://goout.net/sale/607333",
    "fuente": "GoOut",
-   "id": "imp-da19a52ca886"
+   "id": "imp-da19a52ca886",
+   "t": {
+    "es": "Pulsation Face2Face: The Nexus",
+    "en": "Pulsation Face2Face: The Nexus"
+   }
   },
   {
    "n": "BRaK: Edícia jeseň / zima 2026",
@@ -468,7 +608,11 @@
    "web": "https://goout.net/en/brak-edicia-jesen--zima-2026/szmdboy/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-c0235b7342c2"
+   "id": "imp-c0235b7342c2",
+   "t": {
+    "es": "BRaK: Edición otoño / invierno 2026",
+    "en": "BRaK: Autumn / Winter 2026 Edition"
+   }
   },
   {
    "n": "Urban Market Winter Drop",
@@ -481,7 +625,11 @@
    "web": "https://goout.net/en/urban-market-winter-drop/szuyaoy/",
    "tickets": "",
    "fuente": "GoOut",
-   "id": "imp-e4d0e456e513"
+   "id": "imp-e4d0e456e513",
+   "t": {
+    "es": "Urban Market Winter Drop",
+    "en": "Urban Market Winter Drop"
+   }
   },
   {
    "n": "Škvrny na slnku",
@@ -494,7 +642,11 @@
    "web": "https://goout.net/en/skvrny-na-slnku/szmowny/",
    "tickets": "https://goout.net/sale/620789",
    "fuente": "GoOut",
-   "id": "imp-0a619a45aa01"
+   "id": "imp-0a619a45aa01",
+   "t": {
+    "es": "Manchas solares",
+    "en": "Sunspots"
+   }
   },
   {
    "n": "SHIFTS26",
@@ -507,7 +659,11 @@
    "web": "https://goout.net/en/shifts26/szffciy/",
    "tickets": "https://goout.net/sale/562535",
    "fuente": "GoOut",
-   "id": "imp-d6d38e5124e4"
+   "id": "imp-d6d38e5124e4",
+   "t": {
+    "es": "SHIFTS26",
+    "en": "SHIFTS26"
+   }
   },
   {
    "n": "Nov.28/Dec.1-Dec.5 Hungarian Thermal Spa Escape & Christmas City Break",
@@ -520,7 +676,11 @@
    "web": "https://www.meetup.com/aaa-outdoor-hiking-adventure-travel/events/314527286/",
    "tickets": "",
    "fuente": "Meetup",
-   "id": "imp-efa63a02221c"
+   "id": "imp-efa63a02221c",
+   "t": {
+    "es": "28 nov / 1–5 dic: Escapada a las termas de Hungría y ciudad navideña",
+    "en": "Nov.28/Dec.1-Dec.5 Hungarian Thermal Spa Escape & Christmas City Break"
+   }
   },
   {
    "n": "🎄 The Stage is Yours: Open Mic Night [AWS User Group Bratislava]",
@@ -533,7 +693,11 @@
    "web": "https://www.meetup.com/aws-user-group-bratislava/events/317353240/",
    "tickets": "",
    "fuente": "Meetup",
-   "id": "imp-6b9a433881a5"
+   "id": "imp-6b9a433881a5",
+   "t": {
+    "es": "🎄 El escenario es tuyo: noche de micrófono abierto [AWS User Group Bratislava]",
+    "en": "🎄 The Stage is Yours: Open Mic Night [AWS User Group Bratislava]"
+   }
   }
  ]
 }

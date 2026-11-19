@@ -814,6 +814,9 @@ details.filtros[open] summary::after{content:" ▴"}
 .ev-mas{align-self:flex-start;font-size:13.5px;margin-top:2px}
 .item.ev.sel{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
 .ev-fechas{margin-bottom:2px}
+.ev-cats{margin-top:-4px}
+.ev-cat-n{font-size:12px;opacity:.65;margin-left:2px;font-variant-numeric:tabular-nums}
+.ev-cat-t{font-family:var(--f-body);font-weight:600}
 .bus-sec{display:flex;flex-direction:column;gap:6px;margin-bottom:6px}
 .bus-tit{font-size:15px;margin:4px 0 0}
 .bus-it{display:flex;gap:10px;align-items:flex-start;text-align:left}
@@ -1077,6 +1080,7 @@ const I18N = {
     resenas:"Google", notasFuente:"Puntajes de IMDb (vía OMDb) y TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.", tituloSk:t => `En eslovaco: ${t}`,
     evUna:"Una sola vez", evUnaTit:"Solo eventos de un día (sin exposiciones ni festivales de varios días)", sinEventosUna:"No hay eventos de una sola vez para esa fecha.",
     busPh:"Busca lugares, eventos, películas, calles…", busEventos:"Eventos", busCart:"Cine y teatro", busCalles:"Calles y direcciones", busVerTodos:n => `Ver todos (${n})`, busPeli:"Película", busObra:"Obra de teatro", busProx:"Próxima función",
+    evCatTodas:"Todas", evCats:{concierto:"Conciertos", teatro:"Teatro", exposicion:"Exposiciones", festival:"Festivales", gastronomia:"Gastronomía", charla:"Charlas y encuentros", otro:"Otros"}, evCat1:{concierto:"Concierto", teatro:"Teatro", exposicion:"Exposición", festival:"Festival", gastronomia:"Gastronomía", charla:"Charla o encuentro", otro:""}, sinEventosCat:"No hay eventos de esta categoría para esa fecha.",
     evSecEventos:"Eventos", evSecCines:"Cines", evSecTeatros:"Teatros", porPelicula:"Por película", porCine:"Por cine",
     sinFunciones:"No hay funciones para esa fecha.", carteleraNo:"La cartelera no está disponible en este momento.",
     dab:"doblada", tit:"subtítulos", ov:"versión original", agotado:"Agotado", entradas:"Entradas", fichaObra:"Ficha",
@@ -1172,6 +1176,7 @@ const I18N = {
     resenas:"Google", notasFuente:"Ratings from IMDb (via OMDb) and TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.", tituloSk:t => `In Slovak: ${t}`,
     evUna:"One time", evUnaTit:"Only one-day events (no exhibitions or multi-day festivals)", sinEventosUna:"No one-time events for that date.",
     busPh:"Search places, events, films, streets…", busEventos:"Events", busCart:"Cinema and theatre", busCalles:"Streets and addresses", busVerTodos:n => `See all (${n})`, busPeli:"Film", busObra:"Play", busProx:"Next showing",
+    evCatTodas:"All", evCats:{concierto:"Concerts", teatro:"Theatre", exposicion:"Exhibitions", festival:"Festivals", gastronomia:"Food & drink", charla:"Talks & meetups", otro:"Other"}, evCat1:{concierto:"Concert", teatro:"Theatre", exposicion:"Exhibition", festival:"Festival", gastronomia:"Food & drink", charla:"Talk or meetup", otro:""}, sinEventosCat:"No events in this category for that date.",
     evSecEventos:"Events", evSecCines:"Cinemas", evSecTeatros:"Theatres", porPelicula:"By film", porCine:"By cinema",
     sinFunciones:"No showings for that date.", carteleraNo:"The listings aren't available right now.",
     dab:"dubbed", tit:"subtitles", ov:"original version", agotado:"Sold out", entradas:"Tickets", fichaObra:"Details",
@@ -1267,6 +1272,7 @@ const I18N = {
     resenas:"Google", notasFuente:"Hodnotenia z IMDb (cez OMDb) a TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.", tituloSk:t => t,
     evUna:"Jednorazové", evUnaTit:"Len jednodňové podujatia (bez výstav a viacdňových festivalov)", sinEventosUna:"Na tento dátum nie sú žiadne jednorazové podujatia.",
     busPh:"Hľadaj miesta, podujatia, filmy, ulice…", busEventos:"Podujatia", busCart:"Kino a divadlo", busCalles:"Ulice a adresy", busVerTodos:n => `Zobraziť všetky (${n})`, busPeli:"Film", busObra:"Divadelné predstavenie", busProx:"Najbližšie predstavenie",
+    evCatTodas:"Všetky", evCats:{concierto:"Koncerty", teatro:"Divadlo", exposicion:"Výstavy", festival:"Festivaly", gastronomia:"Gastro", charla:"Prednášky a stretnutia", otro:"Ostatné"}, evCat1:{concierto:"Koncert", teatro:"Divadlo", exposicion:"Výstava", festival:"Festival", gastronomia:"Gastro", charla:"Prednáška alebo stretnutie", otro:""}, sinEventosCat:"V tejto kategórii nie sú na tento dátum žiadne podujatia.",
     evSecEventos:"Podujatia", evSecCines:"Kiná", evSecTeatros:"Divadlá", porPelicula:"Podľa filmu", porCine:"Podľa kina",
     sinFunciones:"Na tento dátum nie sú žiadne predstavenia.", carteleraNo:"Program momentálne nie je dostupný.",
     dab:"dabing", tit:"titulky", ov:"pôvodné znenie", agotado:"Vypredané", entradas:"Vstupenky", fichaObra:"Detail",
@@ -1918,10 +1924,10 @@ let _evMapa = {k: "", lista: []};
 function eventosMapa(){
   if (S.tab === "eventos" && S.evSec !== "eventos") return [];
   const rg = S.tab === "eventos" ? rangoEvF() : null, iso = rg ? rg[0] : (S.tab === "cerca" ? fechaMomento() : hoyISO()), fin = rg ? rg[1] : (S.tab === "eventos" ? "9999-12-31" : iso);
-  const k = iso + fin + (S.tab === "eventos" && S.evUna ? "|1x" : "") + "|" + Object.keys(EVENTOS).length + "|" + (typeof EVENTOS_PUB !== "undefined" ? Object.keys(EVENTOS_PUB).length : 0) + "|" + porId.size;
+  const k = iso + fin + (S.tab === "eventos" && S.evUna ? "|1x" : "") + (S.tab === "eventos" ? "|" + (S.evCat || "") : "") + "|" + Object.keys(EVENTOS).length + "|" + (typeof EVENTOS_PUB !== "undefined" ? Object.keys(EVENTOS_PUB).length : 0) + "|" + porId.size;
   if (_evMapa.k === k) return _evMapa.lista;
   const lista = [];
-  for (const e of eventosActivos(iso)){ if ((e.desde || iso) > fin) continue; if (S.tab === "eventos" && S.evUna && !unaVez(e)) continue; const c = coordsEv(e); if (c) lista.push({e, c}); }
+  for (const e of eventosActivos(iso)){ if ((e.desde || iso) > fin) continue; if (S.tab === "eventos" && S.evUna && !unaVez(e)) continue; if (S.tab === "eventos" && S.evCat && catEv(e) !== S.evCat) continue; const c = coordsEv(e); if (c) lista.push({e, c}); }
   _evMapa = {k, lista}; return lista;
 }
 function eventoEnPunto(cp){
@@ -1934,6 +1940,7 @@ function abrirEvento(id){
   const e = eventosActivos(hoyISO()).find(x => x.id === id), rg = rangoEvF();
   if (e && rg && !((e.desde || "") <= rg[1] && (e.hasta || e.desde || "") >= rg[0])){ S.evF = "todas"; }
   if (e && S.evUna && !unaVez(e)) S.evUna = false;
+  if (e && S.evCat && catEv(e) !== S.evCat) S.evCat = "";
   render(); capa.pedir();
   const el = document.querySelector(`[data-ev="${CSS.escape(id)}"]`); if (el) el.scrollIntoView({block: "center", behavior: "smooth"});
 }
@@ -2154,6 +2161,8 @@ function tarjeta(r, i){
 const ICONO_COMPARTIR = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-3px"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.4M8.3 13.2l7.4 4.4"/></svg>`;
 const URL_PUBLICA = "https://marostrifezza-lang.github.io/ba-spots/";
 function abrirDesdeLink(){
+  const me = /^#e-([A-Za-z0-9_-]{1,40})$/.exec(location.hash || "");
+  if (me){ abrirEventoDesdeLink(me[1]); return; }
   const m = /^#l-([nw]\d{1,12})$/.exec(location.hash || ""); if (!m) return;
   const p = porId.get(m[1]);
   try { history.replaceState(null, "", location.pathname + location.search); } catch(e){}
@@ -2503,6 +2512,38 @@ function unaVez(e){
   if (!d) return true;
   return (Date.parse(h.slice(0, 10)) - Date.parse(d.slice(0, 10))) <= 864e5;   // termina el mismo día o el siguiente
 }
+const EV_CATS = ["concierto", "teatro", "exposicion", "festival", "gastronomia", "charla", "otro"];
+function catEv(e){ return EV_CATS.includes(e && e.cat) ? e.cat : "otro"; }   // events without a category count as "other"
+function chipsCategoria(lista){
+  const n = {}; for (const e of lista){ const c = catEv(e); n[c] = (n[c] || 0) + 1; }
+  if (!EV_CATS.some(c => c !== "otro" && n[c])) return "";          // old data without categories: no row
+  const chip = (c, txt, k) => `<button type="button" class="chip" data-a="ev-cat" data-v="${c}" aria-pressed="${(S.evCat || "") === c}">${txt}${k != null ? ` <span class="ev-cat-n">${k}</span>` : ""}</button>`;
+  return `<div class="chips ev-cats">${chip("", tr("evCatTodas"))}${EV_CATS.filter(c => n[c] || S.evCat === c).map(c => chip(c, tr("evCats")[c], n[c] || 0)).join("")}</div>`;
+}
+async function compartirEvento(id){
+  const e = eventoPorId(id); if (!e) return;
+  const rango = e.desde && e.hasta && e.desde !== e.hasta ? fechaCorta(e.desde) + " – " + fechaCorta(e.hasta) : fechaCorta(e.desde || e.hasta);
+  const horario = loc(e, "horario"), web = urlSegura(e.web || e.link);
+  const texto = [loc(e, "n"), rango + (horario ? " · " + horario : ""), loc(e, "lugar"),
+    tr("abrirEnApp", URL_PUBLICA + "#e-" + id), web].filter(Boolean).join("\n");
+  const enMarco = window.self !== window.top;
+  if (navigator.share && !enMarco){
+    try { await navigator.share({title: loc(e, "n"), text: texto}); return; }
+    catch(err){ if (err && err.name === "AbortError") return; }
+  }
+  try { await navigator.clipboard.writeText(texto); toast(tr("copiado")); }
+  catch(err){ toast(tr("noCopiado")); }
+}
+/* Link "#e-<id>": open that event. Public events load a moment after the map, so it retries for a few seconds. */
+function abrirEventoDesdeLink(id, intento){
+  const e = eventoPorId(id);
+  if (!e){ if ((intento || 0) < 20) setTimeout(() => abrirEventoDesdeLink(id, (intento || 0) + 1), 500); return; }
+  try { history.replaceState(null, "", location.pathname + location.search); } catch(err){}
+  if (typeof mapaMax !== "undefined" && mapaMax) mapaGrande(false);
+  S.evCat = ""; abrirEvento(id);
+  const c = coordsEv(Object.assign({id}, e));
+  if (c){ S.marcaEv = c; map.setView([c.lat, c.lng], 17.5); capa.pedir(); }
+}
 function isoMas(n){ const d = new Date(); d.setDate(d.getDate() + n); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
 function rangoEvF(){
   const dow = (new Date().getDay() + 6) % 7;           // 0 = lunes ... 6 = domingo
@@ -2523,13 +2564,14 @@ function filtroFechaEv(cart){
 }
 function vistaEventos(){
   const hoy = hoyISO(), rg = rangoEvF();
-  const ev = eventosActivos(hoy).filter(e => !rg || ((e.desde || hoy) <= rg[1] && (e.hasta || e.desde || hoy) >= rg[0])).filter(e => !S.evUna || unaVez(e));
+  const evBase = eventosActivos(hoy).filter(e => !rg || ((e.desde || hoy) <= rg[1] && (e.hasta || e.desde || hoy) >= rg[0])).filter(e => !S.evUna || unaVez(e));
+  const ev = evBase.filter(e => !S.evCat || catEv(e) === S.evCat);
   let h = `<div class="cab-res"><h2>${tr("eventos")}</h2><div class="row"></div></div>`;
   h += `<div class="seg ev-sec">${[["eventos", tr("evSecEventos")], ["cines", "🎬 " + tr("evSecCines")], ["teatros", "🎭 " + tr("evSecTeatros")]].map(([k, x]) => `<button type="button" data-a="ev-sec" data-v="${k}" aria-pressed="${S.evSec === k}">${x}</button>`).join("")}</div>`;
   if (S.evSec !== "eventos") return h + selVistaCart() + filtroFechaEv(true) + vistaCartelera();
   if (S.formEvento) h += formEvento();
-  h += filtroFechaEv() + `<p class="muted small ev-estrellas"><span class="estrella-ic" aria-hidden="true">★</span> ${tr("evEstrellas")}</p>`;
-  if (!ev.length) h += `<div class="vacio">${S.evUna ? tr("sinEventosUna") : rg ? tr("sinEventosFecha") : tr("sinEventos")}</div>`;
+  h += filtroFechaEv() + chipsCategoria(evBase) + `<p class="muted small ev-estrellas"><span class="estrella-ic" aria-hidden="true">★</span> ${tr("evEstrellas")}</p>`;
+  if (!ev.length) h += `<div class="vacio">${S.evCat && evBase.length ? tr("sinEventosCat") : S.evUna ? tr("sinEventosUna") : rg ? tr("sinEventosFecha") : tr("sinEventos")}</div>`;
   else h += `<div class="lista">${ev.map(e => {
     const activo = (e.desde || hoy) <= hoy;
     const rango = e.desde && e.hasta && e.desde !== e.hasta ? fechaCorta(e.desde) + " – " + fechaCorta(e.hasta) : e.hasta && !e.desde ? tr("hastaEl", fechaCorta(e.hasta)) : fechaCorta(e.desde || e.hasta);
@@ -2539,8 +2581,8 @@ function vistaEventos(){
       ${precio ? `<div class="small"><b>${tr("precio")}:</b> ${esc(precio)}</div>` : ""}
       ${desc ? `<p class="ev-desc${S.evAbiertos.has(e.id) ? "" : " corto"}">${esc(desc)}</p><button type="button" class="linkbtn ev-mas" data-a="ev-mas" data-v="${esc(e.id)}" hidden>${S.evAbiertos.has(e.id) ? tr("verMenos") : tr("verMasTxt")}</button>` : ""}
       ${nota ? `<p class="small muted" style="margin-top:4px">${esc(nota)}</p>` : ""}
-      <div class="row small" style="margin-top:8px">${urlSegura(e.web || e.link) ? `<a class="btn chico" href="${esc(urlSegura(e.web || e.link))}" target="_blank" rel="noopener">${tr("paginaEvento")}</a>` : ""}${urlSegura(e.tickets) ? `<a class="btn chico prim" href="${esc(urlSegura(e.tickets))}" target="_blank" rel="noopener">${tr("comprarEntradas")}</a>` : ""}</div></div>
-      <div class="der">${rango}</div></div>`; }).join("")}</div>`;
+      <div class="row small" style="margin-top:8px"><button type="button" class="btn chico" data-a="compartir-evento" data-v="${esc(e.id)}" aria-label="${tr("compartir")}" title="${tr("compartir")}">${ICONO_COMPARTIR}</button>${urlSegura(e.web || e.link) ? `<a class="btn chico" href="${esc(urlSegura(e.web || e.link))}" target="_blank" rel="noopener">${tr("paginaEvento")}</a>` : ""}${urlSegura(e.tickets) ? `<a class="btn chico prim" href="${esc(urlSegura(e.tickets))}" target="_blank" rel="noopener">${tr("comprarEntradas")}</a>` : ""}</div></div>
+      <div class="der">${rango}${tr("evCat1")[catEv(e)] ? ` · <span class="ev-cat-t">${tr("evCat1")[catEv(e)]}</span>` : ""}</div></div>`; }).join("")}</div>`;
   h += `<p class="muted small">${tr("eventosDesaparecen")}${EVENTOS_FECHA ? " " + tr("eventosActualizados", fechaCorta(EVENTOS_FECHA)) : ""}</p>`;
   return h;
 }
@@ -2734,6 +2776,8 @@ document.addEventListener("click", ev => {
     case "detalle": abrirDetalle(v); break;
     case "ev-f": S.evF = v; S.evSel = null; render(); capa.pedir(); break;
     case "ev-una": S.evUna = !S.evUna; S.evSel = null; render(); capa.pedir(); break;
+    case "ev-cat": S.evCat = v || ""; S.evSel = null; render(); capa.pedir(); break;
+    case "compartir-evento": compartirEvento(v); break;
     case "ev-sec": S.evSec = v; S.carSala = null; S.carObra = null; if (v === "cines") S.carVista = "cine"; render(); capa.pedir(); $("#vista").scrollTop = 0; break;
     case "car-vista": S.carVista = v; S.carSala = null; S.carObra = null; render(); break;
     case "bus-todos": (S.busTodos || (S.busTodos = new Set())).add(v); render(); break;
@@ -2951,7 +2995,7 @@ function volverInicio(){
   Object.assign(S, {tab: "cerca", ubic: null, res: [], sel: null, lejano: null, detalle: null, texto: "", verMas: 60,
     esperandoUbic: false, ubicPara: null, formLugar: null, formEvento: null, marcaDir: null, marcaEv: null, confirmarBorrar: null,
     act: new Set(), planes: new Set(), presuMax: "todos", sinLimite: true, io: "todos", etapa: "todas", maxMin: 15, minAbierto: 60,
-    cuando: "ahora", dia: 0, min: 0, sinHorario: true, filtrosAbiertos: false, xt: new Set(), evF: "todas", evDia: "", evAbiertos: new Set(), evSel: null, evSec: "eventos", carVista: "cine", carSala: null, carAbiertas: new Set(), evUna: false});
+    cuando: "ahora", dia: 0, min: 0, sinHorario: true, filtrosAbiertos: false, xt: new Set(), evF: "todas", evDia: "", evAbiertos: new Set(), evSel: null, evSec: "eventos", carVista: "cine", carSala: null, carAbiertas: new Set(), evUna: false, evCat: ""});
   if (typeof menuIdioma === "function") menuIdioma(false);
   ultimoDij = null; avisoMapa("");
   if (typeof map !== "undefined" && map) map.setView([48.1440, 17.1085], 15.5);

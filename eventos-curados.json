@@ -19,7 +19,8 @@
    "nota_en": "The TASR news agency confirms the concert on November 5; some resellers also list the 4th. Buy from the official seller (Vivien), not resale sites.",
    "tickets": "https://www.vivien.sk",
    "web": "https://www.andrerieu.com",
-   "id": "andre-rieu"
+   "id": "andre-rieu",
+   "cat": "concierto"
   },
   {
    "desc": "Retrospectiva del pintor checo Ivan Ouhel (1945–2021), desde los años 90 hasta sus últimos cuadros. Sus temas son el paisaje y la figura humana, que se va fundiendo con el paisaje en lugar de ser el centro. El título alude a las capas de su pintura, donde se cruzan naturaleza y construcción, intuición y razón.",
@@ -40,7 +41,8 @@
    "precio_en": "Museum entry: €12 adult, €6 student, €25 family (2 adults + 2 students)",
    "tickets": "https://danubiana.sk/kontakt/vstupne",
    "web": "https://danubiana.sk/vystavy/pod-povrchom",
-   "id": "danubiana-beneath"
+   "id": "danubiana-beneath",
+   "cat": "exposicion"
   },
   {
    "desc": "Festival anual de fotografía que se hace en noviembre desde los años 90, con muestras en galerías de toda la ciudad. Lo organiza la Casa Centroeuropea de la Fotografía (SEDF).",
@@ -53,7 +55,8 @@
    "n_en": "Month of Photography (Mesiac fotografie)",
    "tickets": "",
    "web": "https://www.sedf.sk/",
-   "id": "mes-fotografia"
+   "id": "mes-fotografia",
+   "cat": "exposicion"
   },
   {
    "desc": "Festival dedicado a Mozart y a sus contemporáneos, con músicos eslovacos y extranjeros. En 2025 incluyó también un paseo histórico-musical por la vieja Bratislava. Lo organiza la asociación Spoločnosť Theodora Lotza.",
@@ -68,7 +71,8 @@
    "nota_en": "Dates not confirmed. In 2025 it ran from Oct 24 to Nov 9, with tickets on Ticketportal.",
    "tickets": "",
    "web": "https://www.visitbratislava.com/events/bratislava-mozart-festival/",
-   "id": "mozart-festival"
+   "id": "mozart-festival",
+   "cat": "festival"
   },
   {
    "desc": "El comediante Reece Kidd, de Belfast, presenta un show de stand-up en inglés: historias de un irlandés fuera de su ambiente, personajes y humor negro liviano, con mucha improvisación e interacción con el público. Hay un telonero.",
@@ -89,7 +93,8 @@
    "precio_en": "Not listed; shown at checkout",
    "tickets": "https://www.tickettailor.com/events/reecekidd/2033485",
    "web": "https://happeningnext.com/event/1-irishman-in-bratislava-a-stand-up-comedy-show-in-english-8pm-eid1ef0ks7qnd6r",
-   "id": "standup-reece-kidd"
+   "id": "standup-reece-kidd",
+   "cat": "teatro"
   },
   {
    "desc": "Degustación de vinos jóvenes de bodegas y asociaciones vitivinícolas de Bratislava, con gastronomía, conciertos, charlas sobre vino y juegos de preguntas. El viernes a las 16:00 se bendice el vino en la capilla de San Ladislao.",
@@ -110,7 +115,8 @@
    "precio_en": "Free entry. Glass with a €5 deposit; tastings are paid at each stall.",
    "tickets": "",
    "web": "https://www.bkis.sk/en/festival-mladeho-vina/",
-   "id": "vino-joven"
+   "id": "vino-joven",
+   "cat": "gastronomia"
   }
  ]
 }

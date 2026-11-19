@@ -1,6 +1,6 @@
 {
  "formato": "citas-bratislava-eventos/1",
- "generado": "2026-11-19T07:01+01:00",
+ "generado": "2026-11-19T10:54+01:00",
  "eventos": [
   {
    "n": "Bratislava Mozart Festival 2026",
@@ -14,6 +14,7 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-ed2f073f6696",
+   "cat": "festival",
    "t": {
     "es": "Festival Mozart de Bratislava 2026",
     "en": "Bratislava Mozart Festival 2026"
@@ -31,6 +32,7 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-16d28cfefcd0",
+   "cat": "exposicion",
    "t": {
     "es": "Dávid Soboň: ¿Espera, qué?",
     "en": "Dávid Soboň: Wait, What?"
@@ -48,9 +50,30 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-e31814dc48e0",
+   "cat": "exposicion",
    "t": {
     "es": "Ivan Ouhel: Bajo la superficie",
     "en": "Ivan Ouhel: Beneath the Surface"
+   }
+  },
+  {
+   "n": "Narkose",
+   "lugar": "Pink Whale, Dvořákovo Nábrežie",
+   "desde": "2026-11-19",
+   "hasta": "2026-11-19",
+   "horario": "",
+   "precio": "",
+   "desc": "Live: Narkose",
+   "web": "https://www.songkick.com/concerts/43427842-narkose-at-pink-whale",
+   "tickets": "",
+   "fuente": "Songkick",
+   "lat": 48.1412,
+   "lng": 17.08953,
+   "id": "imp-290d1be9f887",
+   "cat": "concierto",
+   "t": {
+    "es": "Narkose",
+    "en": "Narkose"
    }
   },
   {
@@ -65,6 +88,7 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-7b15a10b438c",
+   "cat": "festival",
    "t": {
     "es": "Off Bratislava 2026: White Noise",
     "en": "Off Bratislava 2026: White Noise"
@@ -82,6 +106,7 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-9d96f50b5edf",
+   "cat": "festival",
    "t": {
     "es": "Historias de Irlanda",
     "en": "Stories from Ireland"
@@ -99,6 +124,7 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-20bdff60a7f0",
+   "cat": "exposicion",
    "t": {
     "es": "Space to Space",
     "en": "Space to Space"
@@ -116,6 +142,7 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-0fc109cde5fc",
+   "cat": "exposicion",
    "t": {
     "es": "dizajn.sk",
     "en": "dizajn.sk"
@@ -126,13 +153,14 @@
    "lugar": "Sport Mall, Hodonínska 27",
    "desde": "2026-11-19",
    "hasta": "2026-11-19",
-   "horario": "09:00",
+   "horario": "10:00",
    "precio": "",
    "desc": "“I dream of my painting, and then I paint my dream.” Vincent van Gogh This unique immersive exhibition will draw you directly into the world of colours, emotions and stories of one of the most famous representatives of Post-Impressionism. And you certainly don’t have to be an art expert to fall in love with Van Gogh and his story! All you have to do is come and let yourself be carried away. Discover one of the most iconic artists in history as you have never imagined him before. The immersive…",
-   "web": "https://goout.net/en/vincent-van-gogh/szhpiky/",
-   "tickets": "https://goout.net/sale/583175",
+   "web": "https://goout.net/en/vincent-van-gogh/szipiky/",
+   "tickets": "https://goout.net/sale/583176",
    "fuente": "GoOut",
-   "id": "imp-3426e0923a4f",
+   "id": "imp-74643c868965",
+   "cat": "exposicion",
    "t": {
     "es": "Vincent van Gogh",
     "en": "Vincent van Gogh"
@@ -150,6 +178,7 @@
    "tickets": "https://goout.net/sale/623641",
    "fuente": "GoOut",
    "id": "imp-2abe30ed5dd0",
+   "cat": "otro",
    "t": {
     "es": "La cuestión eslovaca: Ján Lajčiak",
     "en": "The Slovak Question: Ján Lajčiak"
@@ -167,6 +196,7 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-1be186f717f3",
+   "cat": "exposicion",
    "t": {
     "es": "Visita guiada a la exposición Closer (an archive 24 project)",
     "en": "Guided tour of the exhibition Closer (an archive 24 project)"
@@ -184,6 +214,7 @@
    "tickets": "https://goout.net/sale/619831",
    "fuente": "GoOut",
    "id": "imp-bc0508eb864b",
+   "cat": "teatro",
    "t": {
     "es": "La boda",
     "en": "The Wedding"
@@ -201,6 +232,7 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-ec04bfe1d3c4",
+   "cat": "concierto",
    "t": {
     "es": "Separ & Raphael: Monarchia tour",
     "en": "Separ & Raphael: Monarchia Tour"
@@ -218,6 +250,7 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-56b99cf07ada",
+   "cat": "otro",
    "t": {
     "es": "TU–BA Youth: ¿Vivir en comunidad es para mí?",
     "en": "TU–BA Youth: Is Community Living for Me?"
@@ -235,6 +268,7 @@
    "tickets": "https://goout.net/sale/638279",
    "fuente": "GoOut",
    "id": "imp-06a2ae8df910",
+   "cat": "teatro",
    "t": {
     "es": "Jugar con libros: El secreto en conserva",
     "en": "Book Play: The Preserved Secret"
@@ -252,9 +286,30 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-ffa744f68545",
+   "cat": "otro",
    "t": {
     "es": "La cuna cósmica",
     "en": "The Cosmic Cradle"
+   }
+  },
+  {
+   "n": "Los Fastidios",
+   "lugar": "Pink Whale, Dvořákovo Nábrežie",
+   "desde": "2026-11-20",
+   "hasta": "2026-11-20",
+   "horario": "19:00",
+   "precio": "",
+   "desc": "Live: Los Fastidios (rock)",
+   "web": "https://www.songkick.com/concerts/43401060-los-fastidios-at-pink-whale",
+   "tickets": "",
+   "fuente": "Songkick",
+   "lat": 48.1412,
+   "lng": 17.08953,
+   "id": "imp-0af0db539fb1",
+   "cat": "concierto",
+   "t": {
+    "es": "Los Fastidios",
+    "en": "Los Fastidios"
    }
   },
   {
@@ -269,6 +324,7 @@
    "tickets": "https://goout.net/sale/633379",
    "fuente": "GoOut",
    "id": "imp-26bf1984bd11",
+   "cat": "concierto",
    "t": {
     "es": "Mikrozvuk #65: Pablo Diserens + Stefan Maier",
     "en": "Mikrozvuk #65: Pablo Diserens + Stefan Maier"
@@ -286,6 +342,7 @@
    "tickets": "https://goout.net/sale/631300",
    "fuente": "GoOut",
    "id": "imp-cb54ffe1c637",
+   "cat": "concierto",
    "t": {
     "es": "Stano Petrov (presentación del álbum)",
     "en": "Stano Petrov (album launch)"
@@ -303,6 +360,7 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-460332f5a06d",
+   "cat": "concierto",
    "t": {
     "es": "Modestep",
     "en": "Modestep"
@@ -320,6 +378,7 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-4ec126d682df",
+   "cat": "gastronomia",
    "t": {
     "es": "Vino en el mercado Tržnica",
     "en": "Wine at the Tržnica Market Hall"
@@ -337,6 +396,7 @@
    "tickets": "https://goout.net/sale/620780",
    "fuente": "GoOut",
    "id": "imp-ffaea5da064b",
+   "cat": "otro",
    "t": {
     "es": "Levity: Bizzare + Edina y más",
     "en": "Levity: Bizzare + Edina + more"
@@ -354,6 +414,7 @@
    "tickets": "",
    "fuente": "Meetup",
    "id": "imp-36d711c59a3e",
+   "cat": "charla",
    "t": {
     "es": "Laboratorio de alemán en Aupark",
     "en": "German Language Lab Aupark"
@@ -371,6 +432,7 @@
    "tickets": "https://goout.net/sale/643460",
    "fuente": "GoOut",
    "id": "imp-f196665caefa",
+   "cat": "teatro",
    "t": {
     "es": "Un perfil sin pecado",
     "en": "A Profile Without Sin"
@@ -388,6 +450,7 @@
    "tickets": "",
    "fuente": "Meetup",
    "id": "imp-1904550f305f",
+   "cat": "charla",
    "t": {
     "es": "Paseo para practicar eslovaco en Aupark",
     "en": "Slovak Language Walk Aupark"
@@ -405,6 +468,7 @@
    "tickets": "",
    "fuente": "Meetup",
    "id": "imp-44143749baa8",
+   "cat": "charla",
    "t": {
     "es": "Noche internacional de Bratislava",
     "en": "International Night Bratislava"
@@ -422,6 +486,7 @@
    "tickets": "",
    "fuente": "Meetup",
    "id": "imp-7716ff94bc39",
+   "cat": "charla",
    "t": {
     "es": "Noche internacional de Bratislava (desde Viena)",
     "en": "International Night Bratislava (from Vienna)"
@@ -439,9 +504,50 @@
    "tickets": "https://goout.net/sale/614245",
    "fuente": "GoOut",
    "id": "imp-265a053b1a90",
+   "cat": "teatro",
    "t": {
     "es": "El viejo y el mar",
     "en": "The Old Man and the Sea"
+   }
+  },
+  {
+   "n": "Eagle-Eye Cherry",
+   "lugar": "Pink Whale, Dvořákovo Nábrežie",
+   "desde": "2026-11-22",
+   "hasta": "2026-11-22",
+   "horario": "",
+   "precio": "",
+   "desc": "Live: Eagle-Eye Cherry (indie_alternative, rock)",
+   "web": "https://www.songkick.com/concerts/43308626-eagleeye-cherry-at-pink-whale",
+   "tickets": "",
+   "fuente": "Songkick",
+   "lat": 48.1412,
+   "lng": 17.08953,
+   "id": "imp-d354f2f6b328",
+   "cat": "concierto",
+   "t": {
+    "es": "Eagle-Eye Cherry",
+    "en": "Eagle-Eye Cherry"
+   }
+  },
+  {
+   "n": "Little BIG",
+   "lugar": "Majestic Music Club, Karpatská 2",
+   "desde": "2026-11-22",
+   "hasta": "2026-11-22",
+   "horario": "",
+   "precio": "",
+   "desc": "Live: Little BIG (electronic)",
+   "web": "https://www.songkick.com/concerts/43200572-little-big-at-majestic-music-club",
+   "tickets": "",
+   "fuente": "Songkick",
+   "lat": 48.15686,
+   "lng": 17.11358,
+   "id": "imp-981b638c6bc5",
+   "cat": "concierto",
+   "t": {
+    "es": "Little BIG",
+    "en": "Little BIG"
    }
   },
   {
@@ -456,6 +562,7 @@
    "tickets": "https://goout.net/sale/620751",
    "fuente": "GoOut",
    "id": "imp-3bb28536622c",
+   "cat": "otro",
    "t": {
     "es": "Mercado navideño Cverna 2026",
     "en": "Cverna Christmas Market 2026"
@@ -473,6 +580,7 @@
    "tickets": "https://goout.net/sale/622569",
    "fuente": "GoOut",
    "id": "imp-c6a3223f324a",
+   "cat": "exposicion",
    "t": {
     "es": "Visita guiada: Entre la imagen y el interior",
     "en": "Guided tour: Between Image and Interior"
@@ -490,6 +598,7 @@
    "tickets": "",
    "fuente": "Meetup",
    "id": "imp-cdecc20e864b",
+   "cat": "charla",
    "t": {
     "es": "🤖 Agile Day 2026: El ser humano y la inteligencia artificial (en eslovaco, GRATIS)",
     "en": "🤖 Agile Day 2026: People and Artificial Intelligence (in Slovak, FREE)"
@@ -507,6 +616,7 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-13920c18dfff",
+   "cat": "festival",
    "t": {
     "es": "Next 2026: Advanced Music Festival",
     "en": "Next 2026: Advanced Music Festival"
@@ -524,26 +634,10 @@
    "tickets": "https://goout.net/sale/592683",
    "fuente": "GoOut",
    "id": "imp-4f0d89aafa39",
+   "cat": "gastronomia",
    "t": {
     "es": "Gala de champán 2026",
     "en": "Champagne Gala 2026"
-   }
-  },
-  {
-   "n": "Property Investor Networking Bratislava | Investors, Developers & Agents",
-   "lugar": "The Dubliner Irish Pub, Sedlárska 6, 811 01 Bratislava-Staré Mesto, Bratislava",
-   "desde": "2026-11-25",
-   "hasta": "2026-11-25",
-   "horario": "19:00",
-   "precio": "",
-   "desc": "Free monthly property investor networking in Bratislava. Bring a deal, find capital, JV partners, agents, lenders and developers. 👉 Grab your FREE ticket here (required for entry): https://www.eventbrite.co.uk/e/property-deal-network-bratislava-pdn-property-networking-event-tickets-1999803995584 Property Deal Network (PDN) is a relaxed monthly meetup for property investors, developers and professionals who want to do business face-to-face. What happens at PDN Bratislava? People bring deals.…",
-   "web": "https://www.meetup.com/propertydealnetwork/events/317107151/",
-   "tickets": "",
-   "fuente": "Meetup",
-   "id": "imp-1edf9377bd5e",
-   "t": {
-    "es": "Encuentro de inversores inmobiliarios en Bratislava | Inversores, desarrolladores y agentes",
-    "en": "Property Investor Networking Bratislava | Investors, Developers & Agents"
    }
   },
   {
@@ -558,6 +652,7 @@
    "tickets": "https://goout.net/sale/525312",
    "fuente": "GoOut",
    "id": "imp-3450d024fc3c",
+   "cat": "otro",
    "t": {
     "es": "Bratislavský Kaviár: edición de invierno",
     "en": "Bratislavský Kaviár: Winter Edition"
@@ -575,9 +670,30 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-3e07eb2720af",
+   "cat": "festival",
    "t": {
     "es": "Error Fest 2026",
     "en": "Error Fest 2026"
+   }
+  },
+  {
+   "n": "Metrik",
+   "lugar": "A4 Studio, Trnavská cesta 39",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-27",
+   "horario": "",
+   "precio": "",
+   "desc": "Live: Metrik (electronic)",
+   "web": "https://www.songkick.com/concerts/43436726-metrik-at-a4-studio",
+   "tickets": "",
+   "fuente": "Songkick",
+   "lat": 48.16349,
+   "lng": 17.14483,
+   "id": "imp-00e56dbd4c6a",
+   "cat": "concierto",
+   "t": {
+    "es": "Metrik",
+    "en": "Metrik"
    }
   },
   {
@@ -592,6 +708,7 @@
    "tickets": "https://goout.net/sale/607333",
    "fuente": "GoOut",
    "id": "imp-da19a52ca886",
+   "cat": "otro",
    "t": {
     "es": "Pulsation Face2Face: The Nexus",
     "en": "Pulsation Face2Face: The Nexus"
@@ -609,6 +726,7 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-c0235b7342c2",
+   "cat": "festival",
    "t": {
     "es": "BRaK: Edición otoño / invierno 2026",
     "en": "BRaK: Autumn / Winter 2026 Edition"
@@ -626,9 +744,48 @@
    "tickets": "",
    "fuente": "GoOut",
    "id": "imp-e4d0e456e513",
+   "cat": "gastronomia",
    "t": {
     "es": "Urban Market Winter Drop",
     "en": "Urban Market Winter Drop"
+   }
+  },
+  {
+   "n": "Splin",
+   "lugar": "Majestic Music Club, Karpatská 2",
+   "desde": "2026-11-28",
+   "hasta": "2026-11-28",
+   "horario": "18:30",
+   "precio": "",
+   "desc": "Live: Splin",
+   "web": "https://www.songkick.com/concerts/43297203-splin-at-majestic-music-club",
+   "tickets": "",
+   "fuente": "Songkick",
+   "lat": 48.15686,
+   "lng": 17.11358,
+   "id": "imp-9701c28cb521",
+   "cat": "concierto",
+   "t": {
+    "es": "Splin",
+    "en": "Splin"
+   }
+  },
+  {
+   "n": "Bratislava Singles Speed Social",
+   "lugar": "Lachova 2461, Lachova 2461, Bratislava",
+   "desde": "2026-11-29",
+   "hasta": "2026-11-29",
+   "horario": "20:00",
+   "precio": "",
+   "desc": "😊 Speed Dating, Social Style: Bratislava Singles on Zoom One evening, a run of short one-on-one dates, and a host who keeps it easy. Join from your sofa, meet a handful of compatible Bratislava singles in quick video rounds, and tell us who you'd like to see again. If they say yes too, we connect you. Find your age group and sign up: - Ages 18-32 → [REGISTER…",
+   "web": "https://www.meetup.com/paddle-up-pickleball-social-crew/events/317481645/",
+   "tickets": "",
+   "fuente": "Meetup",
+   "id": "imp-cb7744c2ac3f",
+   "cat": "charla",
+   "t": {
+    "es": "Bratislava Singles Speed Social",
+    "en": "Bratislava Singles Speed Social"
    }
   },
   {
@@ -643,9 +800,30 @@
    "tickets": "https://goout.net/sale/620789",
    "fuente": "GoOut",
    "id": "imp-0a619a45aa01",
+   "cat": "teatro",
    "t": {
     "es": "Manchas solares",
     "en": "Sunspots"
+   }
+  },
+  {
+   "n": "Ficture",
+   "lugar": "Nová Cvernovka, Račianska 78",
+   "desde": "2026-12-01",
+   "hasta": "2026-12-01",
+   "horario": "",
+   "precio": "",
+   "desc": "Live: Ficture, froné",
+   "web": "https://www.songkick.com/concerts/43506871-ficture-at-nova-cvernovka",
+   "tickets": "",
+   "fuente": "Songkick",
+   "lat": 48.18311,
+   "lng": 17.13169,
+   "id": "imp-c2eef443038b",
+   "cat": "concierto",
+   "t": {
+    "es": "Ficture",
+    "en": "Ficture"
    }
   },
   {
@@ -660,6 +838,7 @@
    "tickets": "https://goout.net/sale/562535",
    "fuente": "GoOut",
    "id": "imp-d6d38e5124e4",
+   "cat": "otro",
    "t": {
     "es": "SHIFTS26",
     "en": "SHIFTS26"
@@ -677,6 +856,7 @@
    "tickets": "",
    "fuente": "Meetup",
    "id": "imp-efa63a02221c",
+   "cat": "charla",
    "t": {
     "es": "28 nov / 1–5 dic: Escapada a las termas de Hungría y ciudad navideña",
     "en": "Nov.28/Dec.1-Dec.5 Hungarian Thermal Spa Escape & Christmas City Break"
@@ -694,6 +874,7 @@
    "tickets": "",
    "fuente": "Meetup",
    "id": "imp-6b9a433881a5",
+   "cat": "charla",
    "t": {
     "es": "🎄 El escenario es tuyo: noche de micrófono abierto [AWS User Group Bratislava]",
     "en": "🎄 The Stage is Yours: Open Mic Night [AWS User Group Bratislava]"

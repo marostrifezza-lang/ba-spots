@@ -1080,7 +1080,7 @@ const I18N = {
     resenas:"Google", notasFuente:"Puntajes de IMDb (vía OMDb) y TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.", tituloSk:t => `En eslovaco: ${t}`,
     evUna:"Una sola vez", evUnaTit:"Solo eventos de un día (sin exposiciones ni festivales de varios días)", sinEventosUna:"No hay eventos de una sola vez para esa fecha.",
     busPh:"Busca lugares, eventos, películas, calles…", busEventos:"Eventos", busCart:"Cine y teatro", busCalles:"Calles y direcciones", busVerTodos:n => `Ver todos (${n})`, busPeli:"Película", busObra:"Obra de teatro", busProx:"Próxima función",
-    evCatTodas:"Todas", evCats:{concierto:"Conciertos", teatro:"Teatro", exposicion:"Exposiciones", festival:"Festivales", gastronomia:"Gastronomía", charla:"Charlas y encuentros", otro:"Otros"}, evCat1:{concierto:"Concierto", teatro:"Teatro", exposicion:"Exposición", festival:"Festival", gastronomia:"Gastronomía", charla:"Charla o encuentro", otro:""}, sinEventosCat:"No hay eventos de esta categoría para esa fecha.",
+    evCatTodas:"Todas", evCats:{concierto:"Conciertos", teatro:"Teatro", exposicion:"Exposiciones", festival:"Festivales", fiesta:"Fiestas", ninos:"Para niños", gastronomia:"Gastronomía", charla:"Charlas y encuentros", otro:"Otros"}, evCat1:{concierto:"Concierto", teatro:"Teatro", exposicion:"Exposición", festival:"Festival", fiesta:"Fiesta", ninos:"Para niños", gastronomia:"Gastronomía", charla:"Charla o encuentro", otro:""}, sinEventosCat:"No hay eventos de esta categoría para esa fecha.",
     evSecEventos:"Eventos", evSecCines:"Cines", evSecTeatros:"Teatros", porPelicula:"Por película", porCine:"Por cine",
     sinFunciones:"No hay funciones para esa fecha.", carteleraNo:"La cartelera no está disponible en este momento.",
     dab:"doblada", tit:"subtítulos", ov:"versión original", agotado:"Agotado", entradas:"Entradas", fichaObra:"Ficha",
@@ -1176,7 +1176,7 @@ const I18N = {
     resenas:"Google", notasFuente:"Ratings from IMDb (via OMDb) and TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.", tituloSk:t => `In Slovak: ${t}`,
     evUna:"One time", evUnaTit:"Only one-day events (no exhibitions or multi-day festivals)", sinEventosUna:"No one-time events for that date.",
     busPh:"Search places, events, films, streets…", busEventos:"Events", busCart:"Cinema and theatre", busCalles:"Streets and addresses", busVerTodos:n => `See all (${n})`, busPeli:"Film", busObra:"Play", busProx:"Next showing",
-    evCatTodas:"All", evCats:{concierto:"Concerts", teatro:"Theatre", exposicion:"Exhibitions", festival:"Festivals", gastronomia:"Food & drink", charla:"Talks & meetups", otro:"Other"}, evCat1:{concierto:"Concert", teatro:"Theatre", exposicion:"Exhibition", festival:"Festival", gastronomia:"Food & drink", charla:"Talk or meetup", otro:""}, sinEventosCat:"No events in this category for that date.",
+    evCatTodas:"All", evCats:{concierto:"Concerts", teatro:"Theatre", exposicion:"Exhibitions", festival:"Festivals", fiesta:"Parties", ninos:"For kids", gastronomia:"Food & drink", charla:"Talks & meetups", otro:"Other"}, evCat1:{concierto:"Concert", teatro:"Theatre", exposicion:"Exhibition", festival:"Festival", fiesta:"Party", ninos:"For kids", gastronomia:"Food & drink", charla:"Talk or meetup", otro:""}, sinEventosCat:"No events in this category for that date.",
     evSecEventos:"Events", evSecCines:"Cinemas", evSecTeatros:"Theatres", porPelicula:"By film", porCine:"By cinema",
     sinFunciones:"No showings for that date.", carteleraNo:"The listings aren't available right now.",
     dab:"dubbed", tit:"subtitles", ov:"original version", agotado:"Sold out", entradas:"Tickets", fichaObra:"Details",
@@ -1272,7 +1272,7 @@ const I18N = {
     resenas:"Google", notasFuente:"Hodnotenia z IMDb (cez OMDb) a TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.", tituloSk:t => t,
     evUna:"Jednorazové", evUnaTit:"Len jednodňové podujatia (bez výstav a viacdňových festivalov)", sinEventosUna:"Na tento dátum nie sú žiadne jednorazové podujatia.",
     busPh:"Hľadaj miesta, podujatia, filmy, ulice…", busEventos:"Podujatia", busCart:"Kino a divadlo", busCalles:"Ulice a adresy", busVerTodos:n => `Zobraziť všetky (${n})`, busPeli:"Film", busObra:"Divadelné predstavenie", busProx:"Najbližšie predstavenie",
-    evCatTodas:"Všetky", evCats:{concierto:"Koncerty", teatro:"Divadlo", exposicion:"Výstavy", festival:"Festivaly", gastronomia:"Gastro", charla:"Prednášky a stretnutia", otro:"Ostatné"}, evCat1:{concierto:"Koncert", teatro:"Divadlo", exposicion:"Výstava", festival:"Festival", gastronomia:"Gastro", charla:"Prednáška alebo stretnutie", otro:""}, sinEventosCat:"V tejto kategórii nie sú na tento dátum žiadne podujatia.",
+    evCatTodas:"Všetky", evCats:{concierto:"Koncerty", teatro:"Divadlo", exposicion:"Výstavy", festival:"Festivaly", fiesta:"Párty", ninos:"Pre deti", gastronomia:"Gastro", charla:"Prednášky a stretnutia", otro:"Ostatné"}, evCat1:{concierto:"Koncert", teatro:"Divadlo", exposicion:"Výstava", festival:"Festival", fiesta:"Párty", ninos:"Pre deti", gastronomia:"Gastro", charla:"Prednáška alebo stretnutie", otro:""}, sinEventosCat:"V tejto kategórii nie sú na tento dátum žiadne podujatia.",
     evSecEventos:"Podujatia", evSecCines:"Kiná", evSecTeatros:"Divadlá", porPelicula:"Podľa filmu", porCine:"Podľa kina",
     sinFunciones:"Na tento dátum nie sú žiadne predstavenia.", carteleraNo:"Program momentálne nie je dostupný.",
     dab:"dabing", tit:"titulky", ov:"pôvodné znenie", agotado:"Vypredané", entradas:"Vstupenky", fichaObra:"Detail",
@@ -2512,7 +2512,7 @@ function unaVez(e){
   if (!d) return true;
   return (Date.parse(h.slice(0, 10)) - Date.parse(d.slice(0, 10))) <= 864e5;   // termina el mismo día o el siguiente
 }
-const EV_CATS = ["concierto", "teatro", "exposicion", "festival", "gastronomia", "charla", "otro"];
+const EV_CATS = ["concierto", "fiesta", "teatro", "exposicion", "ninos", "festival", "gastronomia", "charla", "otro"];
 function catEv(e){ return EV_CATS.includes(e && e.cat) ? e.cat : "otro"; }   // events without a category count as "other"
 function chipsCategoria(lista){
   const n = {}; for (const e of lista){ const c = catEv(e); n[c] = (n[c] || 0) + 1; }

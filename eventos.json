@@ -1,6 +1,6 @@
 {
  "formato": "citas-bratislava-eventos/1",
- "generado": "2026-11-20T20:38+01:00",
+ "generado": "2026-11-20T20:58+01:00",
  "eventos": [
   {
    "n": "Aitana & Alanis Kolník: untranslated",
@@ -839,6 +839,24 @@
    }
   },
   {
+   "n": "Poulenc, Holst",
+   "lugar": "Reduta (Slovenská filharmónia), Medená 3",
+   "desde": "2026-11-20",
+   "hasta": "2026-11-20",
+   "horario": "19:00",
+   "precio": "20–25 €",
+   "desc": "Slovenská filharmónia, Slovenský filharmonický zbor",
+   "web": "https://www.filharmonia.sk/b2-2026",
+   "tickets": "https://www.filharmonia.sk/b2-2026",
+   "fuente": "Slovenská filharmónia",
+   "id": "imp-7bc6072e0ba6",
+   "cat": "concierto",
+   "t": {
+    "es": "Poulenc, Holst",
+    "en": "Poulenc, Holst"
+   }
+  },
+  {
    "n": "Mikrozvuk #65: Pablo Diserens + Stefan Maier",
    "lugar": "LOM space, Mlynarovičova 5",
    "desde": "2026-11-20",
@@ -1154,6 +1172,24 @@
    "t": {
     "es": "Un perfil sin pecado",
     "en": "A Profile Without Sin"
+   }
+  },
+  {
+   "n": "Organový recitál I. – Wayne Marshall",
+   "lugar": "Reduta (Slovenská filharmónia), Medená 3",
+   "desde": "2026-11-21",
+   "hasta": "2026-11-21",
+   "horario": "16:00",
+   "precio": "10–12 €",
+   "desc": "Slovenská filharmónia",
+   "web": "https://www.filharmonia.sk/o1-2026",
+   "tickets": "https://www.filharmonia.sk/o1-2026",
+   "fuente": "Slovenská filharmónia",
+   "id": "imp-57fd5c826d84",
+   "cat": "concierto",
+   "t": {
+    "es": "Recital de órgano I: Wayne Marshall",
+    "en": "Organ Recital I: Wayne Marshall"
    }
   },
   {
@@ -2177,6 +2213,24 @@
    }
   },
   {
+   "n": "Štefan Margita 70",
+   "lugar": "Reduta (Slovenská filharmónia), Medená 3",
+   "desde": "2026-11-26",
+   "hasta": "2026-11-26",
+   "horario": "19:00",
+   "precio": "20–25 €",
+   "desc": "Slovenská filharmónia",
+   "web": "https://www.filharmonia.sk/c2-2026",
+   "tickets": "https://www.filharmonia.sk/c2-2026",
+   "fuente": "Slovenská filharmónia",
+   "id": "imp-5095e2e50bc2",
+   "cat": "concierto",
+   "t": {
+    "es": "Štefan Margita 70",
+    "en": "Štefan Margita 70"
+   }
+  },
+  {
    "n": "Bratislavský Kaviár zimný",
    "lugar": "Kácečko, Kamenné námestie 1/a",
    "desde": "2026-11-26",
@@ -2234,6 +2288,1554 @@
    "t": {
     "es": "Relief: Vacho & Hans Clou",
     "en": "Relief: Vacho & Hans Clou"
+   }
+  },
+  {
+   "n": "Error Fest 2026",
+   "lugar": "Pistoriho palác, Štefánikova 25",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-28",
+   "horario": "",
+   "precio": "Gratis / Free",
+   "desc": "Od 27. novembra 2026 sa v Pistoriho paláci na Štefánikovej 25 v Bratislave uskutoční 20. ročník Medzinárodného festivalu bezdomoveckých divadiel Error 2025. Počas tohto jednodňového festivalu sa verejnosti predstavia divadlá aj zo Španielska a Talianska. Medzinárodný festival bezdomoveckých divadiel Error je jediný festival v Európe zameraný na divadlá, v ktorých hrajú ľudia bez domova a inak sociálne vylúčení či znevýhodnení ľudia. Vytvára priestor, kde môžu divadelné zoskupenia pracujúce s…",
+   "web": "https://goout.net/en/error-fest-2026/szcyuoy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1522,
+   "lng": 17.1065,
+   "id": "imp-3e07eb2720af",
+   "cat": "festival",
+   "t": {
+    "es": "Error Fest 2026",
+    "en": "Error Fest 2026"
+   }
+  },
+  {
+   "n": "Metrik",
+   "lugar": "A4 Studio, Trnavská cesta 39",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-27",
+   "horario": "",
+   "precio": "",
+   "desc": "Live: Metrik (electronic)",
+   "web": "https://www.songkick.com/concerts/43436726-metrik-at-a4-studio",
+   "tickets": "",
+   "fuente": "Songkick",
+   "lat": 48.16349,
+   "lng": 17.14483,
+   "id": "imp-00e56dbd4c6a",
+   "cat": "concierto",
+   "t": {
+    "es": "Metrik",
+    "en": "Metrik"
+   }
+  },
+  {
+   "n": "Ranníček",
+   "lugar": "Staromestská knižnica, Blumentálska 10/a",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-27",
+   "horario": "09:00",
+   "precio": "Gratis / Free",
+   "desc": "Ranné čítanie pre najmenších, s ktorým príjemne naštartujete svoj deň. Na chvíľu sa spolu zastavíme, započúvame do rozprávok a otvoríme dvere do sveta kníh. Čítať bude riaditeľka knižnice Janka Michalová. [Registrácia](https://forms.gle/UTBKUJc7vhmHhfnQ7) Program podujatí: 13. 11. – Na vrchol kopca (Marianne Dubucová): Dojímavý príbeh o priateľstve a šľachetnosti, ktorý vás inšpiruje k potulkám prírodou. Každú nedeľu putuje pani Jazvecová na vrchol neďalekého kopca. Pozná meno každého zvieraťa…",
+   "web": "https://goout.net/en/rannicek/szlfepy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1528,
+   "lng": 17.1196,
+   "id": "imp-2d91a5a23a92",
+   "cat": "ninos",
+   "t": {
+    "es": "Ranníček: lectura matinal para los más pequeños",
+    "en": "Ranníček: Morning Reading for Little Ones"
+   }
+  },
+  {
+   "n": "Debatujeme po anglicky",
+   "lugar": "Staromestská knižnica, Záhrebská 8",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-27",
+   "horario": "10:00",
+   "precio": "Gratis / Free",
+   "desc": "Konverzačné stretnutie v anglickom jazyku zamerné na praktickú komunikáciu, rozvoj slovnej zásoby a získanie istoty pri rozprávaní. Program ponúka neformálnu diskusiu o knihách, cestovaní a témach z každodenného života bez zamerania na gramatické cvičenia. Podujatie je určené pre všetkých, ktorí si chcú precvičiť jazykové zručnosti v uvoľnenej atmosfére.",
+   "web": "https://goout.net/en/debatujeme-po-anglicky/szghepy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1561,
+   "lng": 17.1162,
+   "id": "imp-23bb947eb993",
+   "cat": "charla",
+   "t": {
+    "es": "Debates en inglés",
+    "en": "Debating in English"
+   }
+  },
+  {
+   "n": "Next Festival: Wouter Jaspers – Threshold Receiver",
+   "lugar": "A4 – priestor súčasnej kultúry, Karpatská 2",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-27",
+   "horario": "10:00",
+   "precio": "25 €",
+   "desc": "Text organizátora: Čo môžeme počuť za hranicami ľudského sluchu? Ulice miest sú plné neviditeľných signálov. Elektrické vedenia, transformátory, trolejové drôty, telefónne nabíjačky a bezpečnostné senzory v obchodoch – to všetko vyžaruje do okolia elektromagnetické vlny. V pásme veľmi nízkych frekvencií (VLF) k nim pribúdajú aj prírodné rádiové javy, ako napríklad praskanie bleskov z búrok vzdialených desiatky kilometrov. Naším prostredím sa šíria aj vibrácie, ktoré rozrezonujú zábradlia,…",
+   "web": "https://goout.net/en/next-festival-wouter-jaspers-threshold-receiver/szevrpy/",
+   "tickets": "https://goout.net/en/next-festival-wouter-jaspers-threshold-receiver/szevrpy/",
+   "fuente": "GoOut",
+   "lat": 48.1571,
+   "lng": 17.1136,
+   "id": "imp-d12ab6b27b82",
+   "cat": "otro",
+   "t": {
+    "es": "Next Festival: Wouter Jaspers – Threshold Receiver",
+    "en": "Next Festival: Wouter Jaspers – Threshold Receiver"
+   }
+  },
+  {
+   "n": "Horkýže Slíže",
+   "lugar": "PEUGEOT aréna, Bratislava",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-27",
+   "horario": "18:00",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.livemusic.sk/koncert/carovne-tour-horkyze-slize-bratislava-2026/49096",
+   "tickets": "https://www.ticketlive.sk/sk/event/horkyze-slize-bratislava-27-11-2026",
+   "fuente": "livemusic.sk",
+   "id": "imp-de0da166cc25",
+   "cat": "concierto",
+   "t": {
+    "es": "Horkýže Slíže",
+    "en": "Horkýže Slíže"
+   }
+  },
+  {
+   "n": "Stupavar Brewing Punk",
+   "lugar": "Nová Cvernovka Bratislava",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-27",
+   "horario": "18:00",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.ticketlive.sk/sk/event/stupavar-brewing-punk-bratislava-27-11-2026",
+   "tickets": "https://www.ticketlive.sk/sk/event/stupavar-brewing-punk-bratislava-27-11-2026",
+   "fuente": "ticketlive.sk",
+   "id": "imp-27d257931b22",
+   "cat": "concierto",
+   "t": {
+    "es": "Stupavar Brewing Punk",
+    "en": "Stupavar Brewing Punk"
+   }
+  },
+  {
+   "n": "Lady Colors",
+   "lugar": "STARS auditorium, Bratislava",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-27",
+   "horario": "19:00",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.livemusic.sk/koncert/lady-colors-bratislava-2026/49070",
+   "tickets": "https://www.ticketportal.sk/performance/1451244",
+   "fuente": "livemusic.sk",
+   "id": "imp-cbbc88aec983",
+   "cat": "concierto",
+   "t": {
+    "es": "Lady Colors",
+    "en": "Lady Colors"
+   }
+  },
+  {
+   "n": "Škvrny na slnku",
+   "lugar": "Štúdio Kaplnka, Ventúrska 3",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-27",
+   "horario": "19:00",
+   "precio": "2–4 €",
+   "desc": "Škvrny na slnku sú v poradí treťou drámou Leopolda Laholu. Napísal ju počas svojej emigrácie vo Francúzsku. Táto dráma sa často označuje ako slovenský Zločin a trest, kvôli jasným tematickým paralelám v týchto dielach. V Škvrnách na slnku pracuje Lahola s témami ako sú zlo, determinizmus, vojna, či koncentračné tábory, ktoré mu boli blízke a v jeho tvorbe sa objavovali pomerne často. Zároveň sú to, prevažne, témy absolútne nadčasové, ktoré aj 70 rokov po napísaní hry majú stále čo povedať a…",
+   "web": "https://goout.net/en/skvrny-na-slnku/sznowny/",
+   "tickets": "https://goout.net/en/skvrny-na-slnku/sznowny/",
+   "fuente": "GoOut",
+   "lat": 48.1424,
+   "lng": 17.1064,
+   "id": "imp-bbaf1dca5c79",
+   "cat": "teatro",
+   "t": {
+    "es": "Manchas solares",
+    "en": "Sunspots"
+   }
+  },
+  {
+   "n": "Štefan Margita 70",
+   "lugar": "Reduta (Slovenská filharmónia), Medená 3",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-27",
+   "horario": "19:00",
+   "precio": "20–25 €",
+   "desc": "Slovenská filharmónia",
+   "web": "https://www.filharmonia.sk/mm-2026",
+   "tickets": "https://www.filharmonia.sk/mm-2026",
+   "fuente": "Slovenská filharmónia",
+   "id": "imp-0c0188708db6",
+   "cat": "concierto",
+   "t": {
+    "es": "Štefan Margita 70",
+    "en": "Štefan Margita 70"
+   }
+  },
+  {
+   "n": "Il Est Vilaine",
+   "lugar": "Metropol, Špitálska 61",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-27",
+   "horario": "19:30",
+   "precio": "",
+   "desc": "Parížske duo Il Est Vilaine prinesie do Metropolu svoju energickú zmes new wave, techna, disca a surf rocku. Ich skladba Surf Rider, vydaná pred desiatimi rokmi, dnes zažíva druhú vlnu úspechu aj vďaka režisérovi Paolovi Sorrentinovi, ktorý ju použil ako opakujúci sa motív vo filme La Grazia. Il Est Vilaine však nežije z minulosti. S novým albumom na ceste prichádza do Bratislavy s čerstvou energiou a večerom pre všetkých, ktorí majú radi hudbu trochu temnú, trochu divokú a hlavne takú, pri…",
+   "web": "https://goout.net/en/il-est-vilaine/szahlmy/",
+   "tickets": "https://www.ticketportal.sk/event/IL-EST-VILAINE",
+   "fuente": "GoOut",
+   "lat": 48.1503,
+   "lng": 17.1175,
+   "id": "imp-58ff848ba3d1",
+   "cat": "concierto",
+   "t": {
+    "es": "Il Est Vilaine",
+    "en": "Il Est Vilaine"
+   }
+  },
+  {
+   "n": "ČAD - NEP!ČUJ A HRAJ TOUR 2026",
+   "lugar": "Randal Club Bratislava",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-27",
+   "horario": "19:30",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.ticketlive.sk/sk/event/cad-nepicuj-a-hraj-tour-bratislava-27-11-2026",
+   "tickets": "https://www.ticketlive.sk/sk/event/cad-nepicuj-a-hraj-tour-bratislava-27-11-2026",
+   "fuente": "ticketlive.sk",
+   "id": "imp-aa34f250035d",
+   "cat": "concierto",
+   "t": {
+    "es": "ČAD: Nep!čuj a hraj Tour 2026",
+    "en": "ČAD: Nep!čuj a hraj Tour 2026"
+   }
+  },
+  {
+   "n": "Pulsation Face2Face: The Nexus",
+   "lugar": "A4 Studio, Trnavská cesta 39",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-28",
+   "horario": "20:00",
+   "precio": "19–98 €",
+   "desc": "Pulsation predstavuje unikátny koncept Face2Face v A4 Studio. Unikátne dvojice umelcov a unikátny stage design pripravený špeciálne na tento event. Line-up: - Metrik - Grafix - Arcando - Subsonic - Black Sun Empire - Pythius - T & Sugah - Alcemist - Document One - Wingz - Creatures - PmdR - RomiE - Sieben",
+   "web": "https://goout.net/en/pulsation-face2face-the-nexus/szorsmy/",
+   "tickets": "https://goout.net/en/pulsation-face2face-the-nexus/szorsmy/",
+   "fuente": "GoOut",
+   "lat": 48.1635,
+   "lng": 17.1448,
+   "id": "imp-da19a52ca886",
+   "cat": "fiesta",
+   "t": {
+    "es": "Pulsation Face2Face: The Nexus",
+    "en": "Pulsation Face2Face: The Nexus"
+   }
+  },
+  {
+   "n": "Už je dobre",
+   "lugar": "Kácečko, Kamenné námestie 1/a",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-27",
+   "horario": "20:00",
+   "precio": "Gratis / Free",
+   "desc": "Text organizátora: Zahoď svoje pracovné starosti a príď načerpať energiu, ktorú budeš potrebovať na celý víkend. Kácečko vám prináša Beyuzov unikátny projekt Už je dobre, ktorý poznáte aj z vysielania Rádia_FM. Tentoraz ale Beyuza nebudete iba počuť, ale budete ho za gramcami aj vidieť. Už je dobre si budete môcť vychutnávať každý piatok počas celej letnej sezóny (najmä) na našej terase a to už od 3. mája. Hráme za každého počasia a (hlavne) zadarmo. Áno, presne tak. Bez vstupného. A ak bude…",
+   "web": "https://goout.net/en/uz-je-dobre/szcdony/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1454,
+   "lng": 17.114,
+   "id": "imp-5a0202b4f62d",
+   "cat": "fiesta",
+   "t": {
+    "es": "Ya está bien (Beyuz)",
+    "en": "It's All Good Now (Beyuz)"
+   }
+  },
+  {
+   "n": "Gaja K-pop Party",
+   "lugar": "Šafko Klub, Šafárikovo nám. 7",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-28",
+   "horario": "21:00",
+   "precio": "",
+   "desc": "Párty venovaná k-popovej hudbe so špeciálnym zameraním na tvorbu skupiny ATEEZ a setom DJe Bowena. Populárna k-popová séria sa vracia do Bratislavy s tematickým pokračovaním ATEEZ Special 2.0. Návštevníci sa môžu tešiť na večer plný skladieb od skupiny ATEEZ, ktoré doplní pestrý výber tanečnej hudby v štýle K-Pop, K-EDM a Pop od rôznych interpretov. O hudobný program sa postará DJ Bowen. 18+",
+   "web": "https://goout.net/en/gaja-k-pop-party/szfruoy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1419,
+   "lng": 17.1155,
+   "id": "imp-18242762d06b",
+   "cat": "fiesta",
+   "t": {
+    "es": "Gaja K-pop Party",
+    "en": "Gaja K-pop Party"
+   }
+  },
+  {
+   "n": "Back to Disco",
+   "lugar": "Aldea Club, Františkánske námestie 408/3",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-27",
+   "horario": "22:00",
+   "precio": "",
+   "desc": "Back to Disco prichádza 27. novembra do Aldea Clubu s poriadnou dávkou disco energie. Možno čakať hity miléniovej generácie, ale aj moderné remixy oldschool klasík, ktoré nepustia z parketu. Vstupné: 8€ na mieste pre pánov, vstup zdarma na mieste pre dámy. 18+",
+   "web": "https://goout.net/en/back-to-disco/szftvny/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1443,
+   "lng": 17.1084,
+   "id": "imp-b55881a4949c",
+   "cat": "fiesta",
+   "t": {
+    "es": "Back to Disco",
+    "en": "Back to Disco"
+   }
+  },
+  {
+   "n": "Temný piatok: UnclPete",
+   "lugar": "Temný Ost Block, Kamenné námestie 1",
+   "desde": "2026-11-27",
+   "hasta": "2026-11-28",
+   "horario": "22:00",
+   "precio": "Gratis / Free",
+   "desc": "Pravidelná piatková párty v Temnom Ost Blocku. Večer prinesie UKG a house v podaní DJ-a UnclPete.",
+   "web": "https://goout.net/en/temny-piatok-unclpete/szsnwoy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1449,
+   "lng": 17.1143,
+   "id": "imp-edd6d1946a35",
+   "cat": "fiesta",
+   "t": {
+    "es": "Viernes oscuro: UnclPete",
+    "en": "Dark Friday: UnclPete"
+   }
+  },
+  {
+   "n": "BRaK: Edícia jeseň / zima 2026",
+   "lugar": "Nová tržnica, Šancová 112",
+   "desde": "2026-11-28",
+   "hasta": "2026-11-28",
+   "horario": "09:00",
+   "precio": "",
+   "desc": "Bratislavský knižný festival tento rok sa výnimočne rozširuje aj o jesenno-zimnú verziu. Po prvýkrát sa uskutoční v Novej tržnici na Trnavskom mýte 28. novembra 2026. Edícia jeseň / zima prinesie diskusie, autorské čítania, performancie, koncerty aj výstavy priamo v tržnici. Súčasťou jednodňového festivalu bude aj predajná výstava kníh, na ktorej festival privíta desiatky nezávislých vydavateľstiev.",
+   "web": "https://goout.net/en/brak-edicia-jesen-zima-2026/szmdboy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.158,
+   "lng": 17.1251,
+   "id": "imp-485e3fbfbee3",
+   "cat": "festival",
+   "t": {
+    "es": "BRaK: Edición otoño / invierno 2026",
+    "en": "BRaK: Autumn / Winter 2026 Edition"
+   }
+  },
+  {
+   "n": "Trh – Piac – Markt",
+   "lugar": "Stará tržnica, Nám. SNP 25",
+   "desde": "2026-11-28",
+   "hasta": "2026-11-28",
+   "horario": "09:00",
+   "precio": "Gratis / Free",
+   "desc": "Trh v Starej tržnici ponúka sezónne potraviny vyrobené a vypestované farmármi a malovýrobcami z okolia Bratislavy, ako aj kvalitné špeciality z krajín vzdialenejších. Kúpiť si tu môžete sezónne ovocie a zeleninu, mäsové a mliečne výrobky, pečivo, cukrovinky a iné delikatesy, nápoje. Trh sa koná od 09:00 do 15:00 a dopĺňa ho sprievodný program – pravidelné burzy, divadelné predstavenia pre deti, ako aj rôzne príležitostné tvorivé dielne a prednášky a chutné obedy v komunitnej kuchyni. Divadelné…",
+   "web": "https://goout.net/en/trh-piac-markt/szrfily/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1446,
+   "lng": 17.1117,
+   "id": "imp-16b9a0241bc8",
+   "cat": "ninos",
+   "t": {
+    "es": "Trh – Piac – Markt",
+    "en": "Trh – Piac – Markt"
+   }
+  },
+  {
+   "n": "Rozprávky o Malej tučnej víle",
+   "lugar": "Bratislavské bábkové divadlo, Dunajská 36",
+   "desde": "2026-11-28",
+   "hasta": "2026-11-28",
+   "horario": "10:00",
+   "precio": "9 €",
+   "desc": "Malá tučná víla, Trpajzel, Prechladnutá rybička, Prasisko, Špinavý zajac - svet hračiek, ktorý je citlivou paródiou svojráznych ľudských vlastností a jednania. Ako povedať niekomu nepríjemnú pravdu a zároveň ho neuraziť? A ako si ju vypočuť? Krátke príbehy o tom, ako zvládať hnev, naučiť sa prijímať kritiku a pracovať so svojimi nepeknými vlastnosťami sú tlmočené s detskou logikou a obrazným pohľadom na svet. Predstavenie je vhodné pre deti od 3 rokov.",
+   "web": "https://goout.net/en/rozpravky-o-malej-tucnej-vile/sztoroy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1453,
+   "lng": 17.118,
+   "id": "imp-4bc2d64460fb",
+   "cat": "ninos",
+   "t": {
+    "es": "Cuentos del Hada Gordita",
+    "en": "Tales of the Little Chubby Fairy"
+   }
+  },
+  {
+   "n": "Urban Market Winter Drop",
+   "lugar": "Nová tržnica, Šancová 112",
+   "desde": "2026-11-28",
+   "hasta": "2026-11-28",
+   "horario": "10:00",
+   "precio": "",
+   "desc": "Urban Market sa v zime mení a miesto klasickej edície prináša špeciálny drop – koncentrovanejšiu a trochu undergroundovejšiu verziu v bývalej herni v suteréne Novej Tržnice na Trnavskom mýte. Na jeden novembrový deň čaká návštevníkov výber mladého a čerstvého lokálneho dizajnu. Kurátorovaná selekcia predstaví nové mená, komunitné projekty a tvorcov a tvorkyne, ktorí robia veci po svojom. Urban Market Winter Drop je stále Urban Marketom, len v mladšej, surovejšej a intenzívnejšej podobe. Back…",
+   "web": "https://goout.net/en/urban-market-winter-drop/szuyaoy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.158,
+   "lng": 17.1251,
+   "id": "imp-e4d0e456e513",
+   "cat": "festival",
+   "t": {
+    "es": "Urban Market Winter Drop",
+    "en": "Urban Market Winter Drop"
+   }
+  },
+  {
+   "n": "Ideme naživo: Vianočná edícia",
+   "lugar": "Dom Albrechtovcov, Kapitulská 313/1",
+   "desde": "2026-11-28",
+   "hasta": "2026-11-28",
+   "horario": "15:00",
+   "precio": "35 €",
+   "desc": "Vianočný workshop v Dome Albrechtovcov na Kapitulskej ulici v Bratislave v rámci série Ideme NAŽIVO. Popoludnie spojené so svetielkami, hudbou, punčom a vôňou ihličia. V prostredí zimnej záhrady účastníkov lektorka Lenka Marfoldy – @lenka.marfoldy prevedie výrobou vlastného vianočného venca zo živého kvetinového materiálu. Záujemcovia si môžu priniesť vlastné sviečky alebo drobné ozdoby na dotvorenie adventného venca. Súčasťou stretnutia je aj nahliadnutie do histórie a príbehu Domu…",
+   "web": "https://goout.net/en/ideme-nazivo-vianocna-edicia/szttnpy/",
+   "tickets": "https://goout.net/en/ideme-nazivo-vianocna-edicia/szttnpy/",
+   "fuente": "GoOut",
+   "lat": 48.1441,
+   "lng": 17.1045,
+   "id": "imp-243fdcb6f293",
+   "cat": "otro",
+   "t": {
+    "es": "En vivo: edición navideña",
+    "en": "Going Live: Christmas Edition"
+   }
+  },
+  {
+   "n": "Orfeus Opening",
+   "lugar": "Koncertná sieň Dvorana, Zochova 1",
+   "desde": "2026-11-28",
+   "hasta": "2026-11-28",
+   "horario": "18:00",
+   "precio": "1–5.50 €",
+   "desc": "26. ročník Študentského festivalu súčasnej hudby Orfeus. Festival predstaví najnovšiu tvorbu mladej skladateľskej generácie. Odštartuje koncertom Orfeus Opening, na ktorom sa predstaví renomovaný poľský súbor Kwartludium, špecializujúci sa na interpretáciu súčasnej vážnej a experimentálnej hudby. V jeho podaní zaznejú v premiére diela študentov skladby Ľuboša Gabča, Táne Hrdinovej, Tomáša Kobielskeho, Stanislava Plyaku a Olesie Stepury. Orfeus vytvára priestor pre premiérové uvedenia nových…",
+   "web": "https://goout.net/en/orfeus-opening/szvrooy/",
+   "tickets": "https://goout.net/en/orfeus-opening/szvrooy/",
+   "fuente": "GoOut",
+   "lat": 48.1456,
+   "lng": 17.1034,
+   "id": "imp-f870b2cbd88b",
+   "cat": "concierto",
+   "t": {
+    "es": "Orfeus Opening",
+    "en": "Orfeus Opening"
+   }
+  },
+  {
+   "n": "Splin",
+   "lugar": "Majestic Music Club, Karpatská 2",
+   "desde": "2026-11-28",
+   "hasta": "2026-11-28",
+   "horario": "18:30",
+   "precio": "",
+   "desc": "Live: Splin",
+   "web": "https://www.songkick.com/concerts/43297203-splin-at-majestic-music-club",
+   "tickets": "",
+   "fuente": "Songkick",
+   "lat": 48.15686,
+   "lng": 17.11358,
+   "id": "imp-9701c28cb521",
+   "cat": "concierto",
+   "t": {
+    "es": "Splin",
+    "en": "Splin"
+   }
+  },
+  {
+   "n": "Swingové Vianoce: Fats Jazz Band",
+   "lugar": "V-klub, Nám. SNP 12",
+   "desde": "2026-11-28",
+   "hasta": "2026-11-28",
+   "horario": "19:00",
+   "precio": "",
+   "desc": "Posledný tohtoročný hudobno-tanečný večer už predznamenáva vianočné obdobie. Táto téma sa nevyhla ani jazzovej hudbe a počas večera bude počuť množstvo skvelých swingových piesní s vianočnou či zimnou tématikou. Nezabudnuteľný večer v duchu prvej republiky bude opäť plný energickej hot jazzovej a swingovej hudby, tanca, dobrôtok a v neposlednom rade pozitívneho espritu. Celý večer bude hrať swingový orchester Fats Jazz Band pod vedením Ladislava Fančoviča. V rámci večera urobí tanečná škola…",
+   "web": "https://goout.net/en/swingove-vianoce-fats-jazz-band/szdpdpy/",
+   "tickets": "https://www.ticketportal.sk/event/SWINGOVE_VIANOCE?idpartner=528",
+   "fuente": "GoOut",
+   "lat": 48.1453,
+   "lng": 17.1118,
+   "id": "imp-942cd662e301",
+   "cat": "concierto",
+   "t": {
+    "es": "Navidad swing: Fats Jazz Band",
+    "en": "Swing Christmas: Fats Jazz Band"
+   }
+  },
+  {
+   "n": "Vstaňte, ak ste dnes večer tu",
+   "lugar": "Ticho a spol., Školská 14",
+   "desde": "2026-11-28",
+   "hasta": "2026-11-28",
+   "horario": "19:00",
+   "precio": "15 €",
+   "desc": "Monodráma s Ivanom Martinkom o bezmennom čudákovi, ktorý chce len jediné. Aby sme aspoň na malý moment boli spolu všetci tu. Hra znikla počas pandémie kovidu. Za jej zrodom stojí stret dvoch okolností – John Kolvenbach už dlhšie plánoval napísať hru o prepojení sa s publikom a do toho mu zavolal dlhoročný spolupracovník a priateľ Jim Ortlieb, aby preňho napísal hru. John Ortlieb za svoj výkon získal cenu Los Angeles Drama Critics Circle a s úspechom inscenáciu až dodnes hráva na viacerých…",
+   "web": "https://goout.net/en/vstante-ak-ste-dnes-vecer-tu/szdnumy/",
+   "tickets": "https://goout.net/en/vstante-ak-ste-dnes-vecer-tu/szdnumy/",
+   "fuente": "GoOut",
+   "lat": 48.1535,
+   "lng": 17.1159,
+   "id": "imp-3d627e8b24c1",
+   "cat": "teatro",
+   "t": {
+    "es": "Pónganse de pie si esta noche están aquí",
+    "en": "Stand Up If You're Here Tonight"
+   }
+  },
+  {
+   "n": "Sarah Brightman",
+   "lugar": "PEUGEOT aréna Bratislava",
+   "desde": "2026-11-28",
+   "hasta": "2026-11-28",
+   "horario": "19:30",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.livemusic.sk/koncert/sarah-brightman-bratislava-2026/47228",
+   "tickets": "https://www.ticketportal.sk/performance/219011",
+   "fuente": "livemusic.sk",
+   "id": "imp-da73e97f6ce5",
+   "cat": "concierto",
+   "t": {
+    "es": "Sarah Brightman",
+    "en": "Sarah Brightman"
+   }
+  },
+  {
+   "n": "Zabiť Františka (SK) + Sofi Khedekel (UA)",
+   "lugar": "Telocvičňa, Račianska 78",
+   "desde": "2026-11-28",
+   "hasta": "2026-11-28",
+   "horario": "19:30",
+   "precio": "12 €",
+   "desc": "Akustický dvojkoncert slovensko-ukrajinského pesničkárstva v neobvyklých priestoroch telocvične. Zabiť Františka – nápaditá kombinácia intelektuálne vyzretých textov vo forme krásosmútiacich brikoláží a ľahko rozpoznateľného, podmanivého hlasového prejavu z neho robia jednu z najvýraznejších tvárí súčasného česko-slovenského pesničkárstva. Sám svoju hudbu označuje ako „alt-folk“, hlásiac tým vedome odklon od zažitých žánrových trópov folku smerom k alternatívnej hudbe. Na konte má dva štúdiové…",
+   "web": "https://goout.net/en/zabit-frantiska-sk+sofi-khedekel-ua/sznodpy/",
+   "tickets": "https://goout.net/en/zabit-frantiska-sk+sofi-khedekel-ua/sznodpy/",
+   "fuente": "GoOut",
+   "lat": 48.1832,
+   "lng": 17.1319,
+   "id": "imp-f2ad23c0f042",
+   "cat": "concierto",
+   "t": {
+    "es": "Zabiť Františka (SK) + Sofi Khedekel (UA)",
+    "en": "Zabiť Františka (SK) + Sofi Khedekel (UA)"
+   }
+  },
+  {
+   "n": "Žužuleta – 30. výročie",
+   "lugar": "Šafko Klub, Šafárikovo nám. 7",
+   "desde": "2026-11-28",
+   "hasta": "2026-11-29",
+   "horario": "20:00",
+   "precio": "12 €",
+   "desc": "30. ročné výročie hip-hop formácie Žužuleta v klube Šafko. Fanúšikovia si budú môcť zakúpiť novú platňu Žužuleta 1996 – 2026, a sólové projekty jednotlivých členov, ktoré vyšli na platni a CD. Súčasťou bude aj burza vinylových platní.",
+   "web": "https://goout.net/en/zuzuleta-30-vyrocie/szwjsoy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1419,
+   "lng": 17.1155,
+   "id": "imp-5a4b72c4fbeb",
+   "cat": "concierto",
+   "t": {
+    "es": "Žužuleta: 30 aniversario",
+    "en": "Žužuleta: 30th Anniversary"
+   }
+  },
+  {
+   "n": "Disco 2000",
+   "lugar": "Kácečko, Kamenné námestie 1/a",
+   "desde": "2026-11-28",
+   "hasta": "2026-11-28",
+   "horario": "22:00",
+   "precio": "",
+   "desc": "Možnosť návratu do teenagerských čias a tanca na svetoznáme hity, ktoré frčali v sluchátkach discmanov a mp3jok v prvých rokoch nového tisícročia. Disco šlágre prvej akosti vyberie majster DJ-ingu Julo alias Python.",
+   "web": "https://goout.net/en/disco-2000/sznfcpy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1454,
+   "lng": 17.114,
+   "id": "imp-7ba733a57e0c",
+   "cat": "fiesta",
+   "t": {
+    "es": "Disco 2000",
+    "en": "Disco 2000"
+   }
+  },
+  {
+   "n": "Leporelo 2.0",
+   "lugar": "Nu Spirit Bar, Medená 96/16",
+   "desde": "2026-11-28",
+   "hasta": "2026-11-28",
+   "horario": "22:00",
+   "precio": "",
+   "desc": "Večer plný producentov slovenského labelu Leporelo a.k.a. Leporelo je späť a.k.a. Leporelo 2.0 a ponúkne house, techno a minimal.",
+   "web": "https://goout.net/en/leporelo-2-0/szlocpy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1422,
+   "lng": 17.1129,
+   "id": "imp-7b72bc7177eb",
+   "cat": "fiesta",
+   "t": {
+    "es": "Leporelo 2.0",
+    "en": "Leporelo 2.0"
+   }
+  },
+  {
+   "n": "Temná sobota: Tess",
+   "lugar": "Temný Ost Block, Kamenné námestie 1",
+   "desde": "2026-11-28",
+   "hasta": "2026-11-29",
+   "horario": "22:00",
+   "precio": "Gratis / Free",
+   "desc": "Pravidelná sobotná párty v Temnom Ost Blocku. Večer sa bude niesť vo zvukoch RnB, caribbean a afro hudby v podaní DJ-ky Tess.",
+   "web": "https://goout.net/en/temna-sobota-tess/szunwoy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1449,
+   "lng": 17.1143,
+   "id": "imp-9be287fe3449",
+   "cat": "fiesta",
+   "t": {
+    "es": "Sábado oscuro: Tess",
+    "en": "Dark Saturday: Tess"
+   }
+  },
+  {
+   "n": "Power&Rave",
+   "lugar": "Alpha Prime Crossfit, Technická 4313/7",
+   "desde": "2026-11-29",
+   "hasta": "2026-11-29",
+   "horario": "08:30",
+   "precio": "9,50 €",
+   "desc": "Intenzívny workout doplnený nabitým DJ setom, ktorý z každého dostane absolútne maximum. ​Čo event prinesie: - ​Hodinový intenzívny workout (vystriedajú sa dve hodinové skupiny po 30 ľudí) - ​DJ set prispôsobený workoutu - ​Jedinečnú atmosféru v priestoroch Alpha Prime Cross Fit - ​Skúsených trénerov dohliadajúcich na správnu techniku - ​Káva, snacky a hydratácia - ​Záverečný final rave ​A samozrejme, skvelu atmosféru a dobité baterky. Harmonogram: - 8:30 Otvorenie - 8:45 Intro pre 1. skupinu…",
+   "web": "https://goout.net/en/power-and-rave/szqotpy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1746,
+   "lng": 17.1777,
+   "id": "imp-ef85f62ccc53",
+   "cat": "concierto",
+   "t": {
+    "es": "Power&Rave",
+    "en": "Power&Rave"
+   }
+  },
+  {
+   "n": "Neskutočné príbehy Mórica Beňovského",
+   "lugar": "Bratislavské bábkové divadlo, Dunajská 36",
+   "desde": "2026-11-29",
+   "hasta": "2026-11-29",
+   "horario": "10:00",
+   "precio": "9 €",
+   "desc": "Inscenácia, ktorá prepája historické dobrodružstvo s fantáziou, baví aj učí a je určená mladším aj starším divákom, ktorí milujú cestovanie, humor a veľké príbehy. Dobrodružné a napínavé divadelné putovanie Mórica Beňovského prináša jeho neuveriteľný životný príbeh ako jedného z najznámejších dobrodruhov 18. storočia. Móric Beňovský – vojak, moreplavec, utečenec a legendárny kráľ Madagaskaru – vezme na cestu od Európy cez drsnú Kamčatku, nehostinné more až po exotické Japonsko či Taiwan. S…",
+   "web": "https://goout.net/en/neskutocne-pribehy-morica-benovskeho/szroroy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1453,
+   "lng": 17.118,
+   "id": "imp-a17a7ea04d3f",
+   "cat": "teatro",
+   "t": {
+    "es": "Las increíbles historias de Mauricio Beňovský",
+    "en": "The Incredible Stories of Maurice Benyovszky"
+   }
+  },
+  {
+   "n": "Meet Someone in Bratislava: Speed Dating Online",
+   "lugar": "Hanulova 1836/8, Hanulova 1836/8, Bratislava",
+   "desde": "2026-11-29",
+   "hasta": "2026-11-29",
+   "horario": "20:00",
+   "precio": "",
+   "desc": "Speed dating for Bratislava, live on Zoom. 💛 Your evening, roughly A short welcome and how it all works → Your dates: private video chats with singles in your age group, timed by the host → The host checks in so nobody feels lost → Choose your matches (privately) → Afterwards: your mutual matches in your inbox Sign up through your age group: If you're 18 to 32, [this is your…",
+   "web": "https://www.meetup.com/wet-on-wet-watercolor-circle/events/317498978/",
+   "tickets": "",
+   "fuente": "Meetup",
+   "id": "imp-e0401e17357f",
+   "cat": "charla",
+   "t": {
+    "es": "Meet Someone in Bratislava: Speed Dating Online",
+    "en": "Meet Someone in Bratislava: Speed Dating Online"
+   }
+  },
+  {
+   "n": "Lucie Bílá - Bíle Vánoce",
+   "lugar": "Divadlo Nová scéna, Bratislava",
+   "desde": "2026-11-30",
+   "hasta": "2026-11-30",
+   "horario": "17:00",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.livemusic.sk/koncert/bile-vanoce-lucie-bile-bratislava-2026-11-30-17-00/58817",
+   "tickets": "https://www.novascena.sk/podujatia/bile-vanoce-lucie-bile-2026",
+   "fuente": "livemusic.sk",
+   "id": "imp-af2156fce0cb",
+   "cat": "concierto",
+   "t": {
+    "es": "Lucie Bílá: Blanca Navidad",
+    "en": "Lucie Bílá: White Christmas"
+   }
+  },
+  {
+   "n": "Môj vzor, Božský Karel",
+   "lugar": "STARS auditorium, Bratislava",
+   "desde": "2026-11-30",
+   "hasta": "2026-11-30",
+   "horario": "19:00",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.livemusic.sk/koncert/moj-vzor-bozsky-karel-gott-bratislava-2026/50858",
+   "tickets": "https://www.ticketportal.sk/performance/212325",
+   "fuente": "livemusic.sk",
+   "id": "imp-8158e3c83319",
+   "cat": "concierto",
+   "t": {
+    "es": "Mi ídolo, el divino Karel (Gott)",
+    "en": "My Idol, the Divine Karel (Gott)"
+   }
+  },
+  {
+   "n": "Tma",
+   "lugar": "PAKT, Pionierska 3276/17",
+   "desde": "2026-11-30",
+   "hasta": "2026-11-30",
+   "horario": "19:00",
+   "precio": "8–20 €",
+   "desc": "IBU – Inštitút Blaha Uhlára uvádza inscenáciu Tma. Inscenácia Tma balansuje na hranici medzi realitou a surreálnym obrazom sveta, v ktorom sa prelínajú groteskné aj tragické momenty ľudskej existencie. Temný javiskový priestor evokuje vnútorné svety postáv – strach, neistotu, manipuláciu – pričom z tejto čiernej prázdnoty magicky vystupujú bohato farebné postavy, kontrastujúce s pochmúrnou atmosférou. Dramaturgia inscenácie čerpá z voľnej improvizácie a polytematickej dekompozície.…",
+   "web": "https://goout.net/en/tma/sztotny/",
+   "tickets": "https://goout.net/en/tma/sztotny/",
+   "fuente": "GoOut",
+   "lat": 48.1692,
+   "lng": 17.1253,
+   "id": "imp-9e086592aa84",
+   "cat": "teatro",
+   "t": {
+    "es": "Oscuridad",
+    "en": "Darkness"
+   }
+  },
+  {
+   "n": "Škvrny na slnku",
+   "lugar": "Štúdio Kaplnka, Ventúrska 3",
+   "desde": "2026-11-30",
+   "hasta": "2026-11-30",
+   "horario": "19:00",
+   "precio": "2–4 €",
+   "desc": "Škvrny na slnku sú v poradí treťou drámou Leopolda Laholu. Napísal ju počas svojej emigrácie vo Francúzsku. Táto dráma sa často označuje ako slovenský Zločin a trest, kvôli jasným tematickým paralelám v týchto dielach. V Škvrnách na slnku pracuje Lahola s témami ako sú zlo, determinizmus, vojna, či koncentračné tábory, ktoré mu boli blízke a v jeho tvorbe sa objavovali pomerne často. Zároveň sú to, prevažne, témy absolútne nadčasové, ktoré aj 70 rokov po napísaní hry majú stále čo povedať a…",
+   "web": "https://goout.net/en/skvrny-na-slnku/szmowny/",
+   "tickets": "https://goout.net/en/skvrny-na-slnku/szmowny/",
+   "fuente": "GoOut",
+   "lat": 48.1424,
+   "lng": 17.1064,
+   "id": "imp-0a619a45aa01",
+   "cat": "teatro",
+   "t": {
+    "es": "Manchas solares",
+    "en": "Sunspots"
+   }
+  },
+  {
+   "n": "Apatiáni 2026. Zápisky z paranormálnej plavby",
+   "lugar": "A4 – priestor súčasnej kultúry, Karpatská 2",
+   "desde": "2026-11-30",
+   "hasta": "2026-11-30",
+   "horario": "20:00",
+   "precio": "0–15 €",
+   "desc": "Dá sa uniknúť? A keď sa dá, tak kam? A keď je kam, tak ako? A keď je jasné kam a ako, tak načo? Novodobá Loď bláznov sa dáva do pohybu. Slovenský Bludný Holanďan napína plachty a Krížnik Potemkin strieľa slepými na všetky svetové strany. Zmätená posádka sa vydáva za protagonistov divadelnej inscenácie a popri plavbe v hustnúcej informačnej hmle sa snaží odovzdať svoje vlastné posolstvo mestu a svetu o tom, či môže byť pesimizmus plnohodnotný životný postoj a či je možné prehrať boj o…",
+   "web": "https://goout.net/en/apatiani-2026-zapisky-z-paranormalnej-plavby/szxwhny/",
+   "tickets": "https://goout.net/en/apatiani-2026-zapisky-z-paranormalnej-plavby/szxwhny/",
+   "fuente": "GoOut",
+   "lat": 48.1571,
+   "lng": 17.1136,
+   "id": "imp-c4fb5b9a4446",
+   "cat": "teatro",
+   "t": {
+    "es": "Los apáticos 2026. Notas de un viaje paranormal",
+    "en": "The Apathetics 2026: Notes from a Paranormal Voyage"
+   }
+  },
+  {
+   "n": "Ficture",
+   "lugar": "Nová Cvernovka, Račianska 78",
+   "desde": "2026-12-01",
+   "hasta": "2026-12-01",
+   "horario": "",
+   "precio": "",
+   "desc": "Live: Ficture, froné",
+   "web": "https://www.songkick.com/concerts/43506871-ficture-at-nova-cvernovka",
+   "tickets": "",
+   "fuente": "Songkick",
+   "lat": 48.18311,
+   "lng": 17.13169,
+   "id": "imp-c2eef443038b",
+   "cat": "concierto",
+   "t": {
+    "es": "Ficture",
+    "en": "Ficture"
+   }
+  },
+  {
+   "n": "Juraj Oravec: Na siedmom poschodí sna",
+   "lugar": "Danubiana, Vodné dielo Slovensko",
+   "desde": "2026-12-01",
+   "hasta": "2027-12-31",
+   "horario": "",
+   "precio": "",
+   "desc": "Juraj Oravec patrí k výrazným predstaviteľom svojej generácie, ktorá vstúpila do slovenského výtvarného umenia na začiatku osemdesiatych rokov. Od jeho prvých maliarskych, grafických a kresliarskych prác ho charakterizoval intelektuálny záujem príbuzný takmer faustovskému smädu po poznaní sveta, vesmíru, prírody, histórie a literatúry. Lákala ho atmosféra doby, babylon času s jeho intenzívnym prežívaním citovosti, zmyslovosti a snahy nadviazať dialóg so súčasnosťou. Oravec ho nadväzuje svojou…",
+   "web": "https://goout.net/en/juraj-oravec-na-siedmom-poschodi-sna/szsotpy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.0342,
+   "lng": 17.2326,
+   "id": "imp-eaf2637f358d",
+   "cat": "exposicion",
+   "t": {
+    "es": "Juraj Oravec: En el séptimo piso del sueño",
+    "en": "Juraj Oravec: On the Seventh Floor of a Dream"
+   }
+  },
+  {
+   "n": "SHIFTS26",
+   "lugar": "Double Tree by Hilton, Trnavská cesta 27/A",
+   "desde": "2026-12-01",
+   "hasta": "2026-12-01",
+   "horario": "09:00",
+   "precio": "848.70–1217.70 €",
+   "desc": "Investičná konferencia SHIFTS26 sa uskutoční 1. decembra 2026 v hoteli Double Tree by Hilton. Rozhodovanie sa dnes odohráva v prostredí permanentnej neistoty. Zatiaľ čo sa vďaka vede a medicíne 3.0 otvárajú úplne nové horizonty života, časté zmeny a tlak na okamžitý výsledok postupne vytláčajú schopnosť myslieť v čase. Pritom práve dlhodobý pohľad dnes rozhoduje o tom, kto obstojí — ako jednotlivec aj ako spoločnosť. Zdravie, kapitál, technológie aj hodnoty sa zbiehajú v jedinej otázke: Ako sa…",
+   "web": "https://goout.net/en/shifts26/szffciy/",
+   "tickets": "https://goout.net/en/shifts26/szffciy/",
+   "fuente": "GoOut",
+   "lat": 48.1607,
+   "lng": 17.1379,
+   "id": "imp-d6d38e5124e4",
+   "cat": "charla",
+   "t": {
+    "es": "SHIFTS26",
+    "en": "SHIFTS26"
+   }
+  },
+  {
+   "n": "Nov.28/Dec.1-Dec.5 Hungarian Thermal Spa Escape & Christmas City Break",
+   "lugar": "M. R. Štefánik Airport Bratislava, Ivanská cesta, Bratislava",
+   "desde": "2026-12-01",
+   "hasta": "2026-12-01",
+   "horario": "15:25",
+   "precio": "",
+   "desc": "1–5 December 2026 (Optional Extension: 28 November–5 December) Following the success of our previous trips, AAA is delighted to return to Hungary for another relaxing Thermal Spa & Sightseeing holiday. Enjoy five days combining Europe's famous healing thermal waters with visits to some of Central Europe's most beautiful cities. Relax in natural medicinal pools, indulge in affordable spa treatments, stroll through charming Christmas markets, and explore historic Budapest, Bratislava, Vienna and…",
+   "web": "https://www.meetup.com/aaa-outdoor-hiking-adventure-travel/events/314527286/",
+   "tickets": "",
+   "fuente": "Meetup",
+   "id": "imp-efa63a02221c",
+   "cat": "charla",
+   "t": {
+    "es": "28 nov / 1–5 dic: Escapada a las termas de Hungría y ciudad navideña",
+    "en": "Nov.28/Dec.1-Dec.5 Hungarian Thermal Spa Escape & Christmas City Break"
+   }
+  },
+  {
+   "n": "FÍHA tralala - pesničková šou s Budíkom",
+   "lugar": "SUD - Slovenský umelecký dvor, Bratislava",
+   "desde": "2026-12-01",
+   "hasta": "2026-12-01",
+   "horario": "17:00",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.livemusic.sk/koncert/pesnickova-sou-s-budikom-fiha-tralala-bratislava-2026-12-01/52811",
+   "tickets": "https://www.ticketportal.sk/performance/213739",
+   "fuente": "livemusic.sk",
+   "id": "imp-f3dace075d4e",
+   "cat": "concierto",
+   "t": {
+    "es": "FÍHA tralala: show de canciones con Budík",
+    "en": "FÍHA tralala: Song Show with Budík"
+   }
+  },
+  {
+   "n": "Keď máš 50, už nečakáš na povolenie žiť",
+   "lugar": "Knihžnica, Zámocká 26",
+   "desde": "2026-12-01",
+   "hasta": "2026-12-01",
+   "horario": "17:30",
+   "precio": "25 €",
+   "desc": "Diskusia na tému Keď máš 50, už nečakáš na povolenie žiť v Knihžnici sa uskutoční 1. decembra. Hosťky: Janette Šimková – koučka a midlife mentorka, Petra Kubányi zdieľa svoj príbeh Moderuje: Lucia Ilašenko",
+   "web": "https://goout.net/en/ked-mas-50-uz-necakas-na-povolenie-zit/szmruoy/",
+   "tickets": "https://goout.net/en/ked-mas-50-uz-necakas-na-povolenie-zit/szmruoy/",
+   "fuente": "GoOut",
+   "lat": 48.1448,
+   "lng": 17.1006,
+   "id": "imp-de3e7eb92274",
+   "cat": "charla",
+   "t": {
+    "es": "A los 50 ya no esperas permiso para vivir",
+    "en": "At 50 You No Longer Wait for Permission to Live"
+   }
+  },
+  {
+   "n": "Sima Magušinová - Advent s Vami 2026",
+   "lugar": "Blumentálsky kostol, Bratislava",
+   "desde": "2026-12-01",
+   "hasta": "2026-12-01",
+   "horario": "18:00",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.livemusic.sk/koncert/advent-s-vami-sima-magusinova-bratislava-2026/59715",
+   "tickets": "https://predpredaj.sk/sk/listky/sima-magusinova-s-kapelou-advent-s-vami-2026-bratislava-2026-12-01/?utm_source=live_music",
+   "fuente": "livemusic.sk",
+   "id": "imp-e62ca9ce1e35",
+   "cat": "concierto",
+   "t": {
+    "es": "Sima Magušinová: Adviento con ustedes 2026",
+    "en": "Sima Magušinová: Advent with You 2026"
+   }
+  },
+  {
+   "n": "EnsembleSpectrum",
+   "lugar": "Malá sála SF, Reduta (Slovenská filharmónia), Medená 3",
+   "desde": "2026-12-01",
+   "hasta": "2026-12-01",
+   "horario": "19:00",
+   "precio": "14 €",
+   "desc": "Slovenská filharmónia",
+   "web": "https://www.filharmonia.sk/kh1-2026",
+   "tickets": "https://www.filharmonia.sk/kh1-2026",
+   "fuente": "Slovenská filharmónia",
+   "id": "imp-810b498a2693",
+   "cat": "concierto",
+   "t": {
+    "es": "EnsembleSpectrum",
+    "en": "EnsembleSpectrum"
+   }
+  },
+  {
+   "n": "K-POP Fever",
+   "lugar": "PEUGEOT aréna, Bratislava",
+   "desde": "2026-12-01",
+   "hasta": "2026-12-01",
+   "horario": "19:00",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.livemusic.sk/koncert/k-pop-fever-bratislava-2026/51244",
+   "tickets": "https://predpredaj.sk/sk/listky/k-pop-fever-2026-12-01/?utm_source=live_music",
+   "fuente": "livemusic.sk",
+   "id": "imp-b596c8c7fb5c",
+   "cat": "concierto",
+   "t": {
+    "es": "K-POP Fever",
+    "en": "K-POP Fever"
+   }
+  },
+  {
+   "n": "Môj vzor, Božský Karel",
+   "lugar": "STARS auditorium, Bratislava",
+   "desde": "2026-12-01",
+   "hasta": "2026-12-01",
+   "horario": "19:00",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.livemusic.sk/koncert/moj-vzor-bozsky-karel-gott-bratislava-2026-12-01/58811",
+   "tickets": "https://www.ticketportal.sk/performance/220101",
+   "fuente": "livemusic.sk",
+   "id": "imp-7ac01a0921a0",
+   "cat": "concierto",
+   "t": {
+    "es": "Mi ídolo, el divino Karel (Gott)",
+    "en": "My Idol, the Divine Karel (Gott)"
+   }
+  },
+  {
+   "n": "Pavol Hammel Poetika Tour 2026",
+   "lugar": "Spoločenský dom Záhorská Bystrica, Bratislava",
+   "desde": "2026-12-01",
+   "hasta": "2026-12-01",
+   "horario": "19:00",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.livemusic.sk/koncert/poetika-tour-pavol-hammel-bratislava-zahorska-bystrica-2026-12-03/59167",
+   "tickets": "https://www.ticketportal.sk/performance/220444",
+   "fuente": "livemusic.sk",
+   "id": "imp-94a9dac2efc9",
+   "cat": "concierto",
+   "t": {
+    "es": "Pavol Hammel Poetika Tour 2026",
+    "en": "Pavol Hammel Poetika Tour 2026"
+   }
+  },
+  {
+   "n": "Queen Abba pri sviečkach",
+   "lugar": "DK Ružinov - Veľká sála, Bratislava",
+   "desde": "2026-12-01",
+   "hasta": "2026-12-01",
+   "horario": "19:00",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.livemusic.sk/koncert/pri-svieckach-queen-abba-bratislava-2026/53482",
+   "tickets": "https://www.ticketportal.sk/performance/214415",
+   "fuente": "livemusic.sk",
+   "id": "imp-e2d78c498c85",
+   "cat": "concierto",
+   "t": {
+    "es": "Queen y ABBA a la luz de las velas",
+    "en": "Queen & ABBA by Candlelight"
+   }
+  },
+  {
+   "n": "Škvrny na slnku",
+   "lugar": "Štúdio Kaplnka, Ventúrska 3",
+   "desde": "2026-12-01",
+   "hasta": "2026-12-01",
+   "horario": "19:00",
+   "precio": "2–4 €",
+   "desc": "Škvrny na slnku sú v poradí treťou drámou Leopolda Laholu. Napísal ju počas svojej emigrácie vo Francúzsku. Táto dráma sa často označuje ako slovenský Zločin a trest, kvôli jasným tematickým paralelám v týchto dielach. V Škvrnách na slnku pracuje Lahola s témami ako sú zlo, determinizmus, vojna, či koncentračné tábory, ktoré mu boli blízke a v jeho tvorbe sa objavovali pomerne často. Zároveň sú to, prevažne, témy absolútne nadčasové, ktoré aj 70 rokov po napísaní hry majú stále čo povedať a…",
+   "web": "https://goout.net/en/skvrny-na-slnku/szlowny/",
+   "tickets": "https://goout.net/en/skvrny-na-slnku/szlowny/",
+   "fuente": "GoOut",
+   "lat": 48.1424,
+   "lng": 17.1064,
+   "id": "imp-27fbe6cb7c44",
+   "cat": "teatro",
+   "t": {
+    "es": "Manchas solares",
+    "en": "Sunspots"
+   }
+  },
+  {
+   "n": "Čechomor - Proměny po 25. letech",
+   "lugar": "GOPASS ARÉNA (Športová hala Pasienky), Bratislava",
+   "desde": "2026-12-01",
+   "hasta": "2026-12-01",
+   "horario": "20:00",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.livemusic.sk/koncert/tour-promeny-po-25-letech-cechomor-bratislava-2026/46756",
+   "tickets": "https://www.ticketportal.sk/performance/1203686",
+   "fuente": "livemusic.sk",
+   "id": "imp-bd8a26778291",
+   "cat": "concierto",
+   "t": {
+    "es": "Čechomor: Proměny, 25 años después",
+    "en": "Čechomor: Proměny 25 Years On"
+   }
+  },
+  {
+   "n": "Elektrické mýty",
+   "lugar": "Pálffyho palác, Zámocká 47",
+   "desde": "2026-12-02",
+   "hasta": "2028-05-23",
+   "horario": "",
+   "precio": "",
+   "desc": "Skupinová výstava Elektrické mýty prepája diela GMB s dielami zo zbierky Art Collection Telekom. Viac než 40 umelkýň a umelcov kriticky skúma technologický pokrok, jeho spoločenské dôsledky a postavenie človeka v dnešnom svete. Skupinová výstava Elektrické mýty v priestoroch Pálffyho paláca Galérie mesta Bratislavy (GMB) predstavuje diela viac než 40 medzinárodných umelkýň a umelcov. Historické diela a najnovšie akvizície zo zbierky GMB vstupujú do dialógu s dielami zo zbierky Art Collection…",
+   "web": "https://goout.net/en/elektricke-myty/szupeoy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 0.0,
+   "lng": 0.0,
+   "id": "imp-3085ec4a714c",
+   "cat": "exposicion",
+   "t": {
+    "es": "Mitos eléctricos",
+    "en": "Electric Myths"
+   }
+  },
+  {
+   "n": "Svadba",
+   "lugar": "Burkovňa, Ventúrska 3",
+   "desde": "2026-12-02",
+   "hasta": "2026-12-02",
+   "horario": "17:30",
+   "precio": "2–4 €",
+   "desc": "Text organizátora: No tak, drahí hostia! Poďte sa posadiť, nehanbite sa. Zasadnite s nami k spoločnému stolu, oslavujeme významný deň! Dášenka a Mikuláš sa berú. Na ich svadbe sa stretnú všetci, známi i tí čo sa na známych len hrajú a tiež takí, ktorí sa hrajú na niekoho úplne iného. Rozpráva sa o všetkom a pritom sa nepovie nič. Hlavné je, že stoly sa prehýbajú – humrami a Tokajom, chlebom a vodou… akurát tá polievka je málo slaná a nevesta? Nebozkaná! Zábava je v plnom prúde, vylepšiť ju…",
+   "web": "https://goout.net/en/svadba/szgtopy/",
+   "tickets": "https://goout.net/en/svadba/szgtopy/",
+   "fuente": "GoOut",
+   "lat": 48.1424,
+   "lng": 17.1064,
+   "id": "imp-97c8f68cfbcc",
+   "cat": "teatro",
+   "t": {
+    "es": "La boda",
+    "en": "The Wedding"
+   }
+  },
+  {
+   "n": "Piesne z Kabinetu: Martin Geišberg + Nils Bloch + Milibea",
+   "lugar": "Nová Cvernovka, Račianska 1575/78",
+   "desde": "2026-12-02",
+   "hasta": "2026-12-02",
+   "horario": "18:30",
+   "precio": "10 €",
+   "desc": "Piesne z Kabinetu prinesú do Novej Cvernovky 3 mená z domácej i zahraničnej scény. Martin Geišberg (SK) – pesničkár, herec a rozprávač. Nils Bloch (DK/RS) – dánsky pesničkár, ktorý momentálne pôsobí v Belehrade. Robí melancholický, atmosférický indie folk, postavený na jemných gitarových melódiách a výraznom hlase. Jeho hudba je miestami až filmová, niekde medzi alternatívnym folkom a indie. Zahrá úplne sólo, len akustická gitara a spev. Milibea (RS) – mladá srbská pesničkárka z Nového Sadu.…",
+   "web": "https://goout.net/en/piesne-z-kabinetu-martin-geisberg+nils-bloch+milibea/szsnopy/",
+   "tickets": "https://goout.net/en/piesne-z-kabinetu-martin-geisberg+nils-bloch+milibea/szsnopy/",
+   "fuente": "GoOut",
+   "lat": 48.1831,
+   "lng": 17.1317,
+   "id": "imp-095a82f487e3",
+   "cat": "concierto",
+   "t": {
+    "es": "Canciones del Gabinete: Martin Geišberg + Nils Bloch + Milibea",
+    "en": "Songs from the Cabinet: Martin Geišberg + Nils Bloch + Milibea"
+   }
+  },
+  {
+   "n": "Celebrating the Music of Ennio Morricone",
+   "lugar": "PEUGEOT aréna Bratislava",
+   "desde": "2026-12-02",
+   "hasta": "2026-12-02",
+   "horario": "19:00",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.livemusic.sk/koncert/celebrating-the-music-of-ennio-morricone-bratislava-2026/47743",
+   "tickets": "https://www.ticketportal.sk/performance/211659",
+   "fuente": "livemusic.sk",
+   "id": "imp-19579e65a45a",
+   "cat": "concierto",
+   "t": {
+    "es": "Celebrating the Music of Ennio Morricone",
+    "en": "Celebrating the Music of Ennio Morricone"
+   }
+  },
+  {
+   "n": "Denis Bango hrá Fvck_Kvlt",
+   "lugar": "Stará tržnica, Nám. SNP 25",
+   "desde": "2026-12-02",
+   "hasta": "2026-12-02",
+   "horario": "20:00",
+   "precio": "29–39 €",
+   "desc": "Po dvoch vypredaných koncertoch vo veľkom štúdiu Slovenského rozhlasu sa Denis Bango vracia so svojím klavírnym vystúpením do legendárnej Starej Tržnice v Bratislave. Okrem prierezu tým najlepším z jeho doterajšej tvorby prvý raz zaznejú aj piesne z pripravovaného nového albumu, ktoré pred vydaním bude možné počuť iba v tento večer. A nebudú chýbať ani nikde nevydané čisto klavírne skladby.",
+   "web": "https://goout.net/en/denis-bango-hra-fvck-kvlt/szaksmy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1446,
+   "lng": 17.1117,
+   "id": "imp-f0f53f6efd53",
+   "cat": "concierto",
+   "t": {
+    "es": "Denis Bango toca Fvck_Kvlt",
+    "en": "Denis Bango Plays Fvck_Kvlt"
+   }
+  },
+  {
+   "n": "Vianoce v meste: Alan Murin",
+   "lugar": "Alchymista pub, Františkánske námestie 10",
+   "desde": "2026-12-02",
+   "hasta": "2026-12-02",
+   "horario": "20:00",
+   "precio": "",
+   "desc": "V stredu, 2. decembra sa v Alchymistovi v Bratislave uskutoční špeciálna vianočá edícia Vianoce v meste. Tešiť sa možno na večer plný hudby, energie a sviatočnej atmosféry, ktorého vrcholom bude živé vystúpenie Alana Murina. O klubovú atmosféru pred koncertom aj po ňom sa postarajú DJs Spin a Triple P. 18+ Kúpnu cenu vstupenky na toto podujatie nie je možné uhradiť prostredníctvom Poukazu GoOut, ani inými spôsobmi, ktoré nie sú uvedené vo Všeobecných obchodných podmienkach Ticketportal SK.",
+   "web": "https://goout.net/en/vianoce-v-meste-alan-murin/szeqtpy/",
+   "tickets": "https://www.ticketportal.sk/event/VIANOCE-V-MESTE-ALAN-MURIN-LIVE",
+   "fuente": "GoOut",
+   "lat": 48.1449,
+   "lng": 17.1081,
+   "id": "imp-71405930b78b",
+   "cat": "concierto",
+   "t": {
+    "es": "Navidad en la ciudad: Alan Murin",
+    "en": "Christmas in Town: Alan Murin"
+   }
+  },
+  {
+   "n": "Elektrické mýty",
+   "lugar": "Pálffyho palác, Panská 19",
+   "desde": "2026-12-03",
+   "hasta": "2027-05-23",
+   "horario": "",
+   "precio": "",
+   "desc": "Skupinová výstava Elektrické mýty prepája diela GMB s dielami zo zbierky Art Collection Telekom. Viac než 40 umelkýň a umelcov kriticky skúma technologický pokrok, jeho spoločenské dôsledky a postavenie človeka v dnešnom svete. Vybrané diela prostredníctvom sochy, maľby, inštalácie, fotografie, filmu či tapisérie reflektujú širšie spoločensko-politické javy a dejinné zvraty, ktoré majú priamy vplyv na ľudské životy. Spájajú sa v nich osobné i kolektívne, ale aj kozmické a metafyzické…",
+   "web": "https://goout.net/en/elektricke-myty/szwltpy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1422,
+   "lng": 17.1071,
+   "id": "imp-bdc1e2ab951c",
+   "cat": "exposicion",
+   "t": {
+    "es": "Mitos eléctricos",
+    "en": "Electric Myths"
+   }
+  },
+  {
+   "n": "Silvestrovský Lužifčák naživo",
+   "lugar": "Kácečko, Kamenné námestie 1/a",
+   "desde": "2026-12-03",
+   "hasta": "2026-12-03",
+   "horario": "",
+   "precio": "17 €",
+   "desc": "Text organizátora: Trendy sa aj tento rok vráti do Lužifčáka, aby s vami, Lužinom a Žifčákom odpálil ten najlepší Silvester. Aby ste si vy potom mohli zažiť aj ten s kamošmi a rodinou, nahrávame už 3. decembra v Kácečku. Podujatie nie je vhodné pre osoby mladšie ako 15 rokov.",
+   "web": "https://goout.net/en/silvestrovsky-luzifcak-nazivo/szwbtky/",
+   "tickets": "https://goout.net/en/silvestrovsky-luzifcak-nazivo/szwbtky/",
+   "fuente": "GoOut",
+   "lat": 48.1454,
+   "lng": 17.114,
+   "id": "imp-02357ec8616e",
+   "cat": "otro",
+   "t": {
+    "es": "Lužifčák de Fin de Año, en vivo",
+    "en": "Lužifčák New Year's Eve Special, Live"
+   }
+  },
+  {
+   "n": "Spolu s umením: Vrstvy trvania",
+   "lugar": "Pálffyho palác, Panská 19",
+   "desde": "2026-12-03",
+   "hasta": "2026-12-03",
+   "horario": "13:00",
+   "precio": "4 €",
+   "desc": "Historické budovy v centre mesta ukrývajú pútavé príbehy. Čo všetko sa v paláci odohralo kým sa z neho stala galéria? Na decembrovom programe Spolu s umením sa s galerijnou pedagogičkou Juditou Šályovou nazrie na rôzne časové etapy Pálffyho paláca. Archeológ Branislav Resutík priblíži obdobie Keltov cez výstavu Biatec a historik umenia Dávid Lelovics bude rozprávať o stredovekej vrstve paláca s nadviazaním na dobu Jána Pálffyho. Súčasťou stretnutia je medzigeneračné prepájanie vo forme…",
+   "web": "https://goout.net/en/spolu-s-umenim-vrstvy-trvania/szvuwmy/",
+   "tickets": "https://goout.net/en/spolu-s-umenim-vrstvy-trvania/szvuwmy/",
+   "fuente": "GoOut",
+   "lat": 48.1422,
+   "lng": 17.1071,
+   "id": "imp-aa9fdbe9f114",
+   "cat": "charla",
+   "t": {
+    "es": "Juntos con el arte: Capas del tiempo",
+    "en": "Together with Art: Layers of Duration"
+   }
+  },
+  {
+   "n": "Svadba",
+   "lugar": "Burkovňa, Ventúrska 3",
+   "desde": "2026-12-03",
+   "hasta": "2026-12-03",
+   "horario": "17:30",
+   "precio": "2–4 €",
+   "desc": "Text organizátora: No tak, drahí hostia! Poďte sa posadiť, nehanbite sa. Zasadnite s nami k spoločnému stolu, oslavujeme významný deň! Dášenka a Mikuláš sa berú. Na ich svadbe sa stretnú všetci, známi i tí čo sa na známych len hrajú a tiež takí, ktorí sa hrajú na niekoho úplne iného. Rozpráva sa o všetkom a pritom sa nepovie nič. Hlavné je, že stoly sa prehýbajú – humrami a Tokajom, chlebom a vodou… akurát tá polievka je málo slaná a nevesta? Nebozkaná! Zábava je v plnom prúde, vylepšiť ju…",
+   "web": "https://goout.net/en/svadba/szitopy/",
+   "tickets": "https://goout.net/en/svadba/szitopy/",
+   "fuente": "GoOut",
+   "lat": 48.1424,
+   "lng": 17.1064,
+   "id": "imp-80d52fe0c827",
+   "cat": "teatro",
+   "t": {
+    "es": "La boda",
+    "en": "The Wedding"
+   }
+  },
+  {
+   "n": "🎄 The Stage is Yours: Open Mic Night [AWS User Group Bratislava]",
+   "lugar": "Biometrics House, Jurská 19, 831 02 Bratislava, Slovakia, Bratislava",
+   "desde": "2026-12-03",
+   "hasta": "2026-12-03",
+   "horario": "18:00",
+   "precio": "",
+   "desc": "The year is almost over, so before everyone disappears for the holidays, let’s get together one more time. This meetup is a relaxed pre-Christmas gathering with an open mic, where the community takes the stage. We’re looking for about 5 speakers for short 10-minute talks. It can be anything AWS-related you’d like to share: a service you started using, a problem you solved, a mistake you learned from or a side project. It doesn’t need to be polished or a big production. Short, practical and…",
+   "web": "https://www.meetup.com/aws-user-group-bratislava/events/317353240/",
+   "tickets": "",
+   "fuente": "Meetup",
+   "id": "imp-6b9a433881a5",
+   "cat": "charla",
+   "t": {
+    "es": "🎄 El escenario es tuyo: noche de micrófono abierto [AWS User Group Bratislava]",
+    "en": "🎄 The Stage is Yours: Open Mic Night [AWS User Group Bratislava]"
+   }
+  },
+  {
+   "n": "Brutálna Bratislava",
+   "lugar": "V-klub, Nám. SNP 12",
+   "desde": "2026-12-03",
+   "hasta": "2026-12-03",
+   "horario": "19:00",
+   "precio": "12 €",
+   "desc": "Keď sa v roku 2022 začala demolácia bývalého Domu odborov – Istropolis, nebolo to prvýkrát, čo bola v Bratislave zbúraná verejná stavba z obdobia socializmu. Unikátny bol záujem verejnosti a diskusia, ktorú tento zámer rozpútal o bratislavskom dedičstve „brutalizmu“. Radikálne moderné monumenty zo 60. a 70. rokov minulého storočia – obrátená pyramída Slovenského rozhlasu, dynamická silueta Mosta SNP s vesmírnou reštauráciou na vrchole piliera či zošikmené „brvná“ premosťujúce barokové Vodné…",
+   "web": "https://goout.net/en/brutalna-bratislava/szmfboy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1453,
+   "lng": 17.1118,
+   "id": "imp-a81c8fb5fd4e",
+   "cat": "charla",
+   "t": {
+    "es": "Bratislava brutalista",
+    "en": "Brutalist Bratislava"
+   }
+  },
+  {
+   "n": "David Kollar: Between Strings & Signals",
+   "lugar": "Nová Cvernovka, Račianska 1575/78",
+   "desde": "2026-12-03",
+   "hasta": "2026-12-03",
+   "horario": "19:00",
+   "precio": "15 €",
+   "desc": "Sólový koncert a diskusia s Oliverom Rehákom Denník N. Z Prešova do štúdia Ricka Beata: David Kollar o hudbe bez hraníc. Čo sa stane, keď sa slovenský gitarista ocitne v štúdiu jedného z najsledovanejších hudobných publicistov internetu? A ako znie hudobný svet, ktorý ho tam priviedol? David Kollar, výrazná osobnosť súčasnej experimentálnej hudby, prichádza do Novej Cvernovky so svojím sólovým koncertom Between Strings & Signals. Večer doplní rozhovor s hudobným publicistom Oliverom Rehákom z…",
+   "web": "https://goout.net/en/david-kollar-between-strings-and-signals/szeufpy/",
+   "tickets": "https://goout.net/en/david-kollar-between-strings-and-signals/szeufpy/",
+   "fuente": "GoOut",
+   "lat": 48.1831,
+   "lng": 17.1317,
+   "id": "imp-d4f4e2551e92",
+   "cat": "concierto",
+   "t": {
+    "es": "David Kollar: Between Strings & Signals",
+    "en": "David Kollar: Between Strings & Signals"
+   }
+  },
+  {
+   "n": "Dohnányi, Németh-Šamorínsky, Čajkovskij",
+   "lugar": "Reduta (Slovenská filharmónia), Medená 3",
+   "desde": "2026-12-03",
+   "hasta": "2026-12-03",
+   "horario": "19:00",
+   "precio": "18–22 €",
+   "desc": "Slovenská filharmónia",
+   "web": "https://www.filharmonia.sk/d2-2026",
+   "tickets": "https://www.filharmonia.sk/d2-2026",
+   "fuente": "Slovenská filharmónia",
+   "id": "imp-5544062542eb",
+   "cat": "concierto",
+   "t": {
+    "es": "Dohnányi, Németh-Šamorínsky, Chaikovski",
+    "en": "Dohnányi, Németh-Šamorínsky, Tchaikovsky"
+   }
+  },
+  {
+   "n": "Pavol Hammel Poetika Tour 2026",
+   "lugar": "SUD - Slovenský umelecký dvor, Bratislava",
+   "desde": "2026-12-03",
+   "hasta": "2026-12-03",
+   "horario": "19:00",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.livemusic.sk/koncert/poetika-tour-pavol-hammel-bratislava-2026-12-03/59170",
+   "tickets": "https://www.ticketportal.sk/performance/220447",
+   "fuente": "livemusic.sk",
+   "id": "imp-e3d66da0345b",
+   "cat": "concierto",
+   "t": {
+    "es": "Pavol Hammel Poetika Tour 2026",
+    "en": "Pavol Hammel Poetika Tour 2026"
+   }
+  },
+  {
+   "n": "Punctum contra punctum",
+   "lugar": "A4 – priestor súčasnej kultúry, Karpatská 2",
+   "desde": "2026-12-03",
+   "hasta": "2026-12-03",
+   "horario": "20:00",
+   "precio": "7–15 €",
+   "desc": "Punctum contra punctum [lat.] — Bod proti bodu. Kompozičná technika využívaná vo viachlasnej hudbe, spájajúca na harmonickom základe dva alebo viaceré samostatné, súčasne znejúce hlasy do jedného hudobného celku. Samostatnosť hlasov spočíva v ich melodickej výraznosti a rytmickej rozdielnosti. „Divák dospeje do bodu, keď rezignuje na analytické vnímanie jednotlivých zložiek, prvkov, línií, pretože sa ho odrazu zmocní neodbytný pocit, ktorý všetko prekryje: že svet je šialené miesto chaosu,…",
+   "web": "https://goout.net/en/punctum-contra-punctum/szlqfpy/",
+   "tickets": "https://goout.net/en/punctum-contra-punctum/szlqfpy/",
+   "fuente": "GoOut",
+   "lat": 48.1571,
+   "lng": 17.1136,
+   "id": "imp-b26e72755609",
+   "cat": "teatro",
+   "t": {
+    "es": "Punctum contra punctum",
+    "en": "Punctum contra punctum"
+   }
+  },
+  {
+   "n": "Pán Guláš. Zákony gravitácie",
+   "lugar": "A4 – priestor súčasnej kultúry, Karpatská 2",
+   "desde": "2026-12-03",
+   "hasta": "2026-12-03",
+   "horario": "20:00",
+   "precio": "0–12 €",
+   "desc": "Inscenácia Pán Guláš. Zákony gravitácie vznikla pod vedením oceňovaného režiséra Rastislava Balleka. Východiskom tvorcov sa stal gravitačný zákon – každé dve telesá sa navzájom priťahujú gravitačnou silou, ktorá pôsobí aj na diaľku. Tvorivý tím tento zákon podrobil pomocou improvizácií, hravých situácií, odkazov a príkazov, skúške. Fyzika a seriálový svet sa nepriťahujú. Kto sa pozerá a kto je videný? Ergo, kto na koho pôsobí? Ten, kto nerozumie fyzikálnym zákonom, rozumie seriálom. A ten, kto…",
+   "web": "https://goout.net/en/pan-gulas-zakony-gravitacie/szmshny/",
+   "tickets": "https://goout.net/en/pan-gulas-zakony-gravitacie/szmshny/",
+   "fuente": "GoOut",
+   "lat": 48.1571,
+   "lng": 17.1136,
+   "id": "imp-136953e73911",
+   "cat": "teatro",
+   "t": {
+    "es": "El señor Guláš. Las leyes de la gravedad",
+    "en": "Mr Guláš: The Laws of Gravity"
+   }
+  },
+  {
+   "n": "Lajka (Volám sa Pes)",
+   "lugar": "Štúdio 1, Zochova 1",
+   "desde": "2026-12-04",
+   "hasta": "2026-12-04",
+   "horario": "17:00",
+   "precio": "2–4 €",
+   "desc": "„Vyslali ma sem. Ľudia. Letím. Ale bojím sa, že mama mala pravdu. Človek aportovať nevie. Akonáhle niečo zahodí, už si to nevezme.“ Pes je dar. Verne sprevádza človeka. Dal človeku všetko. No dokážeme narábať s jeho bezpodmienečnou láskou? Dokážeme zobrať zodpovednosť za živé tvory, ktoré sme si k sebe pripútali? Môže sa ospravedlniť smrť psej kozmonautky Lajky vedeckým triumfom? „Všetkých nás poslať nemohli. A v Lajke bolo z každého z nás trochu,“ pomyslel by si pes. No zmýšľali by sa ľudia…",
+   "web": "https://goout.net/en/lajka-volam-sa-pes/szktopy/",
+   "tickets": "https://goout.net/en/lajka-volam-sa-pes/szktopy/",
+   "fuente": "GoOut",
+   "lat": 48.1456,
+   "lng": 17.1034,
+   "id": "imp-3bf1288977dc",
+   "cat": "teatro",
+   "t": {
+    "es": "Laika (Me llamo Perro)",
+    "en": "Laika (My Name Is Dog)"
+   }
+  },
+  {
+   "n": "Al Bano & Band",
+   "lugar": "PEUGEOT aréna Bratislava",
+   "desde": "2026-12-04",
+   "hasta": "2026-12-04",
+   "horario": "19:00",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.livemusic.sk/koncert/al-bano-bratislava-2026/57569",
+   "tickets": "https://www.ticketportal.sk/performance/216887",
+   "fuente": "livemusic.sk",
+   "id": "imp-9358be489a28",
+   "cat": "concierto",
+   "t": {
+    "es": "Al Bano & Band",
+    "en": "Al Bano & Band"
+   }
+  },
+  {
+   "n": "Dohnányi, Németh-Šamorínsky, Čajkovskij",
+   "lugar": "Reduta (Slovenská filharmónia), Medená 3",
+   "desde": "2026-12-04",
+   "hasta": "2026-12-04",
+   "horario": "19:00",
+   "precio": "18–22 €",
+   "desc": "Slovenská filharmónia",
+   "web": "https://www.filharmonia.sk/e2-2026",
+   "tickets": "https://www.filharmonia.sk/e2-2026",
+   "fuente": "Slovenská filharmónia",
+   "id": "imp-21ada451670d",
+   "cat": "concierto",
+   "t": {
+    "es": "Dohnányi, Németh-Šamorínsky, Chaikovski",
+    "en": "Dohnányi, Németh-Šamorínsky, Tchaikovsky"
+   }
+  },
+  {
+   "n": "Hneď na druhý deň",
+   "lugar": "PAKT, Pionierska 3276/17",
+   "desde": "2026-12-04",
+   "hasta": "2026-12-04",
+   "horario": "19:00",
+   "precio": "8–20 €",
+   "desc": "Hneď na druhý deň – 2. inscenácia z dielne Inštitútu Blaha Uhlára. Ľudia sa ráno zobudia a pokračujú. V rozprávaní, v hádkach, v láskach, v strachoch, vo svojich malých katastrofách. Niekto sa bojí podať ruku, niekto túži po zázraku, niekto po Mercedese. Niekto si nevie poradiť s vlastným telom a niekto s vlastnou hlavou. Svet sa medzitým nezastaví. Len sa trochu pokriví. Groteskné obrazy, absurdné situácie, smiech, ktorý prichádza v nevhodnej chvíli, a neha, ktorá sa objaví tam, kde ju nikto…",
+   "web": "https://goout.net/en/hned-na-druhy-den/szbovny/",
+   "tickets": "https://goout.net/en/hned-na-druhy-den/szbovny/",
+   "fuente": "GoOut",
+   "lat": 48.1692,
+   "lng": 17.1253,
+   "id": "imp-528993e41095",
+   "cat": "teatro",
+   "t": {
+    "es": "Justo al día siguiente",
+    "en": "The Very Next Day"
+   }
+  },
+  {
+   "n": "Slim To No Chance (krst albumu Cause & Effect) + MadRain",
+   "lugar": "Pink Whale, Nábrežie armádneho generála Ludvíka Svobodu 1868rkm",
+   "desde": "2026-12-04",
+   "hasta": "2026-12-04",
+   "horario": "19:00",
+   "precio": "10–12 €",
+   "desc": "Bratislavská nu-metalová štvorica Slim To No Chance pokrstí svoj druhý album Cause & Effect v podpalubí lode Pink Whale. Návštevníci sa môžu tešiť na kompletne novú show a živú prezentáciu nu-metalového materiálu. Celý večer otvorí skupina MadRain z českého mesta Odry.",
+   "web": "https://goout.net/en/slim-to-no-chance-krst-albumu-cause-and-effect+madrain/szverny/",
+   "tickets": "https://goout.net/en/slim-to-no-chance-krst-albumu-cause-and-effect+madrain/szverny/",
+   "fuente": "GoOut",
+   "lat": 48.1396,
+   "lng": 17.1,
+   "id": "imp-466e6d07bd9b",
+   "cat": "concierto",
+   "t": {
+    "es": "Slim To No Chance (presentación del disco Cause & Effect) + MadRain",
+    "en": "Slim To No Chance (Cause & Effect album launch) + MadRain"
+   }
+  },
+  {
+   "n": "Bratislava Happy Hours!",
+   "lugar": "Spilka beer & restaurant, Legionárska 8, 811 07 Bratislava-Staré Mesto, Slovakia, Bratislava",
+   "desde": "2026-12-04",
+   "hasta": "2026-12-04",
+   "horario": "19:30",
+   "precio": "",
+   "desc": "This event offers a vibrant community of local professionals and enthusiasts passionate about socializing, cultural exchange, and meaningful connections. Join us to share ideas, and explore Bratislava’s rich cultures through happy hours filled with great conversations and even better company. Whether you're looking to expand your network or simply enjoy positive vibes with like-minded people, this is the place for you. Let’s celebrate diversity, foster friendships, and create unforgettable…",
+   "web": "https://www.meetup.com/bratislava-happy-hours-group/events/317430766/",
+   "tickets": "",
+   "fuente": "Meetup",
+   "id": "imp-74b00073d9d4",
+   "cat": "charla",
+   "t": {
+    "es": "Bratislava Happy Hours!",
+    "en": "Bratislava Happy Hours!"
+   }
+  },
+  {
+   "n": "Adonxs",
+   "lugar": "Klub Za zrkadlom, Rovniankova 3",
+   "desde": "2026-12-04",
+   "hasta": "2026-12-04",
+   "horario": "20:00",
+   "precio": "25–49 €",
+   "desc": "V Klube Za zrkadlom sa 4. decembra predstaví Adonxs. Adonxs je výrazný slovenský spevák, skladateľ a performer s medzinárodným presahom, ktorý na seba výrazne upozornil víťazstvom v talentovej súťaži SuperStar a účasťou v Eurovízii. Jeho hudba prepája moderný pop s prvkami elektroniky a temnejšou atmosférou, pričom vyniká silným vokálom a charizmatickým pódiovým prejavom. Vo svojej tvorbe kladie dôraz na silnú vizuálnu identitu, autenticitu a emotívnu výpoveď. Má skúsenosti z koncertných pódií…",
+   "web": "https://goout.net/en/adonxs/szaaymy/",
+   "tickets": "",
+   "fuente": "GoOut",
+   "lat": 48.1169,
+   "lng": 17.1108,
+   "id": "imp-9346f5c30198",
+   "cat": "concierto",
+   "t": {
+    "es": "Adonxs",
+    "en": "Adonxs"
+   }
+  },
+  {
+   "n": "Blue Effect Tribute - Pocta Radimovi Hladíkovi",
+   "lugar": "Majestic Music Club Bratislava",
+   "desde": "2026-12-04",
+   "hasta": "2026-12-04",
+   "horario": "20:00",
+   "precio": "",
+   "desc": "",
+   "web": "https://www.ticketlive.sk/sk/event/blue-effect-tribute-bratislava-04-12-2026",
+   "tickets": "https://www.ticketlive.sk/sk/event/blue-effect-tribute-bratislava-04-12-2026",
+   "fuente": "ticketlive.sk",
+   "id": "imp-681b465c4da1",
+   "cat": "concierto",
+   "t": {
+    "es": "Tributo a Blue Effect: homenaje a Radim Hladík",
+    "en": "Blue Effect Tribute: Homage to Radim Hladík"
+   }
+  },
+  {
+   "n": "C:rcle & Friends: C:rcle & Liia + ďalší",
+   "lugar": "Aldea Club, Františkánske námestie 408/3",
+   "desde": "2026-12-04",
+   "hasta": "2026-12-04",
+   "horario": "22:00",
+   "precio": "12 €",
+   "desc": "C:rcle & Friends bude mať aj tento rok svoju mikulášsku edíciu a prinesie naozaj zaujímavý line-up. Po prvýkrát v Aldea Clube privítame slovenskú speváčku, lyrickú storytellerku a DJku LIIA, ktorá momentálne pôsobí v Londýne. Jej debutový singel Airplane Mode vystrelil na #1 priečku rebríčka Hypeddit. Najnovší remake skladby Naughty Girl od Beyoncé, na ktorom spolupracovala s Changing Faces, si vyslúžil titul Drop of the Week v show Charlie Tee na BBC Radio 1. Za sebou má aj silnú podporu mien…",
+   "web": "https://goout.net/en/c-rcle-and-friends-c-rcle-and-liia+dalsi/szclmpy/",
+   "tickets": "https://goout.net/en/c-rcle-and-friends-c-rcle-and-liia+dalsi/szclmpy/",
+   "fuente": "GoOut",
+   "lat": 48.1443,
+   "lng": 17.1084,
+   "id": "imp-1ea46982b8c1",
+   "cat": "fiesta",
+   "t": {
+    "es": "C:rcle & Friends: C:rcle & Liia y más",
+    "en": "C:rcle & Friends: C:rcle & Liia and more"
    }
   }
  ]

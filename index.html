@@ -1147,7 +1147,9 @@ const I18N = {
     errorCarga:"No se pudo cargar el mapa. Revisa la conexión y vuelve a abrir la app.",
     compartirApp:"Comparte Bratislava Spots", compartirAppCorto:"Muestra el código QR para que otra persona la abra al instante.",
     compartirAppTxt:"Muéstrale este código a alguien: lo escanea con la cámara y se abre la app.", verQR:"Mostrar QR", compartirLink:"Compartir link",
-    usarGPS:"Usar mi ubicación", gpsBuscando:"Buscando tu ubicación…", gpsFuera:"Tu ubicación está fuera del mapa de Bratislava.",
+    usarGPS:"Usar mi ubicación", gpsBuscando:"Buscando tu ubicación…",
+    rutaEv:(m, km) => `${m} min a pie (${km.replace(".", ",")} km) desde donde estás`, rutaNo:"No encontré un camino a pie hasta ese lugar.",
+    rutaSinUbic:"Para ver el camino, marca dónde estás en «Cerca mío» o permite usar tu ubicación.", gpsFuera:"Tu ubicación está fuera del mapa de Bratislava.",
     gpsError:"No se pudo obtener tu ubicación. Revisa el permiso de ubicación del navegador o toca el mapa.",
     tocaMapaTxtWeb:"o usa tu ubicación, o escribe la calle arriba. Te muestro lo que está abierto y cerca, en este momento.",
     eventosActualizados:d => `Eventos actualizados el ${d}.`,
@@ -1243,7 +1245,9 @@ const I18N = {
     errorCarga:"Couldn't load the map. Check your connection and open the app again.",
     compartirApp:"Share Bratislava Spots", compartirAppCorto:"Show the QR code so someone else can open it right away.",
     compartirAppTxt:"Show this code to someone: they scan it with their camera and the app opens.", verQR:"Show QR", compartirLink:"Share link",
-    usarGPS:"Use my location", gpsBuscando:"Finding your location…", gpsFuera:"Your location is outside the Bratislava map.",
+    usarGPS:"Use my location", gpsBuscando:"Finding your location…",
+    rutaEv:(m, km) => `${m} min walk (${km} km) from where you are`, rutaNo:"I couldn't find a walking route to that place.",
+    rutaSinUbic:"To see the way there, mark where you are in “Near me” or allow your location.", gpsFuera:"Your location is outside the Bratislava map.",
     gpsError:"Couldn't get your location. Check the browser's location permission or tap the map.",
     tocaMapaTxtWeb:"or use your location, or type the street above. I'll show you what's open and nearby right now.",
     eventosActualizados:d => `Events updated on ${d}.`,
@@ -1339,7 +1343,9 @@ const I18N = {
     errorCarga:"Mapu sa nepodarilo načítať. Skontroluj pripojenie a otvor aplikáciu znova.",
     compartirApp:"Zdieľaj Bratislava Spots", compartirAppCorto:"Ukáž QR kód a niekto iný si ju hneď otvorí.",
     compartirAppTxt:"Ukáž tento kód niekomu: naskenuje ho fotoaparátom a otvorí sa aplikácia.", verQR:"Zobraziť QR", compartirLink:"Zdieľať odkaz",
-    usarGPS:"Použiť moju polohu", gpsBuscando:"Hľadám tvoju polohu…", gpsFuera:"Tvoja poloha je mimo mapy Bratislavy.",
+    usarGPS:"Použiť moju polohu", gpsBuscando:"Hľadám tvoju polohu…",
+    rutaEv:(m, km) => `${m} min pešo (${km.replace(".", ",")} km) odtiaľ, kde si`, rutaNo:"Nenašiel som pešiu cestu na to miesto.",
+    rutaSinUbic:"Ak chceš vidieť cestu, označ, kde si, v „Teraz v okolí“ alebo povoľ svoju polohu.", gpsFuera:"Tvoja poloha je mimo mapy Bratislavy.",
     gpsError:"Nepodarilo sa zistiť tvoju polohu. Skontroluj povolenie polohy v prehliadači alebo ťukni na mapu.",
     tocaMapaTxtWeb:"alebo použi svoju polohu, alebo napíš ulicu hore. Ukážem ti, čo je práve otvorené a nablízku.",
     eventosActualizados:d => `Podujatia aktualizované ${d}.`,
@@ -1812,6 +1818,18 @@ function dibujar(c){
     const X = PX(S.marcaEv.lng)*s + ox, Y = PY(S.marcaEv.lat)*s + oy;
     ctx.beginPath(); ctx.arc(X, Y, 11, 0, 7); ctx.lineWidth = 3; ctx.strokeStyle = css("--accent"); ctx.stroke();
     ctx.beginPath(); ctx.arc(X, Y, 4, 0, 7); ctx.fillStyle = css("--accent"); ctx.fill();
+  }
+  const rutaE = S.rutaEv;
+  if (rutaE && rutaE.c === S.marcaEv && rutaE.desde === S.ubic){
+    ctx.beginPath();
+    ctx.moveTo(PX(S.ubic.lng)*s + ox, PY(S.ubic.lat)*s + oy);
+    for (const [la, lo] of rutaE.pts) ctx.lineTo(PX(lo)*s + ox, PY(la)*s + oy);
+    const X = PX(rutaE.c.lng)*s + ox, Y = PY(rutaE.c.lat)*s + oy;
+    ctx.lineTo(X, Y);
+    ctx.strokeStyle = css("--accent"); ctx.lineWidth = 4; ctx.setLineDash([2, 7]); ctx.stroke(); ctx.setLineDash([]);
+    ctx.font = "600 13px " + css("--f-body"); ctx.textAlign = "center"; ctx.textBaseline = "bottom";
+    ctx.lineWidth = 4; ctx.strokeStyle = css("--halo"); ctx.strokeText(rutaE.min + " min", X, Y - 15);
+    ctx.fillStyle = css("--ink"); ctx.fillText(rutaE.min + " min", X, Y - 15);
   }
   if (S.marcaDir != null && DIR){
     const X = DIR.x[S.marcaDir]*s + ox, Y = DIR.y[S.marcaDir]*s + oy;
@@ -2765,7 +2783,7 @@ document.addEventListener("click", ev => {
     const id = tarjEv.dataset.ev || tarjEv.dataset.evg;
     const e = tarjEv.dataset.ev ? (typeof todosEventos === "function" ? todosEventos() : EVENTOS)[id] : (INFO["ev_" + id] || {}).ev;
     const c = e && coordsEv(e);
-    if (c){ S.marcaEv = c; if (tarjEv.dataset.ev) S.evSel = id; map.setView([c.lat, c.lng], 17.5); render(); capa.pedir(); }
+    if (c){ S.marcaEv = c; if (tarjEv.dataset.ev) S.evSel = id; map.setView([c.lat, c.lng], 17.5); render(); capa.pedir(); rutaAlEvento(c, false); }
     return;
   }
   const b = ev.target.closest("[data-a]"); if (!b) { if (!ev.target.closest(".buscar") && $("#sugs")) $("#sugs").hidden = true; return; }
@@ -2813,7 +2831,7 @@ document.addEventListener("click", ev => {
       const e = eventoPorId(v); if (!e || e.oculto) break;
       const copia = {}; for (const c of ["n", "n_en", "t", "lugar", "desde", "hasta", "horario", "precio", "web", "link", "tickets", "fuente", "lat", "lng"]) if (e[c] != null && e[c] !== "") copia[c] = e[c];
       setInfo(k, {evg: true, ev: copia}); toast(tr("tFav")); break; }
-    case "ir-evento-g": { const g = INFO["ev_" + v]; const c = g && g.ev && coordsEv(g.ev); if (c){ S.marcaEv = c; map.setView([c.lat, c.lng], 17.5); render(); capa.pedir(); if (typeof mapaGrande === "function" && esMovil()) ponerHoja("mapa"); } break; }
+    case "ir-evento-g": { const g = INFO["ev_" + v]; const c = g && g.ev && coordsEv(g.ev); if (c){ S.marcaEv = c; map.setView([c.lat, c.lng], 17.5); render(); capa.pedir(); rutaAlEvento(c, true); if (typeof mapaGrande === "function" && esMovil()) ponerHoja("mapa"); } break; }
     case "quitar-marca": { const k = b.dataset.k; if (!porId.get(v) || !["fav", "fui", "amigos", "desc"].includes(k)) break;
       setInfo(v, {[k]: false}); toast(tr("tQuitada")); break; }
     case "marca": { const p = porId.get(v); if (!p) break; const k = b.dataset.k; const nuevo = !p.info[k];
@@ -2843,7 +2861,7 @@ document.addEventListener("click", ev => {
     case "fe-cancelar": S.formEvento = null; render(); break;
     case "fe-guardar": guardarEvento(); break;
     case "borrar-evento": if (EVENTOS_PUB[v]) EVENTOS[v] = {oculto: true}; else delete EVENTOS[v]; guardarLocal(); render(); toast(tr("tEventoBorrado")); break;
-    case "ir-evento": { const e = todosEventos()[v]; const c = coordsEv(e); if (c){ S.marcaEv = c; S.evSel = v; map.setView([c.lat, c.lng], 17.5); render(); capa.pedir(); } break; }
+    case "ir-evento": { const e = todosEventos()[v]; const c = coordsEv(e); if (c){ S.marcaEv = c; S.evSel = v; map.setView([c.lat, c.lng], 17.5); render(); capa.pedir(); rutaAlEvento(c, true); } break; }
     case "tema": cambiarTema(); break;
     case "respaldo": respaldo(); break;
     case "gps": usarGPS(); break;
@@ -2973,6 +2991,45 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", colorBarra
 setTimeout(colorBarra, 0);
 const ICONO_QR = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM18 18h3v3h-3zM14 20h1M20 14h1"/></svg>`;
 document.addEventListener("click", ev => { const d = document.getElementById("dlg-app"); if (d && d.open && ev.target === d) d.close(); });
+/* Walking route from where you are to an event shown on the map (c = the event's {lat, lng}).
+   askGps: when no location is set yet, ask the phone for it once (only from the "Show on map" buttons). */
+function rutaAlEvento(c, askGps){
+  if (!c || !G) return;
+  if (!S.ubic){
+    if (!askGps) return;
+    if (!hayGPS()){ toast(tr("rutaSinUbic")); return; }
+    toast(tr("gpsBuscando"));
+    navigator.geolocation.getCurrentPosition(pos => {
+      const {latitude: la, longitude: lo} = pos.coords;
+      if (la < 48.01 || la > 48.26 || lo < 16.97 || lo > 17.25){ toast(tr("gpsFuera")); return; }
+      if (S.marcaEv !== c) return;                 // another event was chosen meanwhile
+      if (!S.ubic) ubicarSinCambiar(la, lo);
+      rutaAlEvento(c, false);
+    }, () => toast(tr("rutaSinUbic")), {enableHighAccuracy: true, timeout: 15000, maximumAge: 60000});
+    return;
+  }
+  const o = enganchar(S.ubic.lat, S.ubic.lng), sn = enganchar(c.lat, c.lng);
+  if (!o || !sn || sn.d > 300){ S.rutaEv = null; toast(tr("rutaNo")); return; }
+  // full search from the same origin "Near me" uses: its results keep the same distances
+  dijkstra(semillasDe(o), Infinity); ultimoDij = {o};
+  const rc = recorrido(sn, true);
+  if (!rc){ S.rutaEv = null; toast(tr("rutaNo")); return; }
+  S.rutaEv = {c, desde: S.ubic, pts: rc.pts, min: Math.max(1, Math.round(rc.tot / VEL))};
+  // zoom out to show where you are, the whole path and the event
+  let s0 = Math.min(S.ubic.lat, c.lat), n0 = Math.max(S.ubic.lat, c.lat), w0 = Math.min(S.ubic.lng, c.lng), e0 = Math.max(S.ubic.lng, c.lng);
+  for (const [la, lo] of rc.pts){ s0 = Math.min(s0, la); n0 = Math.max(n0, la); w0 = Math.min(w0, lo); e0 = Math.max(e0, lo); }
+  map.fitBounds([[s0, w0], [n0, e0]], {maxZoom: 17, padding: [40, 40]});
+  toast(tr("rutaEv", S.rutaEv.min, (rc.tot / 1000).toFixed(1)));
+  capa.pedir();
+}
+/* Sets "where you are" (also for "Near me") without leaving the current tab or the event on the map. */
+function ubicarSinCambiar(lat, lng){
+  try { localStorage.setItem("ba-spots-origen-visto", "1"); } catch(e){}
+  S.ubic = {lat, lng};
+  const di = dirCerca(lat, lng, 60);
+  S.ubic.calle = di != null ? textoDir(di) : calleCerca(lat, lng);
+  calcularCerca();
+}
 function hayGPS(){ return !!(navigator.geolocation && window.isSecureContext); }
 function usarGPS(){
   if (!hayGPS()) return;
@@ -3007,7 +3064,7 @@ function volverInicio(){
   Object.assign(S, {tab: "cerca", ubic: null, res: [], sel: null, lejano: null, detalle: null, texto: "", verMas: 60,
     esperandoUbic: false, ubicPara: null, formLugar: null, formEvento: null, marcaDir: null, marcaEv: null, confirmarBorrar: null,
     act: new Set(), planes: new Set(), presuMax: "todos", sinLimite: true, io: "todos", etapa: "todas", maxMin: 15, minAbierto: 60,
-    cuando: "ahora", dia: 0, min: 0, sinHorario: true, filtrosAbiertos: false, xt: new Set(), evF: "todas", evDia: "", evAbiertos: new Set(), evSel: null, evSec: "eventos", carVista: "cine", carSala: null, carAbiertas: new Set(), evUna: false, evCat: ""});
+    cuando: "ahora", dia: 0, min: 0, sinHorario: true, filtrosAbiertos: false, xt: new Set(), evF: "todas", evDia: "", evAbiertos: new Set(), evSel: null, evSec: "eventos", carVista: "cine", carSala: null, carAbiertas: new Set(), evUna: false, evCat: "", rutaEv: null});
   if (typeof menuIdioma === "function") menuIdioma(false);
   ultimoDij = null; avisoMapa("");
   if (typeof map !== "undefined" && map) map.setView([48.1440, 17.1085], 15.5);

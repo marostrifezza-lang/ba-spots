@@ -796,6 +796,7 @@ details.filtros[open] summary::after{content:" ▴"}
 .navcar span{font-family:var(--f-mono);font-size:13px;color:var(--muted);min-width:56px;text-align:center;font-variant-numeric:tabular-nums}
 .carrusel.arrastrando{scroll-snap-type:none;cursor:grabbing;user-select:none}
 .carrusel{cursor:grab}
+.card[data-id]{cursor:pointer}
 .carrusel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 10px;margin-inline:-2px;overscroll-behavior-x:contain}
 .carrusel::-webkit-scrollbar{height:6px}
 .carrusel::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
@@ -2154,7 +2155,6 @@ function tarjeta(r, i){
     <div class="acciones">
       <a class="btn prim chico" href="${linkRuta(p, r.min)}" target="_blank" rel="noopener">${tr("comoLlegar")}${r.min > 25 ? tr("transporte") : ""}</a>
       ${r.min > 25 ? "" : `<a class="btn chico" href="${linkTransporte(p)}" target="_blank" rel="noopener" aria-label="${tr("transporteBtn")}" title="${tr("transporteBtn")}">${ICONO_TRANVIA} ${tr("transporteCorto")}</a>`}
-      <button type="button" class="btn chico" data-a="detalle" data-v="${esc(p.id)}">${tr("verMas")}</button>
       <button type="button" class="btn chico" data-a="marca" data-k="desc" data-v="${esc(p.id)}">${tr("descartar")}</button>
     </div></article>`;
 }
@@ -2226,10 +2226,10 @@ function vistaCerca(){
       const que = S.act.size ? [...S.act].map(a => ACTS[a].toLowerCase()).join(tr("o")) : tr("lugaresGen");
       h += `<div class="vacio">${esc(S.sinLimite || m.cualquiera ? tr("noHayTodo", que) : tr("noHay", que, S.maxMin))}${S.act.size && (S.planes.size || S.etapa !== "todas" || S.presuMax !== "todos" || S.io !== "todos") ? tr("filtrosOcultan") : ""}</div>`;
       if (S.lejano){ const p = S.lejano.p, est = textoEstado(p, momento());
-        h += `<article class="card sel" style="max-width:none;flex:none"><span class="small muted">${tr("masCercano")}</span>
+        h += `<article class="card sel" data-id="${esc(p.id)}" style="max-width:none;flex:none"><span class="small muted">${tr("masCercano")}</span>
           <h4>${esc(p.n)}</h4><div class="dato"><span>${tr("minPieKm", S.lejano.min, S.lejano.km)}</span><span class="${est.cls}">${est.t}</span></div>
           <div class="row">${tagsAct(p, 3)}</div>
-          <div class="acciones"><a class="btn prim chico" href="${linkRuta(p, S.lejano.min)}" target="_blank" rel="noopener">${tr("comoLlegar")}${S.lejano.min > 25 ? tr("transporte") : ""}</a><button type="button" class="btn chico" data-a="detalle" data-v="${esc(p.id)}">${tr("verMas")}</button><button type="button" class="btn chico" data-a="ver-lejano">${tr("verEnMapa")}</button></div></article>`;
+          <div class="acciones"><a class="btn prim chico" href="${linkRuta(p, S.lejano.min)}" target="_blank" rel="noopener">${tr("comoLlegar")}${S.lejano.min > 25 ? tr("transporte") : ""}</a><button type="button" class="btn chico" data-a="ver-lejano">${tr("verEnMapa")}</button></div></article>`;
       } else if (S.act.size) h += `<p class="muted small">${tr("ningunoCiudad")}</p>`;
     }
     else h += `<div class="cab-res"><h2>${S.sinLimite ? tr("opcionesTodo", S.res.length) : tr("opcionesCerca", S.res.length)}</h2><div class="navcar"><button type="button" data-a="car-prev" aria-label="${tr("anterior")}">‹</button><span id="car-pos">${posCarrusel()}</span><button type="button" data-a="car-next" aria-label="${tr("siguiente")}">›</button></div></div>
@@ -2736,7 +2736,17 @@ function seguirSel(){
   const p = porId.get(S.sel); if (!p || p.lat == null) return;
   const b = map.getBounds().pad(-0.15); if (!b.contains([p.lat, p.lng])) map.panTo([p.lat, p.lng]);
 }
-function abrirDetalle(id){ S.detalle = id; S.confirmarBorrar = null; const p = porId.get(id); if (S.tab === "cerca" && S.res.some(r => r.p.id === id)) S.sel = id; render(); $("#vista").scrollTop = 0; if (p && p.lat != null){ S.sel = id; capa.pedir(); seguirSel(); } }
+function cerrarDetalle(){
+  const r = S.volverA; S.detalle = null; S.volverA = null;
+  render(); capa.pedir();
+  if (!r || r.tab !== S.tab) return;
+  const v = $("#vista"), car = $("#carrusel");
+  if (car) car.scrollLeft = r.cx;                  // same card in the carousel
+  v.scrollTop = r.y;                               // same spot of the list
+}
+function abrirDetalle(id){
+  if (!S.detalle){ const v = $("#vista"), car = $("#carrusel"); S.volverA = {tab: S.tab, y: v.scrollTop, cx: car ? car.scrollLeft : 0}; }
+  S.detalle = id; S.confirmarBorrar = null; const p = porId.get(id); if (S.tab === "cerca" && S.res.some(r => r.p.id === id)) S.sel = id; render(); $("#vista").scrollTop = 0; if (p && p.lat != null){ S.sel = id; capa.pedir(); seguirSel(); } }
 
 /* ============================================================ eventos de la interfaz */
 document.addEventListener("click", ev => {
@@ -2748,6 +2758,8 @@ document.addEventListener("click", ev => {
   if (tab){ S.tab = tab.dataset.tab; S.detalle = null; S.texto = ""; S.verMas = 60; if (S.tab === "cerca" && S.ubic) calcularCerca(); render(); capa.pedir(); return; }
   const sug = ev.target.closest(".sugs button:not([data-a])");
   if (sug){ $("#sugs").hidden = true; if (sug.dataset.k === "rec") usarReciente(+sug.dataset.v); else if (sug.dataset.k === "dir") elegirDir(+sug.dataset.v); else if (sug.dataset.k === "calle") elegirCalle(+sug.dataset.v); else abrirDetalle(sug.dataset.v); return; }
+  const tarjL = !ev.target.closest("a, button, input, textarea, select") && ev.target.closest(".card[data-id]");
+  if (tarjL && porId.get(tarjL.dataset.id)){ abrirDetalle(tarjL.dataset.id); return; }
   const tarjEv = !ev.target.closest("a, button, input, textarea, select") && ev.target.closest(".item.ev, .item.ev-g");
   if (tarjEv){
     const id = tarjEv.dataset.ev || tarjEv.dataset.evg;
@@ -2794,7 +2806,7 @@ document.addEventListener("click", ev => {
     case "idioma-menu": menuIdioma(); break;
     case "inicio": volverInicio(); break;
     case "compartir": compartirLugar(v); break;
-    case "volver": S.detalle = null; render(); capa.pedir(); break;
+    case "volver": cerrarDetalle(); break;
     case "ver-mapa": { const p = porId.get(v); if (p){ S.sel = v; irA(p, 17); capa.pedir(); } break; }
     case "guardar-evento": { const k = "ev_" + v;
       if (INFO[k]){ setInfo(k, {evg: false, ev: null}); toast(tr("tQuitada")); break; }
